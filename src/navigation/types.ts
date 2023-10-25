@@ -16,47 +16,43 @@ import type {
   DEV,
   DEV_MENU,
   DEV_STORY_BOOK,
+  ONBOARDING,
   PUBLIC,
   SPLASH,
   WELCOME,
 } from 'constants/screen-names';
 
-type DevMenuParams = undefined;
-type DevStoryBookParams = undefined;
-type SplashParams = undefined;
-type WelcomeParams = undefined;
-
 export type ScreensParamsList = {
-  [DEV_MENU]: DevMenuParams;
-  [DEV_STORY_BOOK]: DevStoryBookParams;
-  [SPLASH]: SplashParams;
-  [WELCOME]: WelcomeParams;
+  [DEV_MENU]: undefined;
+  [DEV_STORY_BOOK]: undefined;
+  [SPLASH]: undefined;
+  [WELCOME]: undefined;
+  [ONBOARDING]: undefined;
 };
 
-export type PublicNavigatorParamList = Pick<
-  ScreensParamsList,
-  typeof SPLASH | typeof WELCOME
->;
+export type DevScreens = typeof DEV_MENU | typeof DEV_STORY_BOOK;
 
-export type DevNavigatorParamList = Pick<
-  ScreensParamsList,
-  typeof DEV_MENU | typeof DEV_STORY_BOOK
->;
+export type PublicNavigatorParamList = Omit<ScreensParamsList, DevScreens>;
+
+export type DevNavigatorParamList = Pick<ScreensParamsList, DevScreens>;
 
 export type MainNavigatorParamList = {
   [DEV]: NavigatorScreenParams<DevNavigatorParamList>;
   [PUBLIC]: NavigatorScreenParams<PublicNavigatorParamList>;
 };
-
 export type ScreenComponentType<
   ParamList extends ParamListBase,
-  RouteName extends keyof ParamList,
+  RouteName extends keyof ParamList = keyof ParamList,
 > =
   | React.ComponentType<{
       route: RouteProp<ParamList, RouteName>;
       navigation: any;
     }>
   | React.ComponentType<{}>;
+
+export type DevScreenComponent = ScreenComponentType<DevNavigatorParamList>;
+export type PublicScreenComponent =
+  ScreenComponentType<PublicNavigatorParamList>;
 
 type ScreenConfig<
   List extends DevNavigatorParamList | PublicNavigatorParamList,
@@ -69,7 +65,7 @@ type ScreenConfig<
   options?: Options;
 };
 
-export type NavigationRoutes<
+type NavigationRoutes<
   List extends DevNavigatorParamList | PublicNavigatorParamList,
   Options extends
     | StackNavigationOptions
@@ -77,3 +73,12 @@ export type NavigationRoutes<
 > = {
   [ScreenName in keyof List]: ScreenConfig<List, ScreenName, Options>;
 };
+
+export type PublicRoutes = NavigationRoutes<
+  PublicNavigatorParamList,
+  NativeStackNavigationOptions
+>;
+export type DevRoutes = NavigationRoutes<
+  DevNavigatorParamList,
+  StackNavigationOptions
+>;

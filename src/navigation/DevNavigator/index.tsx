@@ -6,13 +6,15 @@ import {
 
 import type {
   DevNavigatorParamList,
-  ScreenComponentType,
+  DevScreenComponent,
 } from 'navigation/types';
 import { DEV_MENU } from 'constants/screen-names';
 
-import { devNavigatorRoutes } from './routes';
+import routes from './routes';
 
 const Stack = createStackNavigator<DevNavigatorParamList>();
+
+const devNavigatorRoutes = Object.entries(routes);
 
 const DevNavigator = (): JSX.Element => (
   <Stack.Navigator
@@ -23,16 +25,11 @@ const DevNavigator = (): JSX.Element => (
       headerShown: true,
     }}
   >
-    {Object.entries(devNavigatorRoutes).map(([key, options]) => (
+    {devNavigatorRoutes.map(([key, options]) => (
       <Stack.Screen
         key={key}
         name={key as keyof DevNavigatorParamList}
-        component={
-          options.component as ScreenComponentType<
-            DevNavigatorParamList,
-            keyof DevNavigatorParamList
-          >
-        }
+        component={options.component as DevScreenComponent}
         options={options.options}
       />
     ))}

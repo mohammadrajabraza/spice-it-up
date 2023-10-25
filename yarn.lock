@@ -13082,6 +13082,11 @@ react-native-swipe-gestures@^1.0.5:
   resolved "https://registry.npmjs.org/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz"
   integrity sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw==
 
+react-native-swiper-flatlist@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/react-native-swiper-flatlist/-/react-native-swiper-flatlist-3.2.3.tgz#c96d71cf260a5d7e3759a95d33e1eac38eadfb35"
+  integrity sha512-L4KSy4X1mzUx9a/gZa+lBpY7agS/GHCSzSjHjpIDQB7qh03jKm4PsKyYE5KfFzJRzBMm/srfrixfWzHncZmhkQ==
+
 react-native@0.72.4:
   version "0.72.4"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.72.4.tgz"
