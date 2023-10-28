@@ -25,9 +25,9 @@
       "./node_modules/@types",
       "./@types",
       "./node_modules/@tsconfig/react-native",
-      "src/types"
+      "src/types",
     ],
-    "types": ["react-native"],
+    "types": ["react-native", "jest"],
     "sourceMap": true,
     "inlineSources": true,
     "sourceRoot": "/"

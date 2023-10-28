@@ -16,18 +16,20 @@ import type {
   DEV,
   DEV_MENU,
   DEV_STORY_BOOK,
+  LOGIN,
   ONBOARDING,
   PUBLIC,
+  SIGNUP,
   SPLASH,
-  WELCOME,
 } from 'constants/screen-names';
 
 export type ScreensParamsList = {
   [DEV_MENU]: undefined;
   [DEV_STORY_BOOK]: undefined;
   [SPLASH]: undefined;
-  [WELCOME]: undefined;
   [ONBOARDING]: undefined;
+  [SIGNUP]: undefined;
+  [LOGIN]: undefined;
 };
 
 export type DevScreens = typeof DEV_MENU | typeof DEV_STORY_BOOK;

@@ -1,13 +1,14 @@
 /* eslint-disable sort-keys */
 
 const colors = {
+  primary: '#FF4334',
   cyan: '#21D4B4',
   cyan50: '#F4FDFA',
   black: '#1C1B1B',
   white: '#ffffff',
-  grey50: '#F4F5FD',
-  grey100: '#C0C0C0',
-  grey150: '#6F7384',
+  grey: '#EEEEEE',
+  darkGrey: '#CCCCCC',
+  typography20: '#3B3B3B',
   red: '#EE4D4D',
   green: '#08E488',
   blue: '#1F8BDA',

@@ -1,7 +1,14 @@
 import { type JSX } from 'react';
 import { TextProps } from 'react-native';
 
-export type TypographyVariants = 'heading1' | 'heading2';
+export type TypographyVariants =
+  | 'heading1'
+  | 'heading2'
+  | 'body1'
+  | 'body2'
+  | 'body3'
+  | 'caption'
+  | 'button';
 
 export interface TypographyProps extends TextProps {
   variant: TypographyVariants;

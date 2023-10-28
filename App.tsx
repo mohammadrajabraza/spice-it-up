@@ -19,6 +19,8 @@ import Navigation from 'navigation';
 
 import { Colors } from 'styles';
 import { ThemeProvider } from 'styled-components/native';
+import { Provider } from 'jotai';
+import store from 'store';
 
 const styles = StyleSheet.create({
   android: {
@@ -43,11 +45,13 @@ const App: React.FC = () => {
     <GestureHandlerRootView style={rootStyles}>
       <StatusBar backgroundColor={Colors.white} barStyle="dark-content" />
       <SafeAreaProvider>
-        <LocalesProvider defaultLocale="en" locale={selectedLocale}>
-          <ThemeProvider theme={theme}>
-            <Navigation />
-          </ThemeProvider>
-        </LocalesProvider>
+        <Provider store={store}>
+          <LocalesProvider defaultLocale="en" locale={selectedLocale}>
+            <ThemeProvider theme={theme}>
+              <Navigation />
+            </ThemeProvider>
+          </LocalesProvider>
+        </Provider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
