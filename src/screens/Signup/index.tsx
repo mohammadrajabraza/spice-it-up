@@ -1,11 +1,9 @@
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
 import { SIGNUP } from 'constants/screen-names';
 import styles from './styles';
-import { ImageBackground } from 'react-native';
-import assets from 'assets';
 import Typography from 'components/Typography';
 import useFormState from 'hooks/use-form-state';
 import Input from 'components/Input';
@@ -13,6 +11,7 @@ import Button from 'components/Button';
 
 import CheckBox from '@react-native-community/checkbox';
 import { Colors, Spacing } from 'styles';
+import AuthTopBackground from 'components/AuthTopBackground';
 
 export type SignupProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -32,13 +31,7 @@ const Signup: SignupScreen = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={assets.images.authBackground}
-        style={styles.authBackground}
-        resizeMode="cover"
-      >
-        <Image source={assets.images.authLogo} style={styles.authLogo} />
-      </ImageBackground>
+      <AuthTopBackground />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Create Account

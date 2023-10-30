@@ -1,20 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Layouts, Dimensions, Spacing } from 'styles';
+import { Colors, Layouts, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
     ...Layouts.container,
     backgroundColor: Colors.white,
-  },
-  authBackground: {
-    width: Dimensions.width.size100,
-    height: Dimensions.height.size34,
-    alignItems: 'center',
-    paddingTop: Spacing.vertical.size64,
-  },
-  authLogo: {
-    width: Dimensions.width.size36,
-    height: Dimensions.height.size19,
   },
   contentContainer: {
     ...Layouts.container,

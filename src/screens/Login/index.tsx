@@ -1,16 +1,9 @@
-import {
-  View,
-  ImageBackground,
-  Image,
-  Pressable,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Pressable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
 import { LOGIN, SIGNUP } from 'constants/screen-names';
 import styles from './styles';
-import assets from 'assets';
 import Typography from 'components/Typography';
 import Input from 'components/Input';
 import { Colors, Spacing } from 'styles';
@@ -22,6 +15,7 @@ import GoogleIcon from 'assets/svgs/google.svg';
 import { moderateScale } from 'utils/styles';
 import useBlockBackPress from 'hooks/use-block-back-press';
 import useFormState from 'hooks/use-form-state';
+import AuthTopBackground from 'components/AuthTopBackground';
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -37,13 +31,7 @@ const Login: LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={assets.images.authBackground}
-        style={styles.authBackground}
-        resizeMode="cover"
-      >
-        <Image source={assets.images.authLogo} style={styles.authLogo} />
-      </ImageBackground>
+      <AuthTopBackground />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Login To Your Account
