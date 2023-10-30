@@ -1,16 +1,16 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigation } from '@react-navigation/stack';
 
-import DevNavigator from 'navigation/DevNavigator';
-import PublicNavigator from 'navigation/PublicNavigator';
+import DevNavigation from 'navigation/DevNavigator';
+import PublicNavigation from 'navigation/PublicNavigator';
 
 import useInitNavigation from 'navigation/use-init-navigation';
 
-import type { MainNavigatorParamList } from 'navigation/types';
+import type { MainNavigationParamList } from 'navigation/types';
 import { DEV, PUBLIC } from 'constants/screen-names';
 
-const Stack = createStackNavigator<MainNavigatorParamList>();
+const Stack = createStackNavigation<MainNavigationParamList>();
 
 const Navigation = () => {
   const { handleNavigationRef, onStateChange } = useInitNavigation();
@@ -20,13 +20,13 @@ const Navigation = () => {
       ref={handleNavigationRef}
       onStateChange={onStateChange}
     >
-      <Stack.Navigator
+      <Stack.Navigation
         initialRouteName={PUBLIC}
         screenOptions={{ gestureEnabled: false, headerShown: false }}
       >
-        <Stack.Screen name={PUBLIC} component={PublicNavigator} />
-        <Stack.Screen name={DEV} component={DevNavigator} />
-      </Stack.Navigator>
+        <Stack.Screen name={PUBLIC} component={PublicNavigation} />
+        <Stack.Screen name={DEV} component={DevNavigation} />
+      </Stack.Navigation>
     </NavigationContainer>
   );
 };

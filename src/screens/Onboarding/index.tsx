@@ -5,7 +5,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import SwiperFlatList from 'react-native-swiper-flatlist';
 
 import { PublicNavigatorParamList } from 'navigation/types';
-import { LOGIN, ONBOARDING } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 import assets from 'assets';
 
 import styles from './styles';
@@ -37,7 +37,7 @@ const screens = [
 
 export type OnboardingProps = NativeStackScreenProps<
   PublicNavigatorParamList,
-  typeof ONBOARDING
+  typeof SCREENS.ONBOARDING
 >;
 
 export type OnboardingScreen = React.FC<OnboardingProps>;
@@ -50,7 +50,7 @@ const Onboarding: OnboardingScreen = ({ navigation }) => {
     if (swipeIndex === screens.length - 1) {
       await Storage.set(ONBOARDING_COMPLETE, true);
 
-      return navigation.navigate(LOGIN);
+      return navigation.navigate(SCREENS.LOGIN);
     }
     return swiperRef.current?.scrollToIndex({ index: swipeIndex + 1 });
   };

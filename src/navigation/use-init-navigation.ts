@@ -7,7 +7,7 @@ import type {
 
 import NavigationService from 'navigation/service';
 import type { MainNavigatorParamList } from 'navigation/types';
-import { DEV, DEV_MENU } from 'constants/screen-names';
+import { SCREENS, NAVIGATORS } from 'constants/screen-names';
 
 type UseInitNavigationReturnType = {
   handleNavigationRef: (
@@ -32,11 +32,11 @@ const useInitNavigation = (): UseInitNavigationReturnType => {
     ref: NavigationContainerRef<MainNavigatorParamList> | null,
   ): void => {
     navigationRef.current = ref;
-    NavigationService.setTopLevelNavigator(ref);
+    NavigationService.setTopLevelNavigation(ref);
     if (__DEV__) {
       DevSettings.addMenuItem('Show Dev Menu', () => {
-        NavigationService.navigate(DEV, {
-          screen: DEV_MENU,
+        NavigationService.navigate(NAVIGATORS.DEV, {
+          screen: SCREENS.DEV_MENU,
         });
       });
     }

@@ -12,35 +12,42 @@ import type {
 } from '@react-navigation/native-stack';
 import type { StackNavigationOptions } from '@react-navigation/stack';
 
-import type {
-  DEV,
-  DEV_MENU,
-  DEV_STORY_BOOK,
-  LOGIN,
-  ONBOARDING,
-  PUBLIC,
-  SIGNUP,
-  SPLASH,
-} from 'constants/screen-names';
+import type { SCREENS, NAVIGATORS } from 'constants/screen-names';
 
 export type ScreensParamsList = {
-  [DEV_MENU]: undefined;
-  [DEV_STORY_BOOK]: undefined;
-  [SPLASH]: undefined;
-  [ONBOARDING]: undefined;
-  [SIGNUP]: undefined;
-  [LOGIN]: undefined;
+  [key in typeof SCREENS[keyof typeof SCREENS]]: undefined;
 };
 
-export type DevScreens = typeof DEV_MENU | typeof DEV_STORY_BOOK;
+export type DevScreens =
+  | typeof SCREENS.DEV_MENU
+  | typeof SCREENS.DEV_STORY_BOOK;
 
-export type PublicNavigatorParamList = Omit<ScreensParamsList, DevScreens>;
+export type PublicScreens =
+  | typeof SCREENS.SPLASH
+  | typeof SCREENS.ONBOARDING
+  | typeof SCREENS.SIGNUP
+  | typeof SCREENS.LOGIN;
+
+export type MenuScreens = typeof SCREENS.HOME;
+
+export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>
+
+export type CoreNavigatorParamList = {
+  [NAVIGATORS.MENU]: NavigatorScreenParams<MenuNavigatorParamList>;
+};
+
+export type PublicNavigatorParamList = Pick<
+  ScreensParamsList,
+  PublicScreens
+> & {
+  [NAVIGATORS.CORE]: NavigatorScreenParams<CoreNavigatorParamList>;
+};
 
 export type DevNavigatorParamList = Pick<ScreensParamsList, DevScreens>;
 
 export type MainNavigatorParamList = {
-  [DEV]: NavigatorScreenParams<DevNavigatorParamList>;
-  [PUBLIC]: NavigatorScreenParams<PublicNavigatorParamList>;
+  [NAVIGATORS.DEV]: NavigatorScreenParams<DevNavigatorParamList>;
+  [NAVIGATORS.PUBLIC]: NavigatorScreenParams<PublicNavigatorParamList>;
 };
 export type ScreenComponentType<
   ParamList extends ParamListBase,

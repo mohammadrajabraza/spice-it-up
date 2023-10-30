@@ -2,7 +2,7 @@ import { View } from 'react-native';
 import React, { useState } from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
-import { SIGNUP } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 import styles, { phoneInputStyle } from './styles';
 import Typography from 'components/Typography';
 import useFormState from 'hooks/use-form-state';
@@ -24,7 +24,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export type SignupProps = NativeStackScreenProps<
   PublicNavigatorParamList,
-  typeof SIGNUP
+  typeof SCREENS.SIGNUP
 >;
 
 export type SignupScreen = React.FC<SignupProps>;

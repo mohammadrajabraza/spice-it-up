@@ -4,35 +4,33 @@ import type {
   PartialState,
 } from '@react-navigation/native';
 
-import { PUBLIC, SPLASH } from 'constants/screen-names';
+import { NAVIGATORS, SCREENS } from 'constants/screen-names';
 
 import type { MainNavigatorParamList } from 'navigation/types';
 
-let navigator: NavigationContainerRef<MainNavigatorParamList> | null;
+let Navigation: NavigationContainerRef<MainNavigatorParamList> | null;
 
-const setTopLevelNavigator = (
-  navigatorRef: NavigationContainerRef<MainNavigatorParamList> | null,
+const setTopLevelNavigation = (
+  NavigationRef: NavigationContainerRef<MainNavigatorParamList> | null,
 ): void => {
-  navigator = navigatorRef;
+  Navigation = NavigationRef;
 };
-
-const getTopLevelNavigator = () => {};
 
 const navigate = <RouteName extends keyof MainNavigatorParamList>(
   name: RouteName,
   params: MainNavigatorParamList[RouteName],
 ): void => {
-  if (!navigator) {
+  if (!Navigation) {
     return;
   }
 
   // @ts-expect-error error due to types mismatch
-  navigator.navigate(name, params);
+  Navigation.navigate(name, params);
 };
 
 const resetToRoot = (): void => {
-  navigate(PUBLIC, {
-    screen: SPLASH,
+  navigate(NAVIGATORS.PUBLIC, {
+    screen: SCREENS.SPLASH,
   });
 };
 
@@ -62,7 +60,7 @@ const getActiveRouteName = (
 };
 
 const getCurrentRouteName = (): string | undefined =>
-  getActiveRouteName(navigator?.getRootState());
+  getActiveRouteName(Navigation?.getRootState());
 
 export default {
   getActiveRoute,
@@ -70,5 +68,5 @@ export default {
   getCurrentRouteName,
   navigate,
   resetToRoot,
-  setTopLevelNavigator,
+  setTopLevelNavigation,
 };

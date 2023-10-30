@@ -1,12 +1,12 @@
 import type { DevRoutes } from 'navigation/types';
 import { DevMenu, DevStoryBook } from 'screens';
-import { DEV_MENU, DEV_STORY_BOOK } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 
 const routes: DevRoutes = {
-  [DEV_MENU]: {
+  [SCREENS.DEV_MENU]: {
     component: DevMenu,
   },
-  [DEV_STORY_BOOK]: {
+  [SCREENS.DEV_STORY_BOOK]: {
     component: DevStoryBook,
   },
 };

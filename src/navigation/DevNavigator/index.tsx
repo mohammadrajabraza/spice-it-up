@@ -1,23 +1,23 @@
 import React from 'react';
 import {
   CardStyleInterpolators,
-  createStackNavigator,
+  createStackNavigation,
 } from '@react-navigation/stack';
 
 import type {
-  DevNavigatorParamList,
+  DevNavigationParamList,
   DevScreenComponent,
 } from 'navigation/types';
 import { DEV_MENU } from 'constants/screen-names';
 
 import routes from './routes';
 
-const Stack = createStackNavigator<DevNavigatorParamList>();
+const Stack = createStackNavigation<DevNavigationParamList>();
 
-const devNavigatorRoutes = Object.entries(routes);
+const devNavigationRoutes = Object.entries(routes);
 
-const DevNavigator = (): JSX.Element => (
-  <Stack.Navigator
+const DevNavigation = (): JSX.Element => (
+  <Stack.Navigation
     initialRouteName={DEV_MENU}
     screenOptions={{
       cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
@@ -25,15 +25,15 @@ const DevNavigator = (): JSX.Element => (
       headerShown: true,
     }}
   >
-    {devNavigatorRoutes.map(([key, options]) => (
+    {devNavigationRoutes.map(([key, options]) => (
       <Stack.Screen
         key={key}
-        name={key as keyof DevNavigatorParamList}
+        name={key as keyof DevNavigationParamList}
         component={options.component as DevScreenComponent}
         options={options.options}
       />
     ))}
-  </Stack.Navigator>
+  </Stack.Navigation>
 );
 
-export default DevNavigator;
+export default DevNavigation;

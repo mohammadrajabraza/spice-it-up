@@ -7,7 +7,7 @@ import { Text, View } from 'react-native';
 import useNavigation from 'hooks/use-navigation';
 
 import type { DevNavigatorParamList } from 'navigation/types';
-import type { DEV_MENU } from 'constants/screen-names';
+import type { SCREENS } from 'constants/screen-names';
 
 import styles from '../styles';
 
@@ -16,7 +16,7 @@ import DevList from './list';
 
 type DevMenuProps = NativeStackScreenProps<
   DevNavigatorParamList,
-  typeof DEV_MENU
+  typeof SCREENS.DEV_MENU
 >;
 
 type DevMenuScreen = React.FC<DevMenuProps>;

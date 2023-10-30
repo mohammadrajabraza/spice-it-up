@@ -2,7 +2,7 @@ import React from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import type { PublicNavigatorParamList } from 'navigation/types';
-import { ONBOARDING, LOGIN, type SPLASH } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 
 import assets from 'assets';
 import useBootstrapApp from 'hooks/use-bootstrap-app';
@@ -17,7 +17,7 @@ import { Dimensions } from 'styles';
 
 type SplashProps = NativeStackScreenProps<
   PublicNavigatorParamList,
-  typeof SPLASH
+  typeof SCREENS.SPLASH
 >;
 
 type SplashScreen = React.FC<SplashProps>;
@@ -28,7 +28,7 @@ const Splash: SplashScreen = ({ navigation }) => {
     async onComplete() {
       const isOnboardingComplete = await Storage.get(ONBOARDING_COMPLETE);
       const initialRouteName: keyof PublicNavigatorParamList =
-        isOnboardingComplete ? LOGIN : ONBOARDING;
+        isOnboardingComplete ? SCREENS.LOGIN : SCREENS.ONBOARDING;
       store.set(initialRouteNameAtom, initialRouteName);
       return navigation.navigate(initialRouteName);
     },

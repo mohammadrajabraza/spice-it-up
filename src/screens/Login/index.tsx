@@ -2,7 +2,7 @@ import { View, Pressable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
-import { LOGIN, SIGNUP } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 import styles from './styles';
 import Typography from 'components/Typography';
 import Input from 'components/Input';
@@ -19,7 +19,7 @@ import AuthTopBackground from 'components/AuthTopBackground';
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
-  typeof LOGIN
+  typeof SCREENS.LOGIN
 >;
 
 export type LoginScreen = React.FC<LoginProps>;
@@ -63,11 +63,12 @@ const Login: LoginScreen = ({ navigation }) => {
           variant="contained"
           color="primary"
           title="Login"
+          // onPress={() => navigation.navigate(HOME)}
           style={{ button: { width: '100%' } }}
         />
         <Pressable
           style={styles.registerHere}
-          onPress={() => navigation.navigate(SIGNUP)}
+          onPress={() => navigation.navigate(SCREENS.SIGNUP)}
         >
           <Typography variant="body3">No Account Yet? </Typography>
           <Typography variant="body3" style={{ color: Colors.red }}>

@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { ONBOARDING_COMPLETE } from 'constants/storage';
 import { PublicNavigatorParamList } from 'navigation/types';
-import { SPLASH } from 'constants/screen-names';
+import { SCREENS } from 'constants/screen-names';
 import { AllOptionalKeys } from 'types/utils';
 export const isOnboardingCompleteAtom = atomWithStorage(
   ONBOARDING_COMPLETE,
@@ -16,4 +16,4 @@ export const isOnboardingCompleteAtom = atomWithStorage(
 );
 
 export const initialRouteNameAtom =
-  atom<AllOptionalKeys<PublicNavigatorParamList>>(SPLASH);
+  atom<AllOptionalKeys<PublicNavigatorParamList>>(SCREENS.SPLASH);

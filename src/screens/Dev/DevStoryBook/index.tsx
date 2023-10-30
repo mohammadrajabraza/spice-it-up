@@ -5,14 +5,14 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import StorybookUI from 'storybook';
 
-import type { DEV_STORY_BOOK } from 'constants/screen-names';
+import type { SCREENS } from 'constants/screen-names';
 import type { DevNavigatorParamList } from 'navigation/types';
 
 import styles from './styles';
 
 type DevStoryBookProps = NativeStackScreenProps<
   DevNavigatorParamList,
-  typeof DEV_STORY_BOOK
+  typeof SCREENS.DEV_STORY_BOOK
 >;
 
 type DevStoryBookScreen = React.FC<DevStoryBookProps>;
