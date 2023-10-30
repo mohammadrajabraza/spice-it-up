@@ -2,7 +2,7 @@ import { View, Pressable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
+import { NAVIGATORS, SCREENS } from 'constants/screen-names';
 import styles from './styles';
 import Typography from 'components/Typography';
 import Input from 'components/Input';
@@ -63,7 +63,12 @@ const Login: LoginScreen = ({ navigation }) => {
           variant="contained"
           color="primary"
           title="Login"
-          // onPress={() => navigation.navigate(HOME)}
+          onPress={() =>
+            navigation.navigate(NAVIGATORS.CORE, {
+              screen: NAVIGATORS.MENU,
+              params: { screen: SCREENS.HOME },
+            })
+          }
           style={{ button: { width: '100%' } }}
         />
         <Pressable
