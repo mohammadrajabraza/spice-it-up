@@ -1,10 +1,5 @@
 import type React from 'react';
-import type {
-  TouchableOpacityProps,
-  TextProps,
-  TextStyle,
-  ViewStyle,
-} from 'react-native';
+import type { TouchableOpacityProps, TextStyle, ViewStyle } from 'react-native';
 
 import type { Colors } from 'styles';
 

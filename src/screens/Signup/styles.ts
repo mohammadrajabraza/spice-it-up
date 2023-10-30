@@ -1,10 +1,15 @@
 import { StyleSheet } from 'react-native';
 import { Colors, Layouts, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
+  keyboardAwareScrollView: {
+    flex: 1,
+  },
   container: {
-    ...Layouts.container,
+    // ...Layouts.container,
     backgroundColor: Colors.white,
+    paddingBottom: Spacing.vertical.size20,
   },
   contentContainer: {
     ...Layouts.container,
@@ -35,6 +40,43 @@ const styles = StyleSheet.create({
   },
   checkBoxTextContainer: {
     flexDirection: 'row',
+  },
+  inputContainer: {
+    paddingHorizontal: Spacing.horizontal.size8,
+  },
+  textInput: {
+    paddingHorizontal: Spacing.horizontal.size12,
+  },
+});
+
+export const phoneInputStyle = StyleSheet.create({
+  container: {
+    backgroundColor: Colors.white,
+    borderWidth: 1,
+    borderRadius: 8,
+    marginVertical: Spacing.vertical.size8,
+    borderStyle: 'solid',
+    borderColor: Colors.grey,
+  },
+  flagContainer: {
+    backgroundColor: Colors.white,
+    paddingLeft: Spacing.horizontal.size8,
+    marginVertical: 0,
+    paddingRight: 0,
+  },
+  flag: {
+    gap: 0,
+    padding: 0,
+    margin: 0,
+    marginRight: 0,
+    paddingRight: Spacing.horizontal.size8,
+  },
+  callingCode: {
+    fontSize: moderateScale(15),
+    color: Colors.black,
+  },
+  input: {
+    color: Colors.black,
   },
 });
 
