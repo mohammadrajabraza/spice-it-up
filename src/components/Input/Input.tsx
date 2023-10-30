@@ -1,50 +1,40 @@
 import React from 'react';
-import { View, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, TextInput, TextInputProps } from 'react-native';
 
 import { Colors } from 'styles';
 
-import type { InputComponent } from './input.types';
+import type { InputComponent, InputProps } from './input.types';
 import styles from './styles';
+import { OptionalPropertyOf } from 'types/utils';
+
+const defaultProps: Required<
+  OptionalPropertyOf<Omit<InputProps, keyof TextInputProps>>
+> = {
+  containerStyle: {},
+  textInputStyle: {},
+  InputLeftElement: null,
+  InputRightElement: null,
+};
 
 const Input: InputComponent = (props) => {
   const {
     containerStyle,
-    imageStyle,
     textInputStyle,
-    image,
-    icon,
-    iconContainerStyle,
-    onIconPress,
+    InputLeftElement,
+    InputRightElement,
     ...restInput
-  } = props;
-
+  } = { ...defaultProps, ...props };
   return (
-    <View style={[styles.container, containerStyle ?? {}]}>
-      {image && (
-        <View style={styles.imageContainerStyle}>
-          <Image
-            source={image}
-            style={[styles.image, imageStyle ?? {}]}
-            resizeMode="contain"
-          />
-        </View>
-      )}
-
+    <View style={[styles.container, containerStyle]}>
+      {InputLeftElement}
       <TextInput
-        style={[styles.textInputStyle, textInputStyle ?? {}]}
+        style={[styles.textInputStyle, textInputStyle]}
         autoCapitalize="none"
         autoCorrect={false}
         placeholderTextColor={Colors.typography20}
         {...restInput}
       />
-      {icon && (
-        <TouchableOpacity
-          onPress={onIconPress}
-          style={[styles.iconContainer, iconContainerStyle ?? {}]}
-        >
-          {icon}
-        </TouchableOpacity>
-      )}
+      {InputRightElement}
     </View>
   );
 };
