@@ -20,6 +20,22 @@ const styles = StyleSheet.create({
     height: 15,
     marginEnd: Spacing.horizontal.size12,
   },
+  checkBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 4,
+    paddingVertical: Spacing.vertical.size4,
+  },
+  registerBtn: {
+    width: '100%',
+    marginTop: Spacing.vertical.size8,
+  },
+  redText: {
+    color: Colors.red,
+  },
+  checkBoxTextContainer: {
+    flexDirection: 'row',
+  },
 });
 
 export default styles;

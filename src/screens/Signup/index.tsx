@@ -10,7 +10,7 @@ import Input from 'components/Input';
 import Button from 'components/Button';
 
 import CheckBox from '@react-native-community/checkbox';
-import { Colors, Spacing } from 'styles';
+import { Colors } from 'styles';
 import AuthTopBackground from 'components/AuthTopBackground';
 
 export type SignupProps = NativeStackScreenProps<
@@ -31,7 +31,7 @@ const Signup: SignupScreen = () => {
 
   return (
     <View style={styles.container}>
-      <AuthTopBackground />
+      <AuthTopBackground showBackIcon />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Create Account
@@ -64,14 +64,7 @@ const Signup: SignupScreen = () => {
           value={values.confirmPassword}
           onChangeText={handleChange('confirmPassword')}
         />
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingHorizontal: 4,
-            paddingVertical: Spacing.vertical.size4,
-          }}
-        >
+        <View style={styles.checkBoxContainer}>
           <CheckBox
             disabled={false}
             value={values.agreeToTerms}
@@ -85,13 +78,13 @@ const Signup: SignupScreen = () => {
             onAnimationType="bounce"
             offAnimationType="bounce"
           />
-          <View style={{ flexDirection: 'row' }}>
+          <View style={styles.checkBoxTextContainer}>
             <Typography variant="body3">I agree on the</Typography>
-            <Typography variant="body3" style={{ color: Colors.red }}>
+            <Typography variant="body3" style={styles.redText}>
               Terms
             </Typography>
             <Typography variant="body3"> and </Typography>
-            <Typography variant="body3" style={{ color: Colors.red }}>
+            <Typography variant="body3" style={styles.redText}>
               Privacy Policy
             </Typography>
           </View>
@@ -101,7 +94,7 @@ const Signup: SignupScreen = () => {
           color="primary"
           title="Register"
           style={{
-            button: { width: '100%', marginTop: Spacing.vertical.size8 },
+            button: styles.registerBtn,
           }}
         />
       </View>
