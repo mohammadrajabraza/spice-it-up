@@ -31,7 +31,7 @@ const Input: InputComponent = (props) => {
         style={[styles.textInputStyle, textInputStyle]}
         autoCapitalize="none"
         autoCorrect={false}
-        placeholderTextColor={Colors.typography20}
+        placeholderTextColor={Colors.darkGrey}
         {...restInput}
       />
       {InputRightElement}
