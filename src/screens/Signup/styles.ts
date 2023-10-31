@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Layouts, Spacing } from 'styles';
+import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   container: {
     // ...Layouts.container,
     backgroundColor: Colors.white,
-    paddingBottom: Spacing.vertical.size20,
+    paddingBottom: Spacing.vertical.size56,
   },
   contentContainer: {
     ...Layouts.container,

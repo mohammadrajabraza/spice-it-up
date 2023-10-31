@@ -3,9 +3,13 @@ import { StyleSheet } from 'react-native';
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
+  keyboardAwareScrollView: {
+    flex: 1,
+  },
   container: {
     ...Layouts.container,
     backgroundColor: Colors.white,
+    paddingBottom: Spacing.vertical.size88,
   },
   contentContainer: {
     ...Layouts.container,

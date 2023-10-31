@@ -16,6 +16,7 @@ import { moderateScale } from 'utils/styles';
 import useBlockBackPress from 'hooks/use-block-back-press';
 import useFormState from 'hooks/use-form-state';
 import AuthTopBackground from 'components/AuthTopBackground';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -30,7 +31,11 @@ const Login: LoginScreen = ({ navigation }) => {
   useBlockBackPress();
 
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView
+      style={styles.keyboardAwareScrollView}
+      contentContainerStyle={styles.container}
+      pagingEnabled
+    >
       <AuthTopBackground />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
@@ -95,7 +100,7 @@ const Login: LoginScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
 export default Login;
