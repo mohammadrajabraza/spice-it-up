@@ -9,7 +9,7 @@ import type { PublicNavigatorParamList } from 'navigation/types';
 import { Login, Onboarding, Signup, Splash } from 'screens';
 import { useAtomValue } from 'jotai';
 import { initialRouteNameAtom } from 'store/atoms';
-import CoreNavigation from './CoreNavigator';
+import CoreNavigator from './CoreNavigator';
 
 const { LOGIN, ONBOARDING, SIGNUP, SPLASH } = SCREENS;
 
@@ -39,8 +39,11 @@ const PublicNavigation = () => {
       <Stack.Screen name={SIGNUP} component={Signup} key={SIGNUP} />
       <Stack.Screen name={LOGIN} component={Login} key={LOGIN} />
 
-      <Stack.Screen name={NAVIGATORS.CORE} component={CoreNavigation} key={NAVIGATORS.CORE} />
-
+      <Stack.Screen
+        name={NAVIGATORS.CORE}
+        component={CoreNavigator}
+        key={NAVIGATORS.CORE}
+      />
     </Stack.Navigator>
   );
 };

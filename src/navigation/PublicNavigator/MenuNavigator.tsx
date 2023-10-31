@@ -6,7 +6,7 @@ import { SCREENS } from 'constants/screen-names';
 
 const MenuStack = createStackNavigator<MenuNavigatorParamList>();
 
-const MenuNavigation = () => {
+const MenuNavigator = () => {
   return (
     <MenuStack.Navigator>
       <MenuStack.Screen name={SCREENS.HOME} component={View} />
@@ -14,4 +14,4 @@ const MenuNavigation = () => {
   );
 };
 
-export default MenuNavigation;
+export default MenuNavigator;

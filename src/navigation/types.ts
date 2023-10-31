@@ -29,11 +29,27 @@ export type PublicScreens =
   | typeof SCREENS.LOGIN;
 
 export type MenuScreens = typeof SCREENS.HOME;
-
 export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>
+
+export type CartScreens = typeof SCREENS.MY_CART;
+export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>
+
+export type OrderScreens = typeof SCREENS.ORDER_LIST;
+export type OrderNavigatorParamList = Pick<ScreensParamsList, OrderScreens>
+
+export type ProfileScreens = typeof SCREENS.PROFILE_INFO;
+export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>
+
+export type ReservationScreens = typeof SCREENS.RESERVATION_LIST;
+export type ReservationNavigatorParamList = Pick<ScreensParamsList, ReservationScreens>
+
 
 export type CoreNavigatorParamList = {
   [NAVIGATORS.MENU]: NavigatorScreenParams<MenuNavigatorParamList>;
+  [NAVIGATORS.CART]: NavigatorScreenParams<CartNavigatorParamList>;
+  [NAVIGATORS.ORDER]: NavigatorScreenParams<OrderNavigatorParamList>;
+  [NAVIGATORS.PROFILE]: NavigatorScreenParams<ProfileNavigatorParamList>;
+  [NAVIGATORS.RESERVATION]: NavigatorScreenParams<ReservationNavigatorParamList>;
 };
 
 export type PublicNavigatorParamList = Pick<
