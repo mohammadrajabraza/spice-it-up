@@ -116,7 +116,7 @@ const Signup: SignupScreen = () => {
             <TouchableOpacity onPress={() => setShowPassword((prev) => !prev)}>
               <FontAwesomeIcon
                 name={showPassword ? 'eye' : 'eye-slash'}
-                color="grey"
+                color={Colors.darkGrey}
                 size={iconSize}
               />
             </TouchableOpacity>
