@@ -18,7 +18,7 @@ const AuthTopBackground: React.FC<AuthTopBackgroundProps> = ({
       resizeMode="cover"
     >
       {showBackIcon && <GoBack />}
-      <Image source={assets.images.authLogo} style={styles.authLogo} />
+      <Image source={assets.images.authLogo} style={styles.authLogo} resizeMode='contain' />
     </ImageBackground>
   );
 };

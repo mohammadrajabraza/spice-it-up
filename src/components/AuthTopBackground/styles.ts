@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   authLogo: {
     width: Dimensions.width.size36,
-    height: Dimensions.height.size19,
+    // height: Dimensions.height.size19,
   },
 });
 
