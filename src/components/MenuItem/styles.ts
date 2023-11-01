@@ -19,9 +19,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.horizontal.size12,
   },
   imageContainer: {
-    width: Dimensions.width.size20,
+    width: Dimensions.width.size18,
     height: Dimensions.height.size10,
     ...Layouts.centered,
+    borderRadius: moderateScale(12),
+    overflow: 'hidden',
   },
   image: {
     width: Dimensions.width.size18,
