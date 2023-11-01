@@ -15,7 +15,18 @@ import type { StackNavigationOptions } from '@react-navigation/stack';
 import type { SCREENS, NAVIGATORS } from 'constants/screen-names';
 
 export type ScreensParamsList = {
-  [key in typeof SCREENS[keyof typeof SCREENS]]: undefined;
+  [SCREENS.DEV_MENU]: undefined;
+  [SCREENS.DEV_STORY_BOOK]: undefined;
+  [SCREENS.SPLASH]: undefined;
+  [SCREENS.ONBOARDING]: undefined; 
+  [SCREENS.SIGNUP]: undefined;
+  [SCREENS.LOGIN]: undefined;
+  [SCREENS.HOME]: undefined;
+  [SCREENS.MENU_LIST]: { category: string };
+  [SCREENS.MY_CART]: undefined;
+  [SCREENS.ORDER_LIST]: undefined;
+  [SCREENS.PROFILE_INFO]: undefined;
+  [SCREENS.RESERVATION_LIST]: undefined;
 };
 
 export type DevScreens =
@@ -28,7 +39,7 @@ export type PublicScreens =
   | typeof SCREENS.SIGNUP
   | typeof SCREENS.LOGIN;
 
-export type MenuScreens = typeof SCREENS.HOME;
+export type MenuScreens = typeof SCREENS.HOME | typeof SCREENS.MENU_LIST;
 export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>
 
 export type CartScreens = typeof SCREENS.MY_CART;

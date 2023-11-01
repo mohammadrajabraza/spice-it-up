@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 5,
     shadowOffset: {
-      width: 10,
-      height: 30,
+      width: 8,
+      height: 8,
     },
     ...Layouts.over,
     top: 8,

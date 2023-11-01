@@ -16,14 +16,13 @@ import styles from './styles';
 import TopBackground from 'components/TopBackground';
 import assets from 'assets';
 import Input from 'components/Input';
-import SearchIcon from 'assets/svgs/search.svg';
-import FilterIcon from 'assets/svgs/filter.svg';
 import { Colors, Dimensions } from 'styles';
 import Button from 'components/Button';
 import data from 'data';
 import TodaysSpecialItem from 'components/TodaysSpecialItem';
 import CategoryItem from 'components/CategoryItem';
 import MenuItem from 'components/MenuItem';
+import Search from 'components/Search';
 
 export type HomeProps = NativeStackScreenProps<
   MenuNavigatorParamList,
@@ -42,11 +41,7 @@ const todaysSpecialRenderItem: RenderItem<typeof data.todaysSpecial> = ({
   return <TodaysSpecialItem {...item} />;
 };
 
-const categoryRenderItem: RenderItem<typeof data.categoryList> = ({ item }) => {
-  return <CategoryItem {...item} />;
-};
-
-const Home: HomeScreen = () => {
+const Home: HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <TopBackground type="core" />
@@ -64,23 +59,7 @@ const Home: HomeScreen = () => {
           </View>
         </View>
 
-        <Input
-          placeholder="What do you want to order?"
-          placeholderTextColor={Colors.darkGrey}
-          containerStyle={styles.searchInputContainer}
-          InputLeftElement={
-            <SearchIcon
-              width={Dimensions.width.size6}
-              height={Dimensions.width.size6}
-            />
-          }
-          InputRightElement={
-            <FilterIcon
-              width={Dimensions.width.size6}
-              height={Dimensions.width.size6}
-            />
-          }
-        />
+        <Search />
 
         <ImageBackground
           source={assets.images.banner}
@@ -128,7 +107,18 @@ const Home: HomeScreen = () => {
 
           <FlatList
             data={data.categoryList}
-            renderItem={categoryRenderItem}
+            renderItem={({ item }) => {
+              return (
+                <CategoryItem
+                  onPress={() =>
+                    navigation.navigate(SCREENS.MENU_LIST, {
+                      category: item.name,
+                    })
+                  }
+                  {...item}
+                />
+              );
+            }}
             keyExtractor={(item) => item.id.toString()}
             horizontal
             style={styles.sectionList}
