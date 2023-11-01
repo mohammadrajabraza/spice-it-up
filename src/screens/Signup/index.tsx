@@ -11,7 +11,7 @@ import Button from 'components/Button';
 
 import CheckBox from '@react-native-community/checkbox';
 import { Colors } from 'styles';
-import AuthTopBackground from 'components/AuthTopBackground';
+import TopBackground from 'components/TopBackground';
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import UserIcon from 'assets/svgs/user.svg';
@@ -51,7 +51,7 @@ const Signup: SignupScreen = () => {
       contentContainerStyle={styles.container}
       pagingEnabled
     >
-      <AuthTopBackground showBackIcon />
+      <TopBackground showBackIcon type='auth' />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Create Account

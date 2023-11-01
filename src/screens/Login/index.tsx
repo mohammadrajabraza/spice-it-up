@@ -15,8 +15,8 @@ import GoogleIcon from 'assets/svgs/google.svg';
 import { moderateScale } from 'utils/styles';
 import useBlockBackPress from 'hooks/use-block-back-press';
 import useFormState from 'hooks/use-form-state';
-import AuthTopBackground from 'components/AuthTopBackground';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import TopBackground from 'components/TopBackground';
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -36,7 +36,7 @@ const Login: LoginScreen = ({ navigation }) => {
       contentContainerStyle={styles.container}
       pagingEnabled
     >
-      <AuthTopBackground />
+      <TopBackground type='auth' />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Login To Your Account

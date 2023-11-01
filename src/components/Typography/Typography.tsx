@@ -5,6 +5,13 @@ import { moderateScale } from 'utils/styles';
 import { Colors } from 'styles';
 
 export const typographyVariants: Record<TypographyVariants, TextStyle> = {
+  heading3: {
+    fontSize: moderateScale(14),
+    fontWeight: 'bold',
+    color: Colors.black,
+    lineHeight: moderateScale(20),
+    letterSpacing: 0.5,
+  },
   heading2: {
     fontSize: moderateScale(20),
     fontWeight: 'bold',
@@ -37,16 +44,14 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     fontSize: moderateScale(14),
     fontWeight: 'normal',
     color: Colors.black,
-    lineHeight: moderateScale(28),
+    // lineHeight: moderateScale(28),
     letterSpacing: 0.3,
   },
   caption: {
-    fontSize: moderateScale(14),
-    fontWeight: 'bold',
+    fontSize: moderateScale(12),
+    fontWeight: 'normal',
     color: Colors.typography20,
-    opacity: 0.8,
-    lineHeight: moderateScale(28),
-    letterSpacing: 0.3,
+    letterSpacing: 0.5,
   },
   button: {
     fontSize: moderateScale(16),

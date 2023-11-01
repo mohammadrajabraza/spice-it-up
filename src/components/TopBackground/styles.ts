@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { Dimensions, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
-  authBackground: {
+  background: {
     width: Dimensions.width.size100,
     height: Dimensions.height.size34,
     alignItems: 'center',
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   authLogo: {
     width: Dimensions.width.size36,
-    // height: Dimensions.height.size19,
+    height: Dimensions.height.size19,
   },
 });
 
