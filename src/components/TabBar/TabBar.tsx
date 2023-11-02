@@ -18,6 +18,8 @@ import { NAVIGATORS } from 'constants/screen-names';
 import { SvgProps } from 'react-native-svg';
 import { moderateScale } from 'utils/styles';
 import { Colors } from 'styles';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { CoreNavigatorsInitialScreen } from 'navigation/constants';
 
 const IconMap = {
   [NAVIGATORS.MENU]: [MenuIcon, MenuActiveIcon],
@@ -32,6 +34,17 @@ const TabBar: React.FC<BottomTabBarProps> = ({
   descriptors,
   navigation,
 }) => {
+  const route = state.routes[state.index];
+  const tabName = route.name as keyof typeof CoreNavigatorsInitialScreen;
+  const focusedRouteName = getFocusedRouteNameFromRoute(route);
+
+  if (
+    !focusedRouteName ||
+    CoreNavigatorsInitialScreen[tabName] !== focusedRouteName
+  ) {
+    return <></>;
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -50,6 +63,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({
             });
 
             if (!isFocused && !event.defaultPrevented) {
+              console.log({ route });
               navigation.navigate(route.name, route.params);
             }
           };

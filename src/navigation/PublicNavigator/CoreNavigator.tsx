@@ -1,43 +1,24 @@
 import React from 'react';
-import {
-  createBottomTabNavigator,
-} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CoreNavigatorParamList } from 'navigation/types';
-import { NAVIGATORS } from 'constants/screen-names';
-import MenuNavigator from './MenuNavigator';
 import TabBar from 'components/TabBar';
-import CartNavigator from './CartNavigator';
-import OrderNavigator from './OrderNavigator';
-import ReservationNavigator from './ReservationNavigator';
-import ProfileNavigator from './ProfileNavigator';
+import {
+  CoreNavigatorsComponentMap,
+  CoreNavigatorsInitialScreen,
+  CoreNavigatorsKeys,
+} from 'navigation/constants';
 
 const BottomTab = createBottomTabNavigator<CoreNavigatorParamList>();
 
 type BottomTabScreenProps = React.ComponentProps<typeof BottomTab.Screen>;
 
-
-const routes: Array<BottomTabScreenProps> = [
-  {
-    name: NAVIGATORS.MENU,
-    component: MenuNavigator,
-  },
-  {
-    name: NAVIGATORS.ORDER,
-    component: OrderNavigator,
-  },
-  {
-    name: NAVIGATORS.RESERVATION,
-    component: ReservationNavigator,
-  },
-  {
-    name: NAVIGATORS.CART,
-    component: CartNavigator,
-  },
-  {
-    name: NAVIGATORS.PROFILE,
-    component: ProfileNavigator,
-  },
-] as const;
+const routes: Array<BottomTabScreenProps> = CoreNavigatorsKeys.map((key) => {
+  return {
+    name: key,
+    component: CoreNavigatorsComponentMap[key],
+    initialParams: { screen: CoreNavigatorsInitialScreen[key] },
+  };
+});
 
 const CoreNavigator = () => {
   return (

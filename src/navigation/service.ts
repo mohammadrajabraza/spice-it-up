@@ -1,7 +1,7 @@
-import type {
-  NavigationContainerRef,
-  NavigationState,
-  PartialState,
+import {
+  type NavigationContainerRef,
+  type NavigationState,
+  type PartialState,
 } from '@react-navigation/native';
 
 import { NAVIGATORS, SCREENS } from 'constants/screen-names';
