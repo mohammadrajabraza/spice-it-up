@@ -39,7 +39,7 @@ const CartItem: React.FC<CartItemProps> = (props) => {
         <Image source={image} style={styles.image} resizeMode="cover" />
       </TouchableHighlight>
       <View style={styles.content}>
-        <Typography variant="body2" style={styles.name}>{name}</Typography>
+        <Typography variant="body3" style={styles.name}>{name}</Typography>
         <Typography variant="body3" style={styles.description}>
           {description}
         </Typography>

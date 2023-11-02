@@ -7,3 +7,4 @@ export { default as Home } from './Home';
 export { default as MenuList } from './MenuList';
 export { default as MenuItem } from './MenuItem';
 export { default as MyCart } from './MyCart';
+export { default as OrderList } from './OrderList';
