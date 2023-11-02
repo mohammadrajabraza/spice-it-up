@@ -32,17 +32,17 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     verticalAlign: 'middle',
   },
   body1: {
-    fontSize: moderateScale(15),
+    fontSize: moderateScale(20),
     fontWeight: 'normal',
     color: Colors.black,
-    lineHeight: moderateScale(20),
+    lineHeight: moderateScale(28),
     letterSpacing: 0.5,
   },
   body2: {
     fontSize: moderateScale(16),
     fontWeight: 'normal',
     color: Colors.black,
-    lineHeight: moderateScale(30),
+    lineHeight: moderateScale(28),
     letterSpacing: 0.5,
   },
   body3: {

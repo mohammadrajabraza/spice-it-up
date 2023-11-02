@@ -11,8 +11,6 @@ const GoBack = () => {
   const navigation = useNavigation();
 
   const onGoBack = () => {
-    console.log(navigation.canGoBack())
-    console.log('Calling GO Back')
     if (!navigation.canGoBack()) return;
     return navigation.goBack();
   };

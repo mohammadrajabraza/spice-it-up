@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
     top: 8,
     left: 15,
     ...Layouts.centered,
+    pointerEvents: 'box-only',
+    zIndex: 1000,
   },
 });
 

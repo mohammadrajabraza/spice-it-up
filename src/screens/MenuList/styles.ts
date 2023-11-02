@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   wrapper: {
-    // ...Layouts.container,
     ...Layouts.over,
     top: Dimensions.height.size12,
     backgroundColor: 'transparent',
