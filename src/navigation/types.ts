@@ -18,11 +18,12 @@ export type ScreensParamsList = {
   [SCREENS.DEV_MENU]: undefined;
   [SCREENS.DEV_STORY_BOOK]: undefined;
   [SCREENS.SPLASH]: undefined;
-  [SCREENS.ONBOARDING]: undefined; 
+  [SCREENS.ONBOARDING]: undefined;
   [SCREENS.SIGNUP]: undefined;
   [SCREENS.LOGIN]: undefined;
   [SCREENS.HOME]: undefined;
   [SCREENS.MENU_LIST]: { category: string };
+  [SCREENS.MENU_ITEM]: { id: number };
   [SCREENS.MY_CART]: undefined;
   [SCREENS.ORDER_LIST]: undefined;
   [SCREENS.PROFILE_INFO]: undefined;
@@ -39,21 +40,26 @@ export type PublicScreens =
   | typeof SCREENS.SIGNUP
   | typeof SCREENS.LOGIN;
 
-export type MenuScreens = typeof SCREENS.HOME | typeof SCREENS.MENU_LIST;
-export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>
+export type MenuScreens =
+  | typeof SCREENS.HOME
+  | typeof SCREENS.MENU_LIST
+  | typeof SCREENS.MENU_ITEM;
+export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>;
 
 export type CartScreens = typeof SCREENS.MY_CART;
-export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>
+export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>;
 
 export type OrderScreens = typeof SCREENS.ORDER_LIST;
-export type OrderNavigatorParamList = Pick<ScreensParamsList, OrderScreens>
+export type OrderNavigatorParamList = Pick<ScreensParamsList, OrderScreens>;
 
 export type ProfileScreens = typeof SCREENS.PROFILE_INFO;
-export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>
+export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>;
 
 export type ReservationScreens = typeof SCREENS.RESERVATION_LIST;
-export type ReservationNavigatorParamList = Pick<ScreensParamsList, ReservationScreens>
-
+export type ReservationNavigatorParamList = Pick<
+  ScreensParamsList,
+  ReservationScreens
+>;
 
 export type CoreNavigatorParamList = {
   [NAVIGATORS.MENU]: NavigatorScreenParams<MenuNavigatorParamList>;

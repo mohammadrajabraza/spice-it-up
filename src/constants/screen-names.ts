@@ -1,16 +1,3 @@
-const DEV_MENU = 'DevMenu';
-const DEV_STORY_BOOK = 'DevStoryBook';
-const SPLASH = 'Splash';
-const ONBOARDING = 'Onboarding';
-const SIGNUP = 'Signup';
-const LOGIN = 'Login';
-const HOME = 'Home';
-const MENU = 'Menu';
-const MY_CART = 'MyCart';
-const ORDER_LIST = 'OrderList';
-const RESERVATION_LIST = 'ReservationList';
-const PROFILE_INFO = 'ProfileInfo';
-
 export const NAVIGATORS = {
   DEV: 'DevNavigatior',
   PUBLIC: 'PublicNavigatior',
@@ -31,6 +18,7 @@ export const SCREENS = {
   LOGIN: 'Login',
   HOME: 'Home',
   MENU_LIST: 'MenuList',
+  MENU_ITEM: 'MenuItem',
   MY_CART: 'MyCart',
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',

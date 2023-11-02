@@ -11,6 +11,8 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     color: Colors.black,
     lineHeight: moderateScale(20),
     letterSpacing: 0.5,
+
+    verticalAlign: 'middle',
   },
   heading2: {
     fontSize: moderateScale(20),
@@ -18,13 +20,16 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     color: Colors.black,
     lineHeight: moderateScale(26),
     letterSpacing: 0.5,
+
+    verticalAlign: 'middle',
   },
   heading1: {
     fontSize: moderateScale(27),
     fontWeight: 'bold',
     color: Colors.black,
-    lineHeight: moderateScale(26),
+    lineHeight: moderateScale(35),
     letterSpacing: 0.5,
+    verticalAlign: 'middle',
   },
   body1: {
     fontSize: moderateScale(15),
@@ -44,7 +49,7 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     fontSize: moderateScale(14),
     fontWeight: 'normal',
     color: Colors.black,
-    // lineHeight: moderateScale(28),
+    lineHeight: moderateScale(23),
     letterSpacing: 0.3,
   },
   caption: {

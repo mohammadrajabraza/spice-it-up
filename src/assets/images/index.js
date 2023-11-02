@@ -11,6 +11,7 @@ const banner = require('./banner.png')
 const todaysSpecial1 = require('./todays-special-1.png')
 const todaysSpecial2 = require('./todays-special-2.png')
 const menu1 = require('./menu-1.png')
+const star  = require('./star.png')
 module.exports = {
   splashLogo,
   onboarding1,
@@ -24,4 +25,5 @@ module.exports = {
   todaysSpecial1,
   todaysSpecial2,
   menu1,
+  star,
 };

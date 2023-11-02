@@ -17,19 +17,30 @@ export type MenuListProps = NativeStackScreenProps<
 
 export type MenuListScreen = React.FC<MenuListProps>;
 
-const MenuList: MenuListScreen = ({ route }) => {
+const MenuList: MenuListScreen = ({ route, navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <TopBackground showBackIcon type="core" />
       <View style={styles.wrapper}>
         <Typography variant="heading2" style={styles.title}>
-          {route.params.category + ' Menu'} 
+          {route.params.category + ' Menu'}
         </Typography>
         <Search />
 
         <FlatList
           data={data.popularMenu}
-          renderItem={({ item }) => <MenuItem {...item}  style={{ container: styles.menuItemContainer, price: styles.menuItemPrice }} />}
+          renderItem={({ item }) => (
+            <MenuItem
+              {...item}
+              onPress={() =>
+                navigation.navigate(SCREENS.MENU_ITEM, { id: item.id })
+              }
+              style={{
+                container: styles.menuItemContainer,
+                price: styles.menuItemPrice,
+              }}
+            />
+          )}
           keyExtractor={(item) => item.id.toString()}
         />
       </View>

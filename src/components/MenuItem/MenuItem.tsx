@@ -17,13 +17,21 @@ type MenuItemProps = {
   image: ImageSourcePropType;
   price: string;
   style?: { container?: ViewStyle; price?: TextStyle };
+  onPress?: () => void;
 };
 
 const MenuItem: React.FC<MenuItemProps> = (props) => {
-  const { image, price, name, description, style = {} } = props;
+  const {
+    image,
+    price,
+    name,
+    description,
+    style = {},
+    onPress = () => {},
+  } = props;
   return (
-    <TouchableOpacity style={[styles.container, style?.container]}>
-      <TouchableHighlight style={styles.imageContainer}>
+    <TouchableOpacity onPress={onPress} style={[styles.container, style?.container]}>
+      <TouchableHighlight onPress={onPress} style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
       </TouchableHighlight>
       <View style={styles.content}>
