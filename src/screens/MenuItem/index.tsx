@@ -15,13 +15,10 @@ import GoBack from 'components/GoBack';
 import styles from './styles';
 import Button from 'components/Button';
 import Typography from 'components/Typography';
-import { Colors } from 'styles';
 
-import PlusIcon from 'assets/svgs/plus.svg';
-import MinusIcon from 'assets/svgs/minus.svg';
-import { moderateScale } from 'utils/styles';
 import assets from 'assets';
 import Radio from 'components/Radio';
+import CartQuantity from 'components/CartQuantity';
 
 export type MenuItemProps = NativeStackScreenProps<
   MenuNavigatorParamList,
@@ -29,8 +26,6 @@ export type MenuItemProps = NativeStackScreenProps<
 >;
 
 export type MenuItemScreen = React.FC<MenuItemProps>;
-
-const iconSize = moderateScale(12);
 
 const getAddons = () => data.addons;
 
@@ -43,12 +38,12 @@ const MenuItem: MenuItemScreen = ({ route }) => {
   const menuItem = getMenuItemData(route.params.id);
   const addons = getAddons();
   const scrollViewRef = useRef<ScrollView>(null);
-  const [itemCount, setItemCount] = useState(1);
-  const decrement = () => {
-    setItemCount((count) => count - 1);
+  const [quantity, setQuantity] = useState(1);
+  const onDecrement = () => {
+    setQuantity((count) => count - 1);
   };
-  const increment = () => {
-    setItemCount((count) => count + 1);
+  const onIncrement = () => {
+    setQuantity((count) => count + 1);
   };
 
   const [selectedAddonOption, setSelectedAddonOption] = useState(() => {
@@ -150,26 +145,11 @@ const MenuItem: MenuItemScreen = ({ route }) => {
         </View>
       </ScrollView>
       <View style={styles.footer}>
-        <View style={styles.changeItemCount}>
-          <TouchableOpacity
-            style={[
-              styles.changeCountBtn,
-              { backgroundColor: `${Colors.primary}11` },
-            ]}
-            onPress={decrement}
-            disabled={itemCount === 1}
-          >
-            <MinusIcon width={iconSize} height={iconSize} />
-          </TouchableOpacity>
-          <Typography variant="caption">{itemCount + ''}</Typography>
-
-          <TouchableOpacity
-            style={[styles.changeCountBtn, { backgroundColor: Colors.primary }]}
-            onPress={increment}
-          >
-            <PlusIcon width={iconSize} height={iconSize} />
-          </TouchableOpacity>
-        </View>
+        <CartQuantity
+          count={quantity}
+          onIncrement={onIncrement}
+          onDecrement={onDecrement}
+        />
         <Button
           variant="contained"
           title="Add to cart"
