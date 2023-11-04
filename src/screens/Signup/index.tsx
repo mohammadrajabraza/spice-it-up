@@ -107,6 +107,7 @@ const Signup: SignupScreen = () => {
           onChangeText={handleChange('password')}
           containerStyle={styles.inputContainer}
           textInputStyle={styles.textInput}
+          secureTextEntry={showPassword}
           InputLeftElement={
             <View>
               <PasswordIcon width={iconSize} height={iconSize} />
@@ -131,6 +132,7 @@ const Signup: SignupScreen = () => {
           onChangeText={handleChange('confirmPassword')}
           containerStyle={styles.inputContainer}
           textInputStyle={styles.textInput}
+          secureTextEntry={showConfirmPassword}
           InputLeftElement={
             <View>
               <PasswordIcon width={iconSize} height={iconSize} />
