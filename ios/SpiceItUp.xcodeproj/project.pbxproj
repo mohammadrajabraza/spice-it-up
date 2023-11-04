@@ -24,9 +24,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3570A7412CD6F0B8EE9ACC53 /* libPods-SpiceItUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1A25071F0F1E63EEAF6D83 /* libPods-SpiceItUp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A0C2343768F2F1CE8D7FFD70 /* libPods-SpiceItUp-SpiceItUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 604E1D2F1C95AD07AA6F1124 /* libPods-SpiceItUp-SpiceItUpTests.a */; };
+		972FD71B1F86B53AC25F8171 /* libPods-SpiceItUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 326BBF13A21ADF3D04144E34 /* libPods-SpiceItUp.a */; };
+		FA3E03DF5511497C09714CCB /* libPods-SpiceItUp-SpiceItUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FE9FE4318BEA8763CD42FE /* libPods-SpiceItUp-SpiceItUpTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,19 +56,19 @@
 		04DB32FE2AF0529C00E10CEF /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		04DB33002AF0529C00E10CEF /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		04DB330E2AF06D8C00E10CEF /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		052128874DC839F5A3B4E2C2 /* Pods-SpiceItUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp.release.xcconfig"; path = "Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SpiceItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiceItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SpiceItUp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SpiceItUp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpiceItUp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SpiceItUp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SpiceItUp/main.m; sourceTree = "<group>"; };
-		604E1D2F1C95AD07AA6F1124 /* libPods-SpiceItUp-SpiceItUpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpiceItUp-SpiceItUpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26519482764861A64BECD61F /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		326BBF13A21ADF3D04144E34 /* libPods-SpiceItUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpiceItUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60FE9FE4318BEA8763CD42FE /* libPods-SpiceItUp-SpiceItUpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpiceItUp-SpiceItUpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SpiceItUp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		91D600CEC3CBACEA80C7FC83 /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9B1A25071F0F1E63EEAF6D83 /* libPods-SpiceItUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpiceItUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD364A3EECE4402E5F1D95C0 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp-SpiceItUpTests.release.xcconfig"; path = "Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests.release.xcconfig"; sourceTree = "<group>"; };
-		DD5B0BC0CCB00B9AC2801B44 /* Pods-SpiceItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp.debug.xcconfig"; path = "Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp.debug.xcconfig"; sourceTree = "<group>"; };
+		AA09DDDAFD67E80465692A29 /* Pods-SpiceItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp.debug.xcconfig"; path = "Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp.debug.xcconfig"; sourceTree = "<group>"; };
+		C6C5770836D8B6C63DD07241 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp-SpiceItUpTests.release.xcconfig"; path = "Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		E24598A6E81B5B1A45836E03 /* Pods-SpiceItUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiceItUp.release.xcconfig"; path = "Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C2343768F2F1CE8D7FFD70 /* libPods-SpiceItUp-SpiceItUpTests.a in Frameworks */,
+				FA3E03DF5511497C09714CCB /* libPods-SpiceItUp-SpiceItUpTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3570A7412CD6F0B8EE9ACC53 /* libPods-SpiceItUp.a in Frameworks */,
+				972FD71B1F86B53AC25F8171 /* libPods-SpiceItUp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				9B1A25071F0F1E63EEAF6D83 /* libPods-SpiceItUp.a */,
-				604E1D2F1C95AD07AA6F1124 /* libPods-SpiceItUp-SpiceItUpTests.a */,
+				326BBF13A21ADF3D04144E34 /* libPods-SpiceItUp.a */,
+				60FE9FE4318BEA8763CD42FE /* libPods-SpiceItUp-SpiceItUpTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD5B0BC0CCB00B9AC2801B44 /* Pods-SpiceItUp.debug.xcconfig */,
-				052128874DC839F5A3B4E2C2 /* Pods-SpiceItUp.release.xcconfig */,
-				91D600CEC3CBACEA80C7FC83 /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */,
-				AD364A3EECE4402E5F1D95C0 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */,
+				AA09DDDAFD67E80465692A29 /* Pods-SpiceItUp.debug.xcconfig */,
+				E24598A6E81B5B1A45836E03 /* Pods-SpiceItUp.release.xcconfig */,
+				26519482764861A64BECD61F /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */,
+				C6C5770836D8B6C63DD07241 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -202,12 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SpiceItUpTests" */;
 			buildPhases = (
-				9394438121976BABC55C02B6 /* [CP] Check Pods Manifest.lock */,
+				A5F5FA1A82ACE32E8B062367 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				256B0FEE7CEDA12E27A5800B /* [CP] Embed Pods Frameworks */,
-				55975866EA9DCA861999A546 /* [CP] Copy Pods Resources */,
+				A2578F48418AA923CE301FF0 /* [CP] Embed Pods Frameworks */,
+				C16FAFAB2376B47D6259206A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,14 +223,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SpiceItUp" */;
 			buildPhases = (
-				14687C039FA9A23855C782FA /* [CP] Check Pods Manifest.lock */,
+				3CA927A9B34905833D104ECB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F03D85954FB5E8D525756D98 /* [CP] Embed Pods Frameworks */,
-				D1E0685698F37B69437878C3 /* [CP] Copy Pods Resources */,
+				B7DD824327A49AD1E72B5D60 /* [CP] Embed Pods Frameworks */,
+				72B8AC160ACE7E5D57D0414D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,7 +326,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		14687C039FA9A23855C782FA /* [CP] Check Pods Manifest.lock */ = {
+		3CA927A9B34905833D104ECB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +348,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		256B0FEE7CEDA12E27A5800B /* [CP] Embed Pods Frameworks */ = {
+		72B8AC160ACE7E5D57D0414D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2578F48418AA923CE301FF0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,24 +382,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		55975866EA9DCA861999A546 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9394438121976BABC55C02B6 /* [CP] Check Pods Manifest.lock */ = {
+		A5F5FA1A82ACE32E8B062367 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,24 +404,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1E0685698F37B69437878C3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F03D85954FB5E8D525756D98 /* [CP] Embed Pods Frameworks */ = {
+		B7DD824327A49AD1E72B5D60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,6 +419,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp/Pods-SpiceItUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16FAFAB2376B47D6259206A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiceItUp-SpiceItUpTests/Pods-SpiceItUp-SpiceItUpTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -490,7 +490,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91D600CEC3CBACEA80C7FC83 /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */;
+			baseConfigurationReference = 26519482764861A64BECD61F /* Pods-SpiceItUp-SpiceItUpTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -517,7 +517,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD364A3EECE4402E5F1D95C0 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */;
+			baseConfigurationReference = C6C5770836D8B6C63DD07241 /* Pods-SpiceItUp-SpiceItUpTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -541,7 +541,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD5B0BC0CCB00B9AC2801B44 /* Pods-SpiceItUp.debug.xcconfig */;
+			baseConfigurationReference = AA09DDDAFD67E80465692A29 /* Pods-SpiceItUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -568,7 +568,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 052128874DC839F5A3B4E2C2 /* Pods-SpiceItUp.release.xcconfig */;
+			baseConfigurationReference = E24598A6E81B5B1A45836E03 /* Pods-SpiceItUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
