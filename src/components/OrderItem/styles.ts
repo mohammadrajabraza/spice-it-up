@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: Dimensions.width.size18,
-    height: Dimensions.height.size10,
+    height: Dimensions.width.size18,
     ...Layouts.centered,
     borderRadius: moderateScale(12),
     overflow: 'hidden',

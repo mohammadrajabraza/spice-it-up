@@ -16,6 +16,11 @@ const delivery = require('./delivery.png')
 const pickup = require('./pickup.png')
 const subtotalCardBg = require('./subtotal-card-background.png')
 
+const paypal = require('./paypal.png')
+const visa = require('./visa.png')
+const mastercard = require('./mastercard.png')
+const locationMarker = require('./location-marker.png')
+
 module.exports = {
   splashLogo,
   onboarding1,
@@ -32,5 +37,9 @@ module.exports = {
   star,
   delivery,
   pickup,
-  subtotalCardBg
+  subtotalCardBg,
+  paypal,
+  visa,
+  mastercard,
+  locationMarker
 };

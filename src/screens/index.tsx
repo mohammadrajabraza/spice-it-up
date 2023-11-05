@@ -8,3 +8,6 @@ export { default as MenuList } from './MenuList';
 export { default as MenuItem } from './MenuItem';
 export { default as MyCart } from './MyCart';
 export { default as OrderList } from './OrderList';
+export { default as Location } from './Location';
+export { default as PaymentMethod } from './PaymentMethod';
+export { default as ConfirmOrder } from './ConfirmOrder';

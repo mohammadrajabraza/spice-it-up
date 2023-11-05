@@ -29,7 +29,7 @@ const transferMethods = ['delivery', 'pickup'];
 
 const getCartItems = () => data.cartItems;
 
-const MyCart: MyCartScreen = () => {
+const MyCart: MyCartScreen = ({ navigation }) => {
   const [selectedTransferMethod, setSelectedTransferMethod] =
     useState('delivery');
 
@@ -137,6 +137,9 @@ const MyCart: MyCartScreen = () => {
           style={{
             button: styles.checkoutButton,
             text: styles.checkoutButtonText,
+          }}
+          onPress={() => {
+            navigation.navigate(SCREENS.LOCATION)
           }}
         />
       </ImageBackground>

@@ -25,6 +25,9 @@ export type ScreensParamsList = {
   [SCREENS.MENU_LIST]: { category: string };
   [SCREENS.MENU_ITEM]: { id: number };
   [SCREENS.MY_CART]: undefined;
+  [SCREENS.LOCATION]: undefined;
+  [SCREENS.PAYMENT_METHOD]: undefined;
+  [SCREENS.CONFIRM_ORDER]: undefined;
   [SCREENS.ORDER_LIST]: undefined;
   [SCREENS.PROFILE_INFO]: undefined;
   [SCREENS.RESERVATION_LIST]: undefined;
@@ -46,7 +49,11 @@ export type MenuScreens =
   | typeof SCREENS.MENU_ITEM;
 export type MenuNavigatorParamList = Pick<ScreensParamsList, MenuScreens>;
 
-export type CartScreens = typeof SCREENS.MY_CART;
+export type CartScreens =
+  | typeof SCREENS.MY_CART
+  | typeof SCREENS.LOCATION
+  | typeof SCREENS.PAYMENT_METHOD
+  | typeof SCREENS.CONFIRM_ORDER;
 export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>;
 
 export type OrderScreens = typeof SCREENS.ORDER_LIST;
