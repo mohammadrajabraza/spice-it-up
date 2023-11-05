@@ -3,16 +3,15 @@ import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
-  keyboardAwareScrollView: {
-    flex: 1,
-  },
   container: {
-    // ...Layouts.container,
-    backgroundColor: Colors.white,
-    paddingBottom: Spacing.vertical.size56,
+    flex: 1,
   },
   contentContainer: {
     ...Layouts.container,
+    backgroundColor: Colors.white,
+    paddingBottom: Spacing.vertical.size56,
+  },
+  content: {
     backgroundColor: Colors.white,
     paddingHorizontal: Spacing.horizontal.size20,
   },

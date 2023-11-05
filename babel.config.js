@@ -11,6 +11,7 @@ module.exports = {
           navigation: './src/navigation',
           locales: './src/locales',
           containers: './src/containers',
+          layouts: './src/layouts',
           screens: './src/screens',
           styles: './src/styles',
           utils: './src/utils',

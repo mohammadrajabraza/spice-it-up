@@ -36,7 +36,7 @@ const Login: LoginScreen = ({ navigation }) => {
       contentContainerStyle={styles.container}
       pagingEnabled
     >
-      <TopBackground type='auth' />
+      <TopBackground type='auth'/>
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Login To Your Account

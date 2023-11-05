@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     height: Dimensions.height.size34,
     alignItems: 'center',
     paddingTop: Spacing.vertical.size64,
+    zIndex: 1000,
   },
   authLogo: {
     width: Dimensions.width.size36,

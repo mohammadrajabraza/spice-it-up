@@ -5,15 +5,15 @@ import { moderateScale } from 'utils/styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // ...Layouts.over,
   },
   imageBackground: {
     width: Dimensions.width.size100,
     height: Dimensions.height.size50,
-    // zIndex: -100,
   },
   scrollView: {
     flex: 1,
-    bottom: 50,
+    bottom: Dimensions.height.size10,
     borderTopStartRadius: moderateScale(25),
     borderTopEndRadius: moderateScale(25),
     backgroundColor: Colors.white,

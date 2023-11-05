@@ -47,12 +47,15 @@ const Signup: SignupScreen = () => {
 
   return (
     <KeyboardAwareScrollView
-      style={styles.keyboardAwareScrollView}
-      contentContainerStyle={styles.container}
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
       pagingEnabled
     >
-      <TopBackground showBackIcon type='auth' />
-      <View style={styles.contentContainer}>
+      <TopBackground
+        showBackIcon
+        type='auth'
+      />
+      <View style={styles.content}>
         <Typography style={styles.title} variant="heading2">
           Create Account
         </Typography>

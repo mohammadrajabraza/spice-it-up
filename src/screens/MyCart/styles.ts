@@ -1,16 +1,16 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { Colors, Dimensions, Spacing, Layouts } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
     ...Layouts.container,
-    backgroundColor: Colors.white,
   },
   wrapper: {
     flex: 1,
     ...Layouts.over,
-    paddingTop: Dimensions.height.size12,
+    paddingTop: Spacing.horizontal.size20,
+    // backgroundColor: 'transparent',
   },
   contentContainer: {
     backgroundColor: 'transparent',

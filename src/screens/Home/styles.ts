@@ -8,9 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   wrapper: {
-    // ...Layouts.container,
     ...Layouts.over,
-    paddingTop: Dimensions.height.size4,
     backgroundColor: 'transparent',
   },
   content: {

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Dimensions, Layouts } from 'styles';
+import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,8 +16,7 @@ const styles = StyleSheet.create({
       height: 8,
     },
     ...Layouts.over,
-    top: 8,
-    left: 15,
+    left: Spacing.horizontal.size16,
     ...Layouts.centered,
     pointerEvents: 'box-only',
     zIndex: 1000,
