@@ -24,6 +24,7 @@ export const SCREENS = {
   PAYMENT_METHOD: 'PaymentMethod',
   CONFIRM_ORDER: 'ConfirmOrder',
   ORDER_SUCCESS: 'OrderSuccess',
+  ORDER_FAILED: 'OrderFailed',
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',
   PROFILE_INFO: 'ProfileInfo',

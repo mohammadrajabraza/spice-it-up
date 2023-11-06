@@ -2,7 +2,14 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { CartNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import { ConfirmOrder, Location, MyCart, OrderSuccess, PaymentMethod } from 'screens';
+import {
+  ConfirmOrder,
+  Location,
+  MyCart,
+  OrderFailed,
+  OrderSuccess,
+  PaymentMethod,
+} from 'screens';
 
 const CartStack = createStackNavigator<CartNavigatorParamList>();
 
@@ -35,6 +42,11 @@ const CartNavigator = () => {
         name={SCREENS.ORDER_SUCCESS}
         component={OrderSuccess}
         key={SCREENS.ORDER_SUCCESS}
+      />
+      <CartStack.Screen
+        name={SCREENS.ORDER_FAILED}
+        component={OrderFailed}
+        key={SCREENS.ORDER_FAILED}
       />
     </CartStack.Navigator>
   );

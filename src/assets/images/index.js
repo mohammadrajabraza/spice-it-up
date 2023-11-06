@@ -6,7 +6,6 @@ const onboarding3 = require('./onboarding-3.png');
 const authBackground = require('./auth-background.png')
 
 const coreBackground = require('./core-background.png');
-const success = require('./success.png');
 const authLogo = require('./auth-logo.png')
 const smallLogo = require('./logo-small.png')
 const banner = require('./banner.png')
@@ -22,6 +21,10 @@ const paypal = require('./paypal.png')
 const visa = require('./visa.png')
 const mastercard = require('./mastercard.png')
 const locationMarker = require('./location-marker.png')
+
+const success = require('./success.png');
+const failed = require('./failed.png');
+
 
 module.exports = {
   splashLogo,
@@ -44,5 +47,6 @@ module.exports = {
   visa,
   mastercard,
   locationMarker,
-  success
+  success,
+  failed,
 };
