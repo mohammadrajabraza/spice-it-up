@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { moderateScale } from 'utils/styles';
 import Spacing from './spacing';
-import Dimensions from './dimensions';
 
 const Layouts = StyleSheet.create({
   centered: {
@@ -24,6 +23,7 @@ const Layouts = StyleSheet.create({
     top: 0,
   },
   card: {
+    width: '100%',
     flex: 1,
     flexDirection: 'row',
     backgroundColor: Colors.white,
@@ -32,7 +32,6 @@ const Layouts = StyleSheet.create({
     shadowOffset: { width: 5, height: 5 },
     shadowRadius: 10,
     shadowOpacity: 0.5,
-    alignItems: 'center',
     borderRadius: moderateScale(20),
     paddingHorizontal: Spacing.horizontal.size12,
   }

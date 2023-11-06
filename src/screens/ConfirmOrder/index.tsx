@@ -1,13 +1,14 @@
-import { SafeAreaView, View } from 'react-native';
 import React from 'react';
 import styles from './styles';
-import TopBackground from 'components/TopBackground';
 import Typography from 'components/Typography';
-import CartSummary from 'components/CartSummary/CartSummary';
-import { Colors } from 'styles';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { CartNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
+import MainLayout from 'layouts/MainLayout';
+import { Image, View } from 'react-native';
+import assets from 'assets';
+import CartSummary from 'components/CartSummary';
+import { Dimensions } from 'styles';
 
 type ConfirmOrderProps = NativeStackScreenProps<
   CartNavigatorParamList,
@@ -18,32 +19,62 @@ type ConfirmOrderScreen = React.FC<ConfirmOrderProps>;
 
 const ConfirmOrder: ConfirmOrderScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <TopBackground showBackIcon type="core" />
-      <View style={styles.wrapper}>
-        <Typography variant="heading2" style={styles.title}>
-          Confirm Order
-        </Typography>
+    <MainLayout type="core" showBackIcon scrollView>
+      <Typography variant="heading2" style={styles.title}>
+        Confirm Order
+      </Typography>
+      <View style={{ flex: 1, zIndex: 1000 }}>
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Typography variant="caption" style={styles.heading}>
+            <Typography variant="body3" style={styles.cardTitle}>
               Deliver To
             </Typography>
-            <Typography variant="caption" style={{ color: Colors.red }}>
+            <Typography variant="body3" style={styles.editText}>
               Edit
             </Typography>
           </View>
-          {/* <Typography variant="body2" style={styles.content}>
-            123, Lorem Ipsum, Lorem Street, Lorem City, Lorem State, 123456
-          </Typography> */}
+          <View style={styles.cardContent}>
+            <Image
+              source={assets.images.locationMarker}
+              resizeMode="contain"
+              style={styles.cardLocationImage}
+            />
+            <Typography variant="body3" style={styles.contentText}>
+              007 Bond Ave. Manchester, Kentucky 007, UK
+            </Typography>
+          </View>
         </View>
+
+        <View style={styles.card}>
+          <View style={styles.cardHeader}>
+            <Typography variant="body3" style={styles.cardTitle}>
+              Payment Method
+            </Typography>
+            <Typography variant="body3" style={styles.editText}>
+              Edit
+            </Typography>
+          </View>
+          <View
+            style={[styles.cardContent, { justifyContent: 'space-between' }]}
+          >
+            <Image
+              source={assets.images.paypal}
+              resizeMode="contain"
+              style={styles.cardPaymentImage}
+            />
+            <Typography variant="body3">2121 6352 8465 ****</Typography>
+          </View>
+        </View>
+
         <CartSummary
+          style={{ container: { marginTop: Dimensions.height.size15 } }}
           buttonText="Confirm Order"
-          onSubmit={() => {}}
-          style={{ container: { marginTop: 'auto' } }}
+          onSubmit={() => {
+            console.log(`Order Successful`);
+          }}
         />
       </View>
-    </SafeAreaView>
+    </MainLayout>
   );
 };
 

@@ -1,5 +1,5 @@
 import { View, ScrollView } from 'react-native';
-import React, { useRef } from 'react';
+import React from 'react';
 import styles from './styles';
 import TopBackground, { TopBackgroundProps } from 'components/TopBackground';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
