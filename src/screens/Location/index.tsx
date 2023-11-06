@@ -53,7 +53,7 @@ const Location: LocationScreen = ({ navigation }) => {
                   resizeMode="contain"
                   style={styles.cardImage}
                 />
-                <Typography variant="body3">{item.address}</Typography>
+                <Typography variant="body3" style={styles.address}>{item.address}</Typography>
               </View>
             </TouchableOpacity>
           );

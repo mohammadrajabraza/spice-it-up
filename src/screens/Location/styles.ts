@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   card: {
-    height: Dimensions.height.size18,
+    height: Dimensions.height.size15,
     width: '100%',
     backgroundColor: Colors.white,
     justifyContent: 'center',
@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
     // paddingTop: Spacing.vertical.size24,
   },
+  address: {
+    width: Dimensions.width.size70
+  }
 })
 
 export default styles;
