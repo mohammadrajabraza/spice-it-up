@@ -49,7 +49,7 @@ const Signup: SignupScreen = () => {
     <KeyboardAwareScrollView
       style={styles.container}
       contentContainerStyle={styles.contentContainer}
-      pagingEnabled
+      // pagingEnabled
     >
       <TopBackground
         showBackIcon

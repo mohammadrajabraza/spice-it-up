@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { Colors, Dimensions, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -7,13 +7,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    ...Layouts.container,
     backgroundColor: Colors.white,
-    paddingBottom: Spacing.vertical.size56,
   },
   content: {
     backgroundColor: Colors.white,
     paddingHorizontal: Spacing.horizontal.size20,
+    paddingBottom: Spacing.vertical.size56,
   },
   title: {
     textAlign: 'center',
