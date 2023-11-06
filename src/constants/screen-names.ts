@@ -23,6 +23,7 @@ export const SCREENS = {
   LOCATION: 'Location',
   PAYMENT_METHOD: 'PaymentMethod',
   CONFIRM_ORDER: 'ConfirmOrder',
+  ORDER_SUCCESS: 'OrderSuccess',
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',
   PROFILE_INFO: 'ProfileInfo',

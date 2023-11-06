@@ -28,6 +28,7 @@ export type ScreensParamsList = {
   [SCREENS.LOCATION]: undefined;
   [SCREENS.PAYMENT_METHOD]: undefined;
   [SCREENS.CONFIRM_ORDER]: undefined;
+  [SCREENS.ORDER_SUCCESS]: undefined;
   [SCREENS.ORDER_LIST]: undefined;
   [SCREENS.PROFILE_INFO]: undefined;
   [SCREENS.RESERVATION_LIST]: undefined;
@@ -53,7 +54,8 @@ export type CartScreens =
   | typeof SCREENS.MY_CART
   | typeof SCREENS.LOCATION
   | typeof SCREENS.PAYMENT_METHOD
-  | typeof SCREENS.CONFIRM_ORDER;
+  | typeof SCREENS.CONFIRM_ORDER
+  | typeof SCREENS.ORDER_SUCCESS;
 export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>;
 
 export type OrderScreens = typeof SCREENS.ORDER_LIST;

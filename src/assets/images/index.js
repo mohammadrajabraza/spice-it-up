@@ -4,7 +4,9 @@ const onboarding1 = require('./onboarding-1.png');
 const onboarding2 = require('./onboarding-2.png');
 const onboarding3 = require('./onboarding-3.png');
 const authBackground = require('./auth-background.png')
+
 const coreBackground = require('./core-background.png');
+const success = require('./success.png');
 const authLogo = require('./auth-logo.png')
 const smallLogo = require('./logo-small.png')
 const banner = require('./banner.png')
@@ -41,5 +43,6 @@ module.exports = {
   paypal,
   visa,
   mastercard,
-  locationMarker
+  locationMarker,
+  success
 };

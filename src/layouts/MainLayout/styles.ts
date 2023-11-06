@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Layouts, Colors, Spacing, Dimensions, } from 'styles'
+import { Layouts, Colors, Spacing, } from 'styles'
 
 
 const styles = StyleSheet.create({
@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   wrapper: {
-    // ...Layouts.over,
     backgroundColor: 'transparent',
   },
   content: {

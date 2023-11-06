@@ -11,7 +11,7 @@ const colors = {
   grey100: '#D9D9D9',
   typography20: '#3B3B3B',
   red: '#EE4D4D',
-  green: '#9FCC29',
+  green: '#24C97C',
   blue: '#1F8BDA',
   purple: '#4F1FDA',
   yellow: '#EBEF14',

@@ -17,7 +17,7 @@ type ConfirmOrderProps = NativeStackScreenProps<
 
 type ConfirmOrderScreen = React.FC<ConfirmOrderProps>;
 
-const ConfirmOrder: ConfirmOrderScreen = () => {
+const ConfirmOrder: ConfirmOrderScreen = ({ navigation }) => {
   return (
     <MainLayout type="core" showBackIcon scrollView>
       <Typography variant="heading2" style={styles.title}>
@@ -70,7 +70,7 @@ const ConfirmOrder: ConfirmOrderScreen = () => {
           style={{ container: { marginTop: Dimensions.height.size15 } }}
           buttonText="Confirm Order"
           onSubmit={() => {
-            console.log(`Order Successful`);
+            navigation.navigate(SCREENS.ORDER_SUCCESS);
           }}
         />
       </View>

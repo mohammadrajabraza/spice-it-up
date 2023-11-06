@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Dimensions, Spacing, Layouts } from 'styles';
+import { Dimensions, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   background: {
