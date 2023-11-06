@@ -1,8 +1,9 @@
 import { Image, ImageBackground, ImageSourcePropType } from 'react-native';
-import React, { memo } from 'react';
+import React from 'react';
 import assets from 'assets';
 import styles from './styles';
 import GoBack from 'components/GoBack';
+import { Layouts } from 'styles';
 
 export type TopBackgroundProps = {
   showBackIcon?: boolean;
@@ -15,26 +16,31 @@ export type TopBackgroundProps = {
   | { type: 'custom'; image: ImageSourcePropType }
 );
 
-const TopBackground: React.FC<TopBackgroundProps> = memo(
+const TopBackground: React.FC<TopBackgroundProps> = React.memo(
   ({ type, showBackIcon, ...rest }) => {
     return (
-      <ImageBackground
-        source={
-          type === 'custom' ? rest.image : assets.images[`${type}Background`]
-        }
-        style={styles.background}
-        resizeMode="cover"
-      >
+      <>
         {showBackIcon && <GoBack />}
 
-        {type === 'auth' ? (
-          <Image
-            source={assets.images.authLogo}
-            style={styles.authLogo}
-            resizeMode="contain"
-          />
-        ) : null}
-      </ImageBackground>
+        <ImageBackground
+          source={
+            type === 'custom' ? rest.image : assets.images[`${type}Background`]
+          }
+          style={[
+            styles.background,
+            type === 'core' ? { ...Layouts.over } : {},
+          ]}
+          resizeMode="cover"
+        >
+          {type === 'auth' ? (
+            <Image
+              source={assets.images.authLogo}
+              style={styles.authLogo}
+              resizeMode="contain"
+            />
+          ) : null}
+        </ImageBackground>
+      </>
     );
   },
 );

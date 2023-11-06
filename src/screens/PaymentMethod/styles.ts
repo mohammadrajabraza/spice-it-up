@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(20),
     paddingHorizontal: Spacing.horizontal.size20,
     marginBottom: Spacing.vertical.size16,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   notPrimaryCard: {
     backgroundColor: '#F6F6F6',

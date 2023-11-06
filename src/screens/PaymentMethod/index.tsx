@@ -5,12 +5,11 @@ import { SCREENS } from 'constants/screen-names';
 import MainLayout from 'layouts/MainLayout';
 import Typography from 'components/Typography';
 import {
-  FlatList,
   Image,
   TouchableHighlight,
-  TouchableOpacity,
   View,
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import assets from 'assets';
 import styles from './styles';
 
@@ -43,21 +42,21 @@ const data = [
 type PaymentMethodScreen = React.FC<PaymentMethodProps>;
 
 const PaymentMethod: PaymentMethodScreen = ({ navigation }) => {
+  const handlePress = () => {
+    navigation.navigate(SCREENS.CONFIRM_ORDER);
+  };
+
   return (
-    <MainLayout type="core" showBackIcon>
+    <MainLayout type="core" showBackIcon scrollView>
       <Typography variant="heading2" style={styles.title}>
         Payment Method
       </Typography>
-      <FlatList
-        data={data}
-        renderItem={({ item }) => {
-          const handlePress = () => {
-            navigation.navigate(SCREENS.CONFIRM_ORDER);
-          };
+      <View style={{ flex: 1, zIndex: 1000 }}>
+        {data.map((item) => {
           return (
             <TouchableOpacity
               onPress={handlePress}
-              // disabled={!item.isPrimary}
+              key={item.id}
               style={[styles.card, !item.isPrimary && styles.notPrimaryCard]}
             >
               <TouchableHighlight onPress={handlePress}>
@@ -82,10 +81,8 @@ const PaymentMethod: PaymentMethodScreen = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           );
-        }}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.list}
-      />
+        })}
+      </View>
     </MainLayout>
   );
 };

@@ -1,5 +1,5 @@
 import { View, ScrollView } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './styles';
 import TopBackground, { TopBackgroundProps } from 'components/TopBackground';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -20,6 +20,7 @@ const MainLayout = (props: Props): React.JSX.Element => {
   const insets = useSafeAreaInsets();
   const paddingTop =
     insets.top + (props.showBackIcon ? Dimensions.height.size8 : 0);
+
   return (
     <View style={styles.container}>
       <TopBackground
@@ -27,7 +28,7 @@ const MainLayout = (props: Props): React.JSX.Element => {
       />
       {props.scrollView && (
         <ScrollView
-          style={[styles.wrapper]}
+          style={[[styles.wrapper]]}
           contentContainerStyle={[styles.content, { paddingTop }]}
         >
           {props.children}
