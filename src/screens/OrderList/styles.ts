@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,6 +21,30 @@ const styles = StyleSheet.create({
   },
   orderList: {
     // gap: Spacing.vertical.size12,
+  },
+  noOrderContainer: {
+    ...Layouts.centered,
+    gap: 15,
+    flex: 0.9,
+  },
+  noOrderImageContainer: {
+    width: Dimensions.width.size25,
+    height: Dimensions.width.size25,
+    borderRadius: Dimensions.width.size25,
+    ...Layouts.centered,
+    backgroundColor: `${Colors.red}10`
+  },
+  noOrderTitle: {
+    color: Colors.red,
+    fontSize: moderateScale(30),
+    textAlign: 'center'
+  },
+  noOrderDescription: {
+    textAlign: 'center',
+    width: Dimensions.width.size70
+  },
+  noOrderButton: {
+    marginTop: Spacing.vertical.size20,
   }
 });
 

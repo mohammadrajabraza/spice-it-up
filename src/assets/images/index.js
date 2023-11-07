@@ -25,6 +25,8 @@ const locationMarker = require('./location-marker.png')
 const success = require('./success.png');
 const failed = require('./failed.png');
 
+const noOrder = require('./no-order.png')
+
 
 module.exports = {
   splashLogo,
@@ -49,4 +51,5 @@ module.exports = {
   locationMarker,
   success,
   failed,
+  noOrder,
 };
