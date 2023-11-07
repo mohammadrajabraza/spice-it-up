@@ -7,6 +7,7 @@ import {
   Location,
   MyCart,
   OrderFailed,
+  OrderStatus,
   OrderSuccess,
   PaymentMethod,
 } from 'screens';
@@ -47,6 +48,11 @@ const CartNavigator = () => {
         name={SCREENS.ORDER_FAILED}
         component={OrderFailed}
         key={SCREENS.ORDER_FAILED}
+      />
+      <CartStack.Screen
+        name={SCREENS.ORDER_STATUS}
+        component={OrderStatus}
+        key={SCREENS.ORDER_STATUS}
       />
     </CartStack.Navigator>
   );

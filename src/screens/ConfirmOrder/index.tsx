@@ -70,7 +70,7 @@ const ConfirmOrder: ConfirmOrderScreen = ({ navigation }) => {
           style={{ container: { marginTop: Dimensions.height.size15 } }}
           buttonText="Confirm Order"
           onSubmit={() => {
-            navigation.navigate(SCREENS.ORDER_FAILED);
+            navigation.navigate(SCREENS.ORDER_SUCCESS);
           }}
         />
       </View>

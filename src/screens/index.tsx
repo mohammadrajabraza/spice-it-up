@@ -13,3 +13,4 @@ export { default as PaymentMethod } from './PaymentMethod';
 export { default as ConfirmOrder } from './ConfirmOrder';
 export { default as OrderSuccess } from './OrderSuccess';
 export { default as OrderFailed } from './OrderFailed';
+export { default as OrderStatus } from './OrderStatus';

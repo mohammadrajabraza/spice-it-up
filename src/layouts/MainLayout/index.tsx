@@ -3,19 +3,15 @@ import React from 'react';
 import styles from './styles';
 import TopBackground, { TopBackgroundProps } from 'components/TopBackground';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Dimensions } from 'styles';
+import { Colors, Dimensions, Spacing } from 'styles';
 
 type Props = {
   children: React.ReactNode;
   scrollView?: boolean;
-} & TopBackgroundProps; 
+} & TopBackgroundProps;
 
 const MainLayout = (props: Props): React.JSX.Element => {
-  const {
-    children,
-    scrollView = false,
-    ...rest
-  } = props;
+  const { children, scrollView = false, ...rest } = props;
 
   const insets = useSafeAreaInsets();
   const paddingTop =
@@ -23,9 +19,7 @@ const MainLayout = (props: Props): React.JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <TopBackground
-        {...rest}
-      />
+      <TopBackground {...rest} />
       {props.scrollView && (
         <ScrollView
           style={[[styles.wrapper]]}
@@ -35,7 +29,17 @@ const MainLayout = (props: Props): React.JSX.Element => {
         </ScrollView>
       )}
       {!props?.scrollView && (
-        <View style={[styles.wrapper, styles.content, { paddingTop }]}>
+        <View
+          style={[
+            styles.wrapper,
+            styles.content,
+            {
+              paddingTop,
+              minHeight: Dimensions.screenHeight - Spacing.vertical.size28,
+              marginBottom: Spacing.vertical.size28,
+            },
+          ]}
+        >
           {props.children}
         </View>
       )}

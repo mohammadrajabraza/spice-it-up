@@ -16,7 +16,7 @@ type OrderSuccessProps = NativeStackScreenProps<
 
 type OrderSuccessScreen = React.FC<OrderSuccessProps>;
 
-const OrderSuccess: OrderSuccessScreen = () => {
+const OrderSuccess: OrderSuccessScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -44,6 +44,9 @@ const OrderSuccess: OrderSuccessScreen = () => {
           color="primary"
           title="Track Order"
           style={{ text: { color: Colors.white } }}
+          onPress={() => {
+            navigation.navigate(SCREENS.ORDER_STATUS);
+          }}
         />
       </View>
     </View>
