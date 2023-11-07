@@ -26,8 +26,6 @@ const data = [
   },
 ];
 
-console.log(data);
-
 type LocationScreen = React.FC<LocationProps>;
 
 const Location: LocationScreen = ({ navigation }) => {

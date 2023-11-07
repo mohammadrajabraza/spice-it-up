@@ -63,7 +63,6 @@ const TabBar: React.FC<BottomTabBarProps> = ({
             });
 
             if (!isFocused && !event.defaultPrevented) {
-              console.log({ route });
               navigation.navigate(route.name, route.params);
             }
           };
