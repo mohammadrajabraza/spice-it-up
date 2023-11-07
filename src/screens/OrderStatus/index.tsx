@@ -32,7 +32,7 @@ const cartItems = [
   },
 ];
 
-const OrderStatus: OrderStatusScreen = () => {
+const OrderStatus: OrderStatusScreen = ({ navigation }) => {
   return (
     <MainLayout type="core" showBackIcon>
       <View style={styles.content}>
@@ -114,6 +114,9 @@ const OrderStatus: OrderStatusScreen = () => {
           style={{
             text: { color: Colors.white },
             button: { marginTop: 'auto' },
+          }}
+          onPress={() => {
+            navigation.navigate(SCREENS.FEEDBACK)
           }}
         />
       </View>

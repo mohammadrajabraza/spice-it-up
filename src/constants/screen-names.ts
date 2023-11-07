@@ -26,6 +26,7 @@ export const SCREENS = {
   ORDER_SUCCESS: 'OrderSuccess',
   ORDER_FAILED: 'OrderFailed',
   ORDER_STATUS: 'OrderStatus',
+  FEEDBACK: 'Feedback',
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',
   PROFILE_INFO: 'ProfileInfo',

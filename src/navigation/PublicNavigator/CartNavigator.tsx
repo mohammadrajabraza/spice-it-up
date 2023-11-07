@@ -4,6 +4,7 @@ import { CartNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
 import {
   ConfirmOrder,
+  Feedback,
   Location,
   MyCart,
   OrderFailed,
@@ -53,6 +54,12 @@ const CartNavigator = () => {
         name={SCREENS.ORDER_STATUS}
         component={OrderStatus}
         key={SCREENS.ORDER_STATUS}
+      />
+
+      <CartStack.Screen
+        name={SCREENS.FEEDBACK}
+        component={Feedback}
+        key={SCREENS.FEEDBACK}
       />
     </CartStack.Navigator>
   );
