@@ -16,3 +16,4 @@ export { default as OrderFailed } from './OrderFailed';
 export { default as OrderStatus } from './OrderStatus';
 export { default as Feedback } from './Feedback';
 export { default as ReservationList } from './ReservationList';
+export { default as CreateReservation } from './CreateReservation';

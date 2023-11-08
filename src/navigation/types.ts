@@ -35,6 +35,7 @@ export type ScreensParamsList = {
   [SCREENS.ORDER_LIST]: undefined;
   [SCREENS.PROFILE_INFO]: undefined;
   [SCREENS.RESERVATION_LIST]: undefined;
+  [SCREENS.CREATE_RESERVATION]: undefined;
 };
 
 export type DevScreens =
@@ -71,7 +72,9 @@ export type OrderNavigatorParamList = Pick<ScreensParamsList, OrderScreens>;
 export type ProfileScreens = typeof SCREENS.PROFILE_INFO;
 export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>;
 
-export type ReservationScreens = typeof SCREENS.RESERVATION_LIST;
+export type ReservationScreens =
+  | typeof SCREENS.RESERVATION_LIST
+  | typeof SCREENS.CREATE_RESERVATION;
 export type ReservationNavigatorParamList = Pick<
   ScreensParamsList,
   ReservationScreens

@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { moderateScale } from 'utils/styles';
 import Spacing from './spacing';
+import Colors from './colors'
 
 const Layouts = StyleSheet.create({
   centered: {
@@ -24,17 +24,19 @@ const Layouts = StyleSheet.create({
   },
   card: {
     width: '100%',
-    flex: 1,
-    flexDirection: 'row',
     backgroundColor: Colors.white,
+    justifyContent: 'center',
+    gap: 10,
     elevation: 3,
     shadowColor: Colors.darkGrey,
     shadowOffset: { width: 5, height: 5 },
     shadowRadius: 10,
-    shadowOpacity: 0.5,
+    shadowOpacity: 0.8,
     borderRadius: moderateScale(20),
-    paddingHorizontal: Spacing.horizontal.size12,
-  }
+    paddingHorizontal: Spacing.horizontal.size16,
+    marginBottom: Spacing.vertical.size8,
+    paddingVertical: Spacing.vertical.size20,
+  },
 });
 
 export default Layouts;

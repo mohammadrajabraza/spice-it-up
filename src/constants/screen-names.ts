@@ -29,5 +29,6 @@ export const SCREENS = {
   FEEDBACK: 'Feedback',
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',
+  CREATE_RESERVATION: 'CreateReservation',
   PROFILE_INFO: 'ProfileInfo',
 } as const;

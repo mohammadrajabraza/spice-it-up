@@ -129,7 +129,7 @@ const ReservationList: ReservationListScreen = ({ navigation }) => {
               },
             }}
             onPress={() => {
-              console.log('Make Reservations');
+              navigation.navigate(SCREENS.CREATE_RESERVATION)
             }}
           />
     </MainLayout>

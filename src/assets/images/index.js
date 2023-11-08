@@ -27,6 +27,7 @@ const failed = require('./failed.png');
 
 const noOrder = require('./no-order.png')
 
+const profilePic = require('./photoProfile.png')
 
 module.exports = {
   splashLogo,
@@ -52,4 +53,5 @@ module.exports = {
   success,
   failed,
   noOrder,
+  profilePic,
 };

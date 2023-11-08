@@ -74,7 +74,7 @@ const Button: ButtonComponent = (props) => {
     style,
     onPress,
     ...other
-  } = Object.assign(defaultProps, props);
+  } = { ...defaultProps, ...props  };
 
   const [isPressed, setIsPressed] = useState(false);
 
