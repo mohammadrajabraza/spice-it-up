@@ -26,7 +26,7 @@ type CreateReservationScreen = React.FC<CreateReservationProps>;
 
 const iconSize = moderateScale(25);
 
-const CreateReservation: CreateReservationScreen = () => {
+const CreateReservation: CreateReservationScreen = ({ navigation }) => {
   const [noOfGuests, setNoOfGuests] = useState(1)
 
   return (
@@ -94,6 +94,9 @@ const CreateReservation: CreateReservationScreen = () => {
         color='primary'
         title='Confirm'
         style={{ button: { marginBottom: Dimensions.height.size5 } }}
+        onPress={() => {
+          navigation.navigate(SCREENS.RESERVATION_SUCCESS)
+        }}
       />
     </MainLayout>
   );

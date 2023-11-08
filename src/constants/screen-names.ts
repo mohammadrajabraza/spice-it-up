@@ -30,5 +30,6 @@ export const SCREENS = {
   ORDER_LIST: 'OrderList',
   RESERVATION_LIST: 'ReservationList',
   CREATE_RESERVATION: 'CreateReservation',
+  RESERVATION_SUCCESS: 'ReservationSuccess',
   PROFILE_INFO: 'ProfileInfo',
 } as const;
