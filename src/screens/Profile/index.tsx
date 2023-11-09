@@ -83,11 +83,16 @@ const Profile: ProfileScreen = ({ navigation }) => {
             <CurrencyIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Payment Method</Typography>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            style={styles.card}
+          >
             <FaqsIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">FAQs</Typography>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.ABOUT_US)}
+            style={styles.card}
+          >
             <AboutUsIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">About Us</Typography>
           </TouchableOpacity>

@@ -35,4 +35,5 @@ export const SCREENS = {
   EDIT_PROFILE: 'EditProfile',
   CHANGE_PASSWORD: 'ChangePassword',
   LANGUAGE: 'Language',
+  ABOUT_US: 'AboutUs',
 } as const;

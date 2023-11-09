@@ -37,6 +37,7 @@ export type ScreensParamsList = {
   [SCREENS.EDIT_PROFILE]: undefined;
   [SCREENS.CHANGE_PASSWORD]: undefined;
   [SCREENS.LANGUAGE]: undefined;
+  [SCREENS.ABOUT_US]: undefined;
   [SCREENS.RESERVATION_LIST]: undefined;
   [SCREENS.CREATE_RESERVATION]: undefined;
   [SCREENS.RESERVATION_SUCCESS]: undefined;
@@ -76,7 +77,8 @@ export type ProfileScreens =
   | typeof SCREENS.PROFILE
   | typeof SCREENS.EDIT_PROFILE
   | typeof SCREENS.CHANGE_PASSWORD
-  | typeof SCREENS.LANGUAGE;
+  | typeof SCREENS.LANGUAGE
+  | typeof SCREENS.ABOUT_US;
 export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>;
 
 export type ReservationScreens =
