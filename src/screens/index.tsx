@@ -18,3 +18,4 @@ export { default as Feedback } from './Feedback';
 export { default as ReservationList } from './ReservationList';
 export { default as CreateReservation } from './CreateReservation';
 export { default as ReservationSuccess } from './ReservationSuccess'
+export { default as Profile } from './Profile'
