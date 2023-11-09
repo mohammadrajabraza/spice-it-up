@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PublicNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import styles, { phoneInputStyle } from './styles';
+import styles from './styles';
 import Typography from 'components/Typography';
 import useFormState from 'hooks/use-form-state';
 import Input from 'components/Input';
 import Button from 'components/Button';
+import PhoneInput from 'components/PhoneInput';
 
 import CheckBox from '@react-native-community/checkbox';
 import { Colors } from 'styles';
@@ -18,7 +19,7 @@ import UserIcon from 'assets/svgs/user.svg';
 import MailIcon from 'assets/svgs/mail.svg';
 import PasswordIcon from 'assets/svgs/password.svg';
 import { moderateScale } from 'utils/styles';
-import PhoneInput, { ICountry } from 'react-native-international-phone-number';
+import { ICountry } from 'react-native-international-phone-number';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -51,10 +52,7 @@ const Signup: SignupScreen = () => {
       contentContainerStyle={styles.contentContainer}
       // pagingEnabled
     >
-      <TopBackground
-        showBackIcon
-        type='auth'
-      />
+      <TopBackground showBackIcon type="auth" />
       <View style={styles.content}>
         <Typography style={styles.title} variant="heading2">
           Create Account
@@ -93,12 +91,6 @@ const Signup: SignupScreen = () => {
           value={values.phone}
           onChangePhoneNumber={handleChange('phone')}
           selectedCountry={values.country}
-          placeholder="111 234 5678"
-          keyboardType="phone-pad"
-          verticalAlign="middle"
-          language="en"
-          defaultCountry="US"
-          phoneInputStyle={phoneInputStyle}
           onChangeSelectedCountry={handleChange('country')}
         />
         <Input
