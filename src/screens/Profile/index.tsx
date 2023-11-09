@@ -72,7 +72,10 @@ const Profile: ProfileScreen = ({ navigation }) => {
             <NotificationIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Notifications</Typography>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.LANGUAGE)}
+            style={styles.card}
+          >
             <LanguageIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Language</Typography>
           </TouchableOpacity>
