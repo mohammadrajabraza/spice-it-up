@@ -6,6 +6,7 @@ export interface InputProps extends Omit<TextInputProps, 'style'> {
   textInputStyle?: TextStyle;
   InputLeftElement?: React.ReactNode;
   InputRightElement?: React.ReactNode;
+  label?: string;
 }
 
 export type InputComponent = React.FC<InputProps>;

@@ -6,6 +6,7 @@ import { Colors } from 'styles';
 import type { InputComponent, InputProps } from './input.types';
 import styles from './styles';
 import { OptionalPropertyOf } from 'types/utils';
+import Typography from 'components/Typography';
 
 const defaultProps: Required<
   OptionalPropertyOf<Omit<InputProps, keyof TextInputProps>>
@@ -14,6 +15,7 @@ const defaultProps: Required<
   textInputStyle: {},
   InputLeftElement: null,
   InputRightElement: null,
+  label: ''
 };
 
 const Input: InputComponent = (props) => {
@@ -22,18 +24,22 @@ const Input: InputComponent = (props) => {
     textInputStyle,
     InputLeftElement,
     InputRightElement,
+    label,
     ...restInput
   } = { ...defaultProps, ...props };
   return (
     <View style={[styles.container, containerStyle]}>
       {InputLeftElement}
-      <TextInput
-        style={[styles.textInputStyle, textInputStyle]}
-        autoCapitalize="none"
-        autoCorrect={false}
-        placeholderTextColor={Colors.darkGrey}
-        {...restInput}
-      />
+      <View style={[styles.textInputContainer, textInputStyle]}>
+        {!!label && <Typography variant='caption' style={styles.label}>{label}</Typography>} 
+        <TextInput
+          style={[styles.textInput]}
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholderTextColor={Colors.darkGrey}
+          {...restInput}
+        />
+      </View>
       {InputRightElement}
     </View>
   );

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors, Dimensions, Spacing } from 'styles';
+import { Colors, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -14,14 +14,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     marginVertical: Spacing.vertical.size8,
     width: '100%',
-    height: Dimensions.height.size8,
+    paddingVertical: Spacing.vertical.size16,
   },
-  textInputStyle: {
+  textInputContainer: {
     flex: 1,
     paddingHorizontal: Spacing.horizontal.size16,
+    flexDirection: 'column',
+    gap: 2
+  },
+  textInput: {
     fontSize: moderateScale(15),
     color: Colors.black,
   },
+  label: {
+    color: `${Colors.typography20}aa`,
+    fontSize: moderateScale(11),
+    paddingHorizontal: 1,
+  }
 });
 
 export default styles;
