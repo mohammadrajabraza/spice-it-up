@@ -34,13 +34,17 @@ type ProfileScreen = React.FC<ProfileProps>;
 
 const iconSize = moderateScale(18);
 
-const Profile: ProfileScreen = () => {
+const Profile: ProfileScreen = ({ navigation }) => {
   return (
     <MainLayout type="core" scrollView>
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableHighlight style={styles.imageContainer}>
-            <Image source={assets.images.profilePicX2} resizeMode="contain" />
+            <Image
+              source={assets.images.profilePicX2}
+              resizeMode="contain"
+              style={styles.image}
+            />
           </TouchableHighlight>
           <View style={styles.cameraIcon}>
             <CameraIcon width={moderateScale(25)} height={moderateScale(25)} />
@@ -50,7 +54,10 @@ const Profile: ProfileScreen = () => {
         </View>
 
         <View style={styles.list}>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.EDIT_PROFILE)}
+            style={styles.card}
+          >
             <ProfileIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Profile</Typography>
           </TouchableOpacity>

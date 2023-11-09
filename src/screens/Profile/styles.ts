@@ -18,6 +18,11 @@ const styles = StyleSheet.create({
     width: Dimensions.width.size50,
     height: Dimensions.width.size50,
     borderRadius: Dimensions.width.size60,
+    overflow: 'hidden',
+  },
+  image: {
+    width: Dimensions.width.size50,
+    height: Dimensions.width.size50,
   },
   cameraIcon: {
     ...Layouts.over,
@@ -29,12 +34,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.grey,
     ...Layouts.centered,
   },
-  list: { 
+  list: {
     marginVertical: Spacing.vertical.size24,
-    flex: 1, 
-    alignItems: 'center', 
+    flex: 1,
+    alignItems: 'center',
     width: '100%',
-    gap: 5 
+    gap: 5,
   },
   card: {
     ...Layouts.card,
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     flexDirection: 'row',
     gap: moderateScale(15),
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });
 

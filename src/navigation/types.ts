@@ -34,6 +34,7 @@ export type ScreensParamsList = {
   [SCREENS.FEEDBACK]: undefined;
   [SCREENS.ORDER_LIST]: undefined;
   [SCREENS.PROFILE]: undefined;
+  [SCREENS.EDIT_PROFILE]: undefined;
   [SCREENS.RESERVATION_LIST]: undefined;
   [SCREENS.CREATE_RESERVATION]: undefined;
   [SCREENS.RESERVATION_SUCCESS]: undefined;
@@ -64,13 +65,14 @@ export type CartScreens =
   | typeof SCREENS.ORDER_FAILED
   | typeof SCREENS.ORDER_STATUS
   | typeof SCREENS.FEEDBACK;
-
 export type CartNavigatorParamList = Pick<ScreensParamsList, CartScreens>;
 
 export type OrderScreens = typeof SCREENS.ORDER_LIST;
 export type OrderNavigatorParamList = Pick<ScreensParamsList, OrderScreens>;
 
-export type ProfileScreens = typeof SCREENS.PROFILE;
+export type ProfileScreens =
+  | typeof SCREENS.PROFILE
+  | typeof SCREENS.EDIT_PROFILE
 export type ProfileNavigatorParamList = Pick<ScreensParamsList, ProfileScreens>;
 
 export type ReservationScreens =

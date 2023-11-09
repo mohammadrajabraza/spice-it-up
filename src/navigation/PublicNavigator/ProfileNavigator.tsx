@@ -1,9 +1,8 @@
-import { View } from 'reac-native';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ProfileNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import { Profile } from 'screens';
+import { EditProfile, Profile } from 'screens';
 
 const ProfileStack = createStackNavigator<ProfileNavigatorParamList>();
 
@@ -19,6 +18,11 @@ const ProfileNavigator = () => {
         name={SCREENS.PROFILE}
         component={Profile}
         key={SCREENS.PROFILE}
+      />
+      <ProfileStack.Screen
+        name={SCREENS.EDIT_PROFILE}
+        component={EditProfile}
+        key={SCREENS.EDIT_PROFILE}
       />
     </ProfileStack.Navigator>
   );

@@ -32,4 +32,5 @@ export const SCREENS = {
   CREATE_RESERVATION: 'CreateReservation',
   RESERVATION_SUCCESS: 'ReservationSuccess',
   PROFILE: 'Profile',
+  EDIT_PROFILE: 'EditProfile',
 } as const;
