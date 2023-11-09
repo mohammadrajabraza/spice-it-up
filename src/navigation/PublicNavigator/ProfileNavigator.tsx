@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ProfileNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import { EditProfile, Profile } from 'screens';
+import { EditProfile, Profile, ChangePassword } from 'screens';
 
 const ProfileStack = createStackNavigator<ProfileNavigatorParamList>();
 
@@ -23,6 +23,11 @@ const ProfileNavigator = () => {
         name={SCREENS.EDIT_PROFILE}
         component={EditProfile}
         key={SCREENS.EDIT_PROFILE}
+      />
+      <ProfileStack.Screen
+        name={SCREENS.CHANGE_PASSWORD}
+        component={ChangePassword}
+        key={SCREENS.CHANGE_PASSWORD}
       />
     </ProfileStack.Navigator>
   );

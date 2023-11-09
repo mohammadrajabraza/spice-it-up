@@ -20,3 +20,4 @@ export { default as CreateReservation } from './CreateReservation';
 export { default as ReservationSuccess } from './ReservationSuccess'
 export { default as Profile } from './Profile'
 export { default as EditProfile } from './EditProfile'
+export { default as ChangePassword } from './ChangePassword'

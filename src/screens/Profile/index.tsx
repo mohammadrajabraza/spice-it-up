@@ -61,7 +61,10 @@ const Profile: ProfileScreen = ({ navigation }) => {
             <ProfileIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Profile</Typography>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.CHANGE_PASSWORD)}
+            style={styles.card}
+          >
             <PasswordIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Change Password</Typography>
           </TouchableOpacity>

@@ -33,4 +33,5 @@ export const SCREENS = {
   RESERVATION_SUCCESS: 'ReservationSuccess',
   PROFILE: 'Profile',
   EDIT_PROFILE: 'EditProfile',
+  CHANGE_PASSWORD: 'ChangePassword'
 } as const;
