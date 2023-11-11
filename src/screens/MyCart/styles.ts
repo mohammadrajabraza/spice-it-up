@@ -52,6 +52,8 @@ const styles = StyleSheet.create({
   cartItems: {
     alignItems: 'center',
     gap: moderateScale(15),
+    width: Dimensions.width.size100,
+    left: -Spacing.horizontal.globalHorizontalPadding,
   },
   cartTotalCard: {
     // marginTop: Spacing.vertical.size28,

@@ -14,7 +14,7 @@ const colors = {
   green: '#24C97C',
   blue: '#1F8BDA',
   purple: '#4F1FDA',
-  yellow: '#EBEF14',
+  yellow: '#FEAD1D',
   orange: '#F0821D',
   meriGold: '#FFCB45',
   brown: '#5A1A05',
