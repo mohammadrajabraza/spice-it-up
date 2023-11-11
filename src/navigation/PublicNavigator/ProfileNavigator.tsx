@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ProfileNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import { EditProfile, Profile, ChangePassword, Language, AboutUs } from 'screens';
+import { EditProfile, Profile, ChangePassword, Language, Faqs, AboutUs } from 'screens';
 
 const ProfileStack = createStackNavigator<ProfileNavigatorParamList>();
 
@@ -33,6 +33,11 @@ const ProfileNavigator = () => {
         name={SCREENS.LANGUAGE}
         component={Language}
         key={SCREENS.LANGUAGE}
+      />
+      <ProfileStack.Screen
+        name={SCREENS.FAQS}
+        component={Faqs}
+        key={SCREENS.FAQS}
       />
       <ProfileStack.Screen
         name={SCREENS.ABOUT_US}
