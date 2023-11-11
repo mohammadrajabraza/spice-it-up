@@ -37,12 +37,12 @@ const TabBar: React.FC<BottomTabBarProps> = ({
   const route = state.routes[state.index];
   const tabName = route.name as keyof typeof CoreNavigatorsInitialScreen;
   const focusedRouteName = getFocusedRouteNameFromRoute(route);
-
+  
   if (
     !focusedRouteName ||
     CoreNavigatorsInitialScreen[tabName] !== focusedRouteName
   ) {
-    return <></>;
+    return <></>
   }
 
   return (

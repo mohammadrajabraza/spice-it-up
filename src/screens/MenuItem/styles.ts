@@ -1,21 +1,24 @@
-import { StatusBar, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // ...Layouts.over,
+    minHeight: Dimensions.screenHeight,
+    backgroundColor: Colors.black
   },
   imageBackground: {
     width: Dimensions.width.size100,
     height: Dimensions.height.size50,
   },
   scrollView: {
-    flex: 1,
-    bottom: Dimensions.height.size10,
+    minHeight: Dimensions.height.size55,
+    bottom: Dimensions.height.size12,
     borderTopStartRadius: moderateScale(25),
     borderTopEndRadius: moderateScale(25),
+    overflow: 'hidden',
+    // borderStartEndRadius: moderateScale(25),
     backgroundColor: Colors.white,
   },
   content: {
@@ -100,12 +103,10 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   footer: {
-    ...Layouts.over,
-    // bottom: 0,
-    top:
-      Dimensions.height.size98 -
-      Dimensions.height.size12 -
-      (StatusBar.currentHeight ?? 0),
+    position: 'absolute',
+    bottom: 0,
+    display: 'flex',
+    width: '100%',
     height: Dimensions.height.size12,
     backgroundColor: Colors.white,
     alignItems: 'center',

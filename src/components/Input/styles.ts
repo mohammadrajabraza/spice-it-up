@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { Colors, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
@@ -14,7 +14,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     marginVertical: Spacing.vertical.size8,
     width: '100%',
-    paddingVertical: Spacing.vertical.size16,
+    ...Platform.select({
+      ios: { paddingVertical: Spacing.vertical.size20  },
+      android: { paddingVertical: Spacing.vertical.size4 * 1.2 },
+    }),
   },
   textInputContainer: {
     flex: 1,
