@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   description: { color: Colors.darkGrey },
-  cartQuantityContainer: {
+  counter: {
     marginStart: 'auto',
     paddingTop: Spacing.vertical.size16,
   },

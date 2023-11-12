@@ -4,7 +4,7 @@ import type { FlatListProps } from 'react-native';
 
 import useNavigation from 'hooks/use-navigation';
 
-import { DEV } from 'constants/screen-names';
+import { NAVIGATORS } from 'constants/screen-names';
 
 import styles from '../styles';
 
@@ -14,7 +14,7 @@ const RouteDevItem = (item: DevMenuItem): JSX.Element => {
   const { navigate } = useNavigation();
 
   const navigateTosScreen = useCallback(() => {
-    navigate(DEV, { screen: item.name });
+    navigate(NAVIGATORS.DEV, { screen: item.name });
   }, [item.name, navigate]);
 
   return (

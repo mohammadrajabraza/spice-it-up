@@ -18,7 +18,7 @@ import Typography from 'components/Typography';
 
 import assets from 'assets';
 import Radio from 'components/Radio';
-import CartQuantity from 'components/CartQuantity';
+import Counter from 'components/Counter';
 
 export type MenuItemProps = NativeStackScreenProps<
   MenuNavigatorParamList,
@@ -145,7 +145,7 @@ const MenuItem: MenuItemScreen = ({ route }) => {
         </View>
       </ScrollView>
       <View style={styles.footer}>
-        <CartQuantity
+        <Counter
           count={quantity}
           onIncrement={onIncrement}
           onDecrement={onDecrement}

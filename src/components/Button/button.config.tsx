@@ -1,0 +1,37 @@
+import { ComponentConfig } from 'storybook/utils/component-config';
+import Button from './Button';
+import { Spacing } from 'styles';
+
+export default {
+  argTypes: {
+    variant: {
+      control: {
+        options: ['contained', 'outlined'],
+        type: 'select',
+      },
+    },
+    color: {
+      control: {
+        options: ['primary', 'darkGrey', 'black'],
+        type: 'select',
+      },
+    },
+    loading: {
+      control: {
+        options: [true, false],
+        type: 'select'
+      }
+    }
+  },
+  title: 'Button',
+  component: Button,
+  props: {
+    ur: {},
+    en: {
+      title: 'Button',
+      variant: 'contained',
+      color: 'primary',
+      style: { button: { marginBottom: Spacing.vertical.size12 } },
+    },
+  },
+} satisfies ComponentConfig<typeof Button>;

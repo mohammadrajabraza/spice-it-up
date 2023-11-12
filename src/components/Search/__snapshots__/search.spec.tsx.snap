@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given - Search component and without props should render correctly and match snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#EEEEEE",
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginVertical": 14,
+        "paddingHorizontal": 5,
+        "paddingVertical": 34,
+        "width": "100%",
+      },
+      {
+        "borderWidth": 0,
+        "elevation": 4,
+        "height": 106.5,
+        "paddingLeft": 34,
+        "paddingRight": 34,
+        "shadowColor": "#CCCCCC",
+        "shadowOffset": {
+          "height": 5,
+          "width": 3,
+        },
+        "shadowOpacity": 0.8,
+        "shadowRadius": 10,
+      },
+    ]
+  }
+>
+  <
+    height={45}
+    width={45}
+  />
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "gap": 2,
+          "paddingHorizontal": 34,
+        },
+        {},
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      placeholder="What do you want to order?"
+      placeholderTextColor="#CCCCCC"
+      style={
+        [
+          {
+            "color": "#1C1B1B",
+            "fontSize": 24,
+          },
+        ]
+      }
+    />
+  </View>
+  <
+    height={45}
+    width={45}
+  />
+</View>
+`;

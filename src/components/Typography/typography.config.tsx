@@ -1,4 +1,4 @@
-import type { ComponentConfig } from 'storybook/utils/component-config';
+import { ComponentConfig } from 'storybook/utils/component-config';
 import Typography, { typographyVariants } from './Typography';
 
 export default {
@@ -10,13 +10,13 @@ export default {
       },
     },
   },
+  title: 'Typography',
   component: Typography,
   props: {
     ur: {},
     en: {
-      text: 'This is a text',
-      variant: 'heading2',
+      children: 'This is a text',
+      variant: 'body1',
     },
   },
-  title: 'Typography',
-} as ComponentConfig<typeof Typography>;
+} satisfies ComponentConfig<typeof Typography>;

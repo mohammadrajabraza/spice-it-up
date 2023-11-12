@@ -109,11 +109,6 @@ module.exports = {
       'error',
       {
         paths: [
-          // {
-          //   importNames: ['Pressable'],
-          //   message: 'Please use Pressable from components/Pressable instead.',
-          //   name: 'react-native',
-          // },
           {
             importNames: ['useNavigation', 'useRoute'],
             message:

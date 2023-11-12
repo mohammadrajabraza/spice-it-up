@@ -67,7 +67,7 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
 };
 
 const Typography: TypogrpahyComponent = (props) => {
-  const { variant, style, children, ...rest } = props;
+  const { variant, style = {}, children, ...rest } = props;
   const variantStyles = typographyVariants[variant];
   return (
     <Text style={[variantStyles, style]} {...rest}>

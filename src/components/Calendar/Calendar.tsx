@@ -17,8 +17,9 @@ import {
   startOfMonth,
   startOfWeek,
 } from 'date-fns';
+import { CalendarComponent } from './calendar.types';
 
-const Calendar = () => {
+const Calendar: CalendarComponent = () => {
   const [monthIndex, setMonthIndex] = useState(0);
   const [selectedDate, setSelectedDate] = useState(new Date())
 

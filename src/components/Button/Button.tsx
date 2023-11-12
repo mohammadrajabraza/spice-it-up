@@ -74,7 +74,7 @@ const Button: ButtonComponent = (props) => {
     style,
     onPress,
     ...other
-  } = { ...defaultProps, ...props  };
+  } = { ...defaultProps, ...props };
 
   const [isPressed, setIsPressed] = useState(false);
 
@@ -109,7 +109,10 @@ const Button: ButtonComponent = (props) => {
       onPress={handlePress}
     >
       {isLoading ? (
-        <ActivityIndicator size={18} color={Colors[loadingColor]} />
+        <ActivityIndicator
+          size={18}
+          color={variant === 'outlined' ? Colors[color] : Colors[loadingColor]}
+        />
       ) : (
         <Typography variant="button" style={textStyles}>
           {title}

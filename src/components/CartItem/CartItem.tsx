@@ -6,7 +6,7 @@ import {
   Pressable,
 } from 'react-native';
 import React from 'react';
-import CartQuantity from 'components/CartQuantity';
+import Counter from 'components/Counter';
 import Typography from 'components/Typography';
 
 import styles from './styles';
@@ -70,11 +70,11 @@ const CartItem: React.FC<CartItemProps> = (props) => {
             {'$ ' + price}
           </Typography>
         </View>
-        <CartQuantity
+        <Counter
           count={quantity}
           onIncrement={onIncrement}
           onDecrement={onDecrement}
-          style={{ container: styles.cartQuantityContainer }}
+          style={{ container: styles.counter }}
         />
       </Pressable>
     </Swipeable>

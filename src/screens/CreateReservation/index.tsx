@@ -14,7 +14,7 @@ import PersonsIcon from 'assets/svgs/persons.svg';
 import PersonIcon from 'assets/svgs/person.svg';
 import ChevronDownIcon from 'assets/svgs/chevron-down.svg';
 import { moderateScale } from 'utils/styles';
-import CartQuantity from 'components/CartQuantity';
+import Counter from 'components/Counter';
 import Button from 'components/Button';
 
 type CreateReservationProps = NativeStackScreenProps<
@@ -61,7 +61,7 @@ const CreateReservation: CreateReservationScreen = ({ navigation }) => {
             <PersonsIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">No. of Guests</Typography>
           </View>
-          <CartQuantity
+          <Counter
             count={noOfGuests}
             onIncrement={() => {
               setNoOfGuests(prev => prev + 1)

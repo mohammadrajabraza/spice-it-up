@@ -5,10 +5,9 @@ import { Colors, Dimensions } from 'styles';
 
 import SearchIcon from 'assets/svgs/search.svg';
 import FilterIcon from 'assets/svgs/filter.svg';
+import { SearchComponent } from './search.types';
 
-type SearchProps = {}
-
-const Search: React.FC<SearchProps> = () => {
+const Search: SearchComponent  = () => {
   return (
     <Input
       placeholder="What do you want to order?"

@@ -19,13 +19,17 @@ module.exports = {
           types: './src/types',
           api: './src/api',
           logging: './src/logging',
-          data: './src/data'
+          data: './src/data',
         },
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         root: './src/',
       },
     ],
     'react-native-reanimated/plugin',
+    // ['babel-plugin-transform-private-methods']
   ],
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: [
+    'module:metro-react-native-babel-preset',
+    ['@babel/preset-env', { loose: true }],
+  ],
 };
