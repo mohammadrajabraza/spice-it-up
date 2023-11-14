@@ -67,8 +67,8 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
     const rBackdropStyle = useAnimatedStyle(
       () => ({
         opacity: withTiming(active.value ? 1 : 0),
-        /* eslint-disable react-hooks/exhaustive-deps */
       }),
+      /* eslint-disable react-hooks/exhaustive-deps */
       [],
     );
 
