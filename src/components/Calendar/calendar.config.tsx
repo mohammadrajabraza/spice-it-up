@@ -1,5 +1,6 @@
-import { ComponentConfig } from "storybook/utils/component-config";
-import Calendar from "./Calendar";
+import type { ComponentConfig } from 'storybook/utils/component-config';
+
+import Calendar from './Calendar';
 
 export default {
   title: 'Calendar',
@@ -8,4 +9,4 @@ export default {
     ur: {},
     en: {},
   },
-} satisfies ComponentConfig<typeof Calendar>
+} satisfies ComponentConfig<typeof Calendar>;

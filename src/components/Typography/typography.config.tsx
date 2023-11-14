@@ -1,4 +1,5 @@
-import { ComponentConfig } from 'storybook/utils/component-config';
+import type { ComponentConfig } from 'storybook/utils/component-config';
+
 import Typography, { typographyVariants } from './Typography';
 
 export default {

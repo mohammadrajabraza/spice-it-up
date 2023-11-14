@@ -1,4 +1,5 @@
-import setupComponentSnapshotTests from "storybook/utils/setup-component-snapshot-tests";
-import calendarConfig from "./calendar.config";
+import setupComponentSnapshotTests from 'storybook/utils/setup-component-snapshot-tests';
 
-setupComponentSnapshotTests(calendarConfig)
+import calendarConfig from './calendar.config';
+
+setupComponentSnapshotTests(calendarConfig);

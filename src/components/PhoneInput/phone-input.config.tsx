@@ -1,8 +1,10 @@
-import React from 'react'
-import { ComponentConfig } from 'storybook/utils/component-config';
+import React, { useState } from 'react';
+
+import type { ICountry } from 'react-native-international-phone-number';
+
+import type { ComponentConfig } from 'storybook/utils/component-config';
+
 import PhoneInput from './PhoneInput';
-import { ICountry } from 'react-native-international-phone-number';
-import { useState } from 'react';
 
 const PhoneInputStory = () => {
   const [value, setValue] = useState('');

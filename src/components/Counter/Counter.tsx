@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import styles from './styles';
+
 import { Colors } from 'styles';
 import { moderateScale } from 'utils/styles';
 import PlusIcon from 'assets/svgs/plus.svg';
 import MinusIcon from 'assets/svgs/minus.svg';
 import Typography from 'components/Typography';
-import { CounterComponent } from './counter.types';
 
+import styles from './styles';
+import type { CounterComponent } from './counter.types';
 
 const iconSize = moderateScale(12);
 

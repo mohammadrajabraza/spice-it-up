@@ -13,7 +13,7 @@ const PhoneInput: PhoneInputComponent = ({ ...props }) => (
     verticalAlign="middle"
     language="en"
     defaultCountry="US"
-    phoneInputStyle={styles}
+    phoneInputStyles={styles}
   />
 );
 

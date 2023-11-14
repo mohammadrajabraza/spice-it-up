@@ -11,13 +11,14 @@ import {
   startOfMonth,
   startOfWeek,
 } from 'date-fns';
-import { CalendarComponent } from './calendar.types';
 
 import Typography from 'components/Typography';
 
 import ChevronRight from 'assets/svgs/chevron-right.svg';
 import ChevronLeft from 'assets/svgs/chevron-left.svg';
 import { moderateScale } from 'utils/styles';
+
+import type { CalendarComponent } from './calendar.types';
 
 import styles from './styles';
 

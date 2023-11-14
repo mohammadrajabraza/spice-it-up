@@ -7,5 +7,5 @@ import 'react-native';
 import { it } from '@jest/globals';
 
 it('renders correctly', () => {
-  expect(2 + 2).toBe(4)
+  expect(2 + 2).toBe(4);
 });

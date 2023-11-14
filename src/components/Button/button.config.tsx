@@ -1,6 +1,8 @@
-import { ComponentConfig } from 'storybook/utils/component-config';
-import Button from './Button';
+import type { ComponentConfig } from 'storybook/utils/component-config';
+
 import { Spacing } from 'styles';
+
+import Button from './Button';
 
 export default {
   argTypes: {
@@ -19,9 +21,9 @@ export default {
     loading: {
       control: {
         options: [true, false],
-        type: 'select'
-      }
-    }
+        type: 'select',
+      },
+    },
   },
   title: 'Button',
   component: Button,

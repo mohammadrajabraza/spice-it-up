@@ -1,6 +1,8 @@
-import { Meta } from '@storybook/react-native';
-import Calendar from './Calendar';
+import type { Meta } from '@storybook/react-native';
+
 import setupComponentStories from 'storybook/utils/setup-component-stories';
+
+import Calendar from './Calendar';
 import calendarConfig from './calendar.config';
 
 export default {

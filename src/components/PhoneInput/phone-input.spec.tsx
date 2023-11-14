@@ -1,4 +1,5 @@
-import setupComponentSnapshotTests from "storybook/utils/setup-component-snapshot-tests";
-import phoneInputConfig from "./phone-input.config";
+import setupComponentSnapshotTests from 'storybook/utils/setup-component-snapshot-tests';
 
-setupComponentSnapshotTests(phoneInputConfig)
+import phoneInputConfig from './phone-input.config';
+
+setupComponentSnapshotTests(phoneInputConfig);

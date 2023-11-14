@@ -11,3 +11,4 @@ vendor/
 Gemfile
 Gemfile.lock
 *.json
+jest.setup.ts

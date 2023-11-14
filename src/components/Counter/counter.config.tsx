@@ -1,6 +1,8 @@
-import { ComponentConfig } from 'storybook/utils/component-config';
-import Counter from './Counter';
 import React from 'react';
+
+import type { ComponentConfig } from 'storybook/utils/component-config';
+
+import Counter from './Counter';
 
 const CounterStory = () => {
   const [count, setCount] = React.useState(1);

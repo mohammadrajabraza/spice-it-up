@@ -1,3 +1,5 @@
-export type CalendarProps = {}
+/* eslint-disable @typescript-eslint/ban-types */
 
-export type CalendarComponent = (props: CalendarProps) => JSX.Element
+export type CalendarProps = {};
+
+export type CalendarComponent = (props: CalendarProps) => JSX.Element;

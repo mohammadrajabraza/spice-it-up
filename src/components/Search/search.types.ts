@@ -1,3 +1,5 @@
-export type SearchProps = {}
+/* eslint-disable @typescript-eslint/ban-types */
 
-export type SearchComponent = (props: SearchProps) => JSX.Element
+export type SearchProps = {};
+
+export type SearchComponent = (props: SearchProps) => JSX.Element;
