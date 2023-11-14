@@ -40,7 +40,6 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
       active.value = destination !== 0;
 
       translateY.value = withSpring(destination, { damping: 50 });
-      /* eslint-disable react-hooks/exhaustive-deps */
     }, []);
 
     const isActive = useCallback(() => active.value, []);
@@ -64,21 +63,17 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
       };
     });
 
-    const rBackdropStyle = useAnimatedStyle(
-      () => ({
+    const rBackdropStyle = useAnimatedStyle(() => {
+      return {
         opacity: withTiming(active.value ? 1 : 0),
-      }),
-      /* eslint-disable react-hooks/exhaustive-deps */
-      [],
-    );
+      };
+    }, []);
 
-    const rBackdropProps = useAnimatedProps(
-      () =>
-        ({
-          pointerEvents: active.value ? 'auto' : 'none',
-        }) as any,
-      [],
-    );
+    const rBackdropProps = useAnimatedProps(() => {
+      return {
+        pointerEvents: active.value ? 'auto' : 'none',
+      } as any;
+    }, []);
 
     return (
       <>
