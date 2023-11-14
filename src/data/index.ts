@@ -11,5 +11,5 @@ export default {
   popularMenu,
   addons,
   cartItems,
-  orders: orders.filter(() => false)
+  orders: orders.filter(() => false),
 };

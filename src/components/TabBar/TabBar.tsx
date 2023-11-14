@@ -1,8 +1,10 @@
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 
-import styles from './styles';
+import type { SvgProps } from 'react-native-svg';
+
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 import MenuIcon from 'assets/svgs/menu.svg';
 import MenuActiveIcon from 'assets/svgs/menu-active.svg';
@@ -15,11 +17,12 @@ import ReservationActiveIcon from 'assets/svgs/reservation-active.svg';
 import ProfileIcon from 'assets/svgs/profile.svg';
 import ProfileActiveIcon from 'assets/svgs/profile-active.svg';
 import { NAVIGATORS } from 'constants/screen-names';
-import { SvgProps } from 'react-native-svg';
 import { moderateScale } from 'utils/styles';
 import { Colors } from 'styles';
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+
 import { CoreNavigatorsInitialScreen } from 'navigation/constants';
+
+import styles from './styles';
 
 const IconMap = {
   [NAVIGATORS.MENU]: [MenuIcon, MenuActiveIcon],
@@ -34,15 +37,15 @@ const TabBar: React.FC<BottomTabBarProps> = ({
   descriptors,
   navigation,
 }) => {
-  const route = state.routes[state.index];
-  const tabName = route.name as keyof typeof CoreNavigatorsInitialScreen;
-  const focusedRouteName = getFocusedRouteNameFromRoute(route);
-  
+  const currentRoute = state.routes[state.index];
+  const tabName = currentRoute.name as keyof typeof CoreNavigatorsInitialScreen;
+  const focusedRouteName = getFocusedRouteNameFromRoute(currentRoute);
+
   if (
     !focusedRouteName ||
     CoreNavigatorsInitialScreen[tabName] !== focusedRouteName
   ) {
-    return <></>
+    return null;
   }
 
   return (
@@ -54,7 +57,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({
           const TabBarIcon =
             route.name in IconMap && IconMap[route.name as keyof typeof IconMap]
               ? IconMap[route.name as keyof typeof IconMap][Number(isFocused)]
-              : (_props: SvgProps) => <></>;
+              : (_props: SvgProps) => null;
           const onPress = () => {
             const event = navigation.emit({
               type: 'tabPress',

@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Layouts, Spacing } from "styles";
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   todaysSpecialContainer: {
@@ -25,22 +26,22 @@ const styles = StyleSheet.create({
     ...Layouts.centered,
     flex: 1,
     gap: 5,
-  },    
+  },
   imageContainer: {
     width: Dimensions.width.size40,
     height: Dimensions.height.size16,
     borderTopStartRadius: moderateScale(10),
     borderTopEndRadius: moderateScale(10),
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   image: {
     width: Dimensions.width.size40,
     height: Dimensions.height.size16,
   },
-  price: { 
-    color: Colors.red, 
-    fontWeight: 'bold' 
-  }
-})
+  price: {
+    color: Colors.red,
+    fontWeight: 'bold',
+  },
+});
 
 export default styles;

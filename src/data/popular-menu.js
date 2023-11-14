@@ -1,4 +1,5 @@
-const { default: assets } = require("assets");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { default: assets } = require('assets');
 
 module.exports = [
   {
@@ -22,4 +23,4 @@ module.exports = [
     description: 'Noodle Home',
     price: '$15.00',
   },
-]
+];

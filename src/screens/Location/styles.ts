@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Spacing, Dimensions, Colors } from 'styles'
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Spacing, Dimensions, Colors } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   title: {
@@ -32,17 +33,17 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: Dimensions.width.size10,
-    height: Dimensions.width.size10
+    height: Dimensions.width.size10,
   },
   cardContent: {
     flexDirection: 'row',
     gap: 15,
-    alignItems: 'center'
+    alignItems: 'center',
     // paddingTop: Spacing.vertical.size24,
   },
   address: {
-    width: Dimensions.width.size70
-  }
-})
+    width: Dimensions.width.size70,
+  },
+});
 
 export default styles;

@@ -8,6 +8,7 @@ import MinusIcon from 'assets/svgs/minus.svg';
 import Typography from 'components/Typography';
 import { CounterComponent } from './counter.types';
 
+
 const iconSize = moderateScale(12);
 
 const Counter: CounterComponent = (props) => {
@@ -29,7 +30,7 @@ const Counter: CounterComponent = (props) => {
       >
         <MinusIcon width={iconSize} height={iconSize} />
       </TouchableOpacity>
-      <Typography variant="caption">{itemCount + ''}</Typography>
+      <Typography variant="caption">{`${itemCount}`}</Typography>
 
       <TouchableOpacity
         style={[styles.changeCountBtn, { backgroundColor: Colors.primary }]}

@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { Layouts, Colors, Spacing, } from 'styles'
+import { StyleSheet } from 'react-native';
 
+import { Layouts, Colors, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     gap: Spacing.horizontal.size16,
   },
-})
+});
 
 export default styles;

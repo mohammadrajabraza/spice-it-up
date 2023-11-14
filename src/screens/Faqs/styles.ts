@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Colors, Spacing } from "styles";
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   title: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.vertical.size16,
   },
   question: {
-    fontWeight: '500'
+    fontWeight: '500',
   },
   line: {
     width: '100%',
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.grey,
   },
   answer: {
-    lineHeight: moderateScale(16)
-  }
-})
+    lineHeight: moderateScale(16),
+  },
+});
 
 export default styles;

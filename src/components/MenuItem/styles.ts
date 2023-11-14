@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Spacing, Layouts } from "styles";
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Spacing, Layouts } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   },
   name: {},
   description: {
-    color: Colors.darkGrey
+    color: Colors.darkGrey,
   },
   price: {
     color: Colors.red,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     paddingRight: Spacing.horizontal.size8,
     alignSelf: 'flex-start',
     paddingTop: Spacing.horizontal.size28,
-  }
-})
+  },
+});
 
 export default styles;

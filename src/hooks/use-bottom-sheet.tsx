@@ -1,14 +1,16 @@
-import BottomSheet, { BottomSheetRefProps } from 'components/BottomSheet';
 import React, { useEffect, useRef } from 'react';
+
+import type { BottomSheetRefProps } from 'components/BottomSheet';
+import BottomSheet from 'components/BottomSheet';
 
 export class BottomSheetDriver {
   private static sheet: React.RefObject<BottomSheetRefProps>;
+
   static setSheet = (sheet: React.RefObject<BottomSheetRefProps>) => {
     BottomSheetDriver.sheet = sheet;
   };
 
   static toggle = () => {
-    console.log(this.sheet)
     if (!BottomSheetDriver.sheet.current) return;
     if (BottomSheetDriver.sheet.current.isActive()) {
       BottomSheetDriver.sheet.current.scrollTo(0);
@@ -23,8 +25,8 @@ const useBottomSheet = () => {
 
   useEffect(() => {
     BottomSheetDriver.setSheet(bottomSheetRef);
-  }, [])
-  
+  }, []);
+
   return () => <BottomSheet ref={bottomSheetRef} />;
 };
 

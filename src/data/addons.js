@@ -16,7 +16,7 @@ module.exports = [
         name: 'Thousand Island',
       },
     ],
-    isRequired: true
+    isRequired: true,
   },
   {
     id: 2,
@@ -31,6 +31,6 @@ module.exports = [
         name: 'Garlic Bread',
       },
     ],
-    isRequired: true
+    isRequired: true,
   },
 ];

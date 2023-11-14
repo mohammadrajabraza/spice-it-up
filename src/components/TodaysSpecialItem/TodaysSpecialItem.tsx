@@ -1,7 +1,10 @@
-import { View, ImageSourcePropType, Image, TouchableHighlight } from 'react-native';
+import type { ImageSourcePropType } from 'react-native';
+import { View, Image, TouchableHighlight } from 'react-native';
 import React from 'react';
-import styles from './styles';
+
 import Typography from 'components/Typography';
+
+import styles from './styles';
 
 type TodaysSpecialItemProps = {
   name: string;
@@ -14,15 +17,11 @@ const TodaysSpecialItem: React.FC<TodaysSpecialItemProps> = (props) => {
   return (
     <View style={styles.item}>
       <TouchableHighlight style={styles.imageContainer}>
-      <Image source={image} resizeMode="cover" style={styles.image} />
-
+        <Image source={image} resizeMode="cover" style={styles.image} />
       </TouchableHighlight>
       <View style={styles.content}>
         <Typography variant="body3">{name}</Typography>
-        <Typography
-          variant="body3"
-          style={styles.price}
-        >
+        <Typography variant="body3" style={styles.price}>
           {price}
         </Typography>
       </View>

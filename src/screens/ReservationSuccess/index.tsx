@@ -1,17 +1,22 @@
 import { View, ImageBackground, Image } from 'react-native';
 import React from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import {
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { NavigationProp } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+
+import type {
   CoreNavigatorParamList,
   ReservationNavigatorParamList,
 } from 'navigation/types';
 import { NAVIGATORS, SCREENS } from 'constants/screen-names';
-import styles from './styles';
+
 import assets from 'assets';
 import { Colors } from 'styles';
 import Typography from 'components/Typography';
 import Button from 'components/Button';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+
+import styles from './styles';
 
 type ReservationSuccessProps = NativeStackScreenProps<
   ReservationNavigatorParamList,

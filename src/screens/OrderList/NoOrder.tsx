@@ -1,12 +1,16 @@
 import { View, Image } from 'react-native';
 import React from 'react';
-import styles from './styles';
+
+import type { NavigationProp } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+
 import Typography from 'components/Typography';
 import assets from 'assets';
 import Button from 'components/Button';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
-import { CoreNavigatorParamList } from 'navigation/types';
+import type { CoreNavigatorParamList } from 'navigation/types';
 import { NAVIGATORS, SCREENS } from 'constants/screen-names';
+
+import styles from './styles';
 
 const NoOrder = () => {
   const navigation = useNavigation<NavigationProp<CoreNavigatorParamList>>();

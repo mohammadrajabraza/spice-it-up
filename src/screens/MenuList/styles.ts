@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Layouts, Colors, Spacing, Dimensions } from 'styles'
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Layouts, Colors, Spacing, Dimensions } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,11 +19,11 @@ const styles = StyleSheet.create({
     paddingLeft: Spacing.horizontal.size8,
   },
   menuItemContainer: {
-    marginBottom: Spacing.vertical.size12
-  },  
+    marginBottom: Spacing.vertical.size12,
+  },
   menuItemPrice: {
-    fontSize: moderateScale(16)
-  }
-})
+    fontSize: moderateScale(16),
+  },
+});
 
 export default styles;

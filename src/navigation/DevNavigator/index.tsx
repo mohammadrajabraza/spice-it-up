@@ -16,7 +16,7 @@ const Stack = createStackNavigator<DevNavigatorParamList>();
 
 const devNavigationRoutes = Object.entries(routes);
 
-const DevNavigation = (): JSX.Element => (
+const DevNavigator = (): JSX.Element => (
   <Stack.Navigator
     initialRouteName={SCREENS.DEV_MENU}
     screenOptions={{
@@ -36,4 +36,4 @@ const DevNavigation = (): JSX.Element => (
   </Stack.Navigator>
 );
 
-export default DevNavigation;
+export default DevNavigator;

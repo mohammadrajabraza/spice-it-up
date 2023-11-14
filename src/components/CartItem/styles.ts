@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   swiper: {
     marginHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    width: Dimensions.width.size100 - (Spacing.horizontal.globalHorizontalPadding * 2),
+    width:
+      Dimensions.width.size100 - Spacing.horizontal.globalHorizontalPadding * 2,
     backgroundColor: Colors.yellow,
     borderRadius: moderateScale(20),
   },
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: moderateScale(20),
     borderBottomRightRadius: moderateScale(20),
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   container: {
     height: Dimensions.height.size14,

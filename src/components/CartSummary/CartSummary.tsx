@@ -1,10 +1,14 @@
-import { View, ImageBackground, ViewStyle } from 'react-native';
+import type { ViewStyle } from 'react-native';
+import { View, ImageBackground } from 'react-native';
 import React from 'react';
+
 import assets from 'assets';
 import Typography from 'components/Typography';
-import styles from './styles';
+
 import { Spacing } from 'styles';
 import Button from 'components/Button';
+
+import styles from './styles';
 
 type CartSummaryProps = {
   style?: { container?: ViewStyle };

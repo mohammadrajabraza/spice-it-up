@@ -1,14 +1,10 @@
-import {
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Image, ImageBackground, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { CartNavigatorParamList } from 'navigation/types';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { CartNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
-import styles from './styles';
+
 import Typography from 'components/Typography';
 import assets from 'assets';
 import strings from 'utils/strings';
@@ -17,6 +13,8 @@ import CartItem from 'components/CartItem';
 import { Spacing } from 'styles';
 import Button from 'components/Button';
 import MainLayout from 'layouts/MainLayout';
+
+import styles from './styles';
 
 type MyCartProps = NativeStackScreenProps<
   CartNavigatorParamList,
@@ -35,22 +33,18 @@ const MyCart: MyCartScreen = ({ navigation }) => {
 
   const cartItems = getCartItems();
 
-  const [cartItemsQuantity, setCartItemsQuantity] = useState(() => {
-    return Object.fromEntries(
+  const [cartItemsQuantity, setCartItemsQuantity] = useState(() =>
+    Object.fromEntries(
       cartItems.map((cartItem) => [cartItem.id, cartItem.quantity]),
-    );
-  });
+    ),
+  );
 
   const onIncrementQuantity = (id: number) => {
-    setCartItemsQuantity((prev) => {
-      return { ...prev, [id]: prev[id] + 1 };
-    });
+    setCartItemsQuantity((prev) => ({ ...prev, [id]: prev[id] + 1 }));
   };
 
   const onDecrementQuantity = (id: number) => {
-    setCartItemsQuantity((prev) => {
-      return { ...prev, [id]: prev[id] - 1 };
-    });
+    setCartItemsQuantity((prev) => ({ ...prev, [id]: prev[id] - 1 }));
   };
 
   return (
@@ -139,7 +133,7 @@ const MyCart: MyCartScreen = ({ navigation }) => {
             text: styles.checkoutButtonText,
           }}
           onPress={() => {
-            navigation.navigate(SCREENS.LOCATION)
+            navigation.navigate(SCREENS.LOCATION);
           }}
         />
       </ImageBackground>

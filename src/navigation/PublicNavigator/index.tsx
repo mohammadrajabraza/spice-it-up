@@ -2,20 +2,22 @@ import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { useAtomValue } from 'jotai';
+
 import { NAVIGATORS, SCREENS } from 'constants/screen-names';
 
 import type { PublicNavigatorParamList } from 'navigation/types';
 
 import { Login, Onboarding, Signup, Splash } from 'screens';
-import { useAtomValue } from 'jotai';
 import { initialRouteNameAtom } from 'store/atoms';
+
 import CoreNavigator from './CoreNavigator';
 
 const { LOGIN, ONBOARDING, SIGNUP, SPLASH } = SCREENS;
 
 const Stack = createNativeStackNavigator<PublicNavigatorParamList>();
 
-const PublicNavigation = () => {
+const PublicNavigator = () => {
   const initialRouteName = useAtomValue(initialRouteNameAtom);
 
   return (
@@ -47,4 +49,4 @@ const PublicNavigation = () => {
     </Stack.Navigator>
   );
 };
-export default PublicNavigation;
+export default PublicNavigator;

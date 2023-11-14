@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ReservationNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
-import MainLayout from 'layouts/MainLayout';
-import Typography from 'components/Typography';
-import styles from './styles';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import { TouchableOpacity, View } from 'react-native';
+
 import ProfileInfo from 'components/ProfileInfo';
 import Calendar from 'components/Calendar';
-import { TouchableOpacity, View } from 'react-native';
+import Typography from 'components/Typography';
+import MainLayout from 'layouts/MainLayout';
+import { SCREENS } from 'constants/screen-names';
+import type { ReservationNavigatorParamList } from 'navigation/types';
 import { Dimensions, Layouts, Spacing } from 'styles';
 
 import PersonsIcon from 'assets/svgs/persons.svg';
@@ -16,6 +17,8 @@ import ChevronDownIcon from 'assets/svgs/chevron-down.svg';
 import { moderateScale } from 'utils/styles';
 import Counter from 'components/Counter';
 import Button from 'components/Button';
+
+import styles from './styles';
 
 type CreateReservationProps = NativeStackScreenProps<
   ReservationNavigatorParamList,
@@ -27,7 +30,7 @@ type CreateReservationScreen = React.FC<CreateReservationProps>;
 const iconSize = moderateScale(25);
 
 const CreateReservation: CreateReservationScreen = ({ navigation }) => {
-  const [noOfGuests, setNoOfGuests] = useState(1)
+  const [noOfGuests, setNoOfGuests] = useState(1);
 
   return (
     <MainLayout type="core" showBackIcon scrollView>
@@ -64,16 +67,18 @@ const CreateReservation: CreateReservationScreen = ({ navigation }) => {
           <Counter
             count={noOfGuests}
             onIncrement={() => {
-              setNoOfGuests(prev => prev + 1)
+              setNoOfGuests((prev) => prev + 1);
             }}
             onDecrement={() => {
-              setNoOfGuests(prev => prev - 1)
+              setNoOfGuests((prev) => prev - 1);
             }}
             style={{ container: { gap: 12 } }}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.card, { marginBottom: Dimensions.height.size20 }]}>
+        <TouchableOpacity
+          style={[styles.card, { marginBottom: Dimensions.height.size20 }]}
+        >
           <View style={{ flexDirection: 'row', gap: 5, alignItems: 'center' }}>
             <PersonIcon width={iconSize} height={iconSize} />
             <Typography variant="body3">Reference</Typography>
@@ -82,20 +87,15 @@ const CreateReservation: CreateReservationScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
+      <Button variant="outlined" color="primary" title="Cancel" />
 
       <Button
-        variant='outlined'
-        color='primary'
-        title='Cancel'
-      />
-
-      <Button
-        variant='contained'
-        color='primary'
-        title='Confirm'
+        variant="contained"
+        color="primary"
+        title="Confirm"
         style={{ button: { marginBottom: Dimensions.height.size5 } }}
         onPress={() => {
-          navigation.navigate(SCREENS.RESERVATION_SUCCESS)
+          navigation.navigate(SCREENS.RESERVATION_SUCCESS);
         }}
       />
     </MainLayout>

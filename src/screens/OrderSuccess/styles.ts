@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Dimensions, Layouts, Colors, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingBottom:  Spacing.vertical.size28
+    paddingBottom: Spacing.vertical.size28,
   },
   content: {
     alignItems: 'center',

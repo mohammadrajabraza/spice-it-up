@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowColor: Colors.darkGrey,
     shadowRadius: 20,
-    shadowOffset: { width : 3, height: 5 },
+    shadowOffset: { width: 3, height: 5 },
     shadowOpacity: 0.6,
     backgroundColor: Colors.white,
     // borderColor: Colors.darkGrey,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.red,
     borderBottomWidth: 2,
     paddingBottom: Spacing.vertical.size8,
-  }
+  },
 });
 
 export default styles;

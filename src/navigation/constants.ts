@@ -1,9 +1,10 @@
-import { NAVIGATORS, SCREENS } from "constants/screen-names";
-import CartNavigator from "./PublicNavigator/CartNavigator";
-import MenuNavigator from "./PublicNavigator/MenuNavigator";
-import OrderNavigator from "./PublicNavigator/OrderNavigator";
-import ProfileNavigator from "./PublicNavigator/ProfileNavigator";
-import ReservationNavigator from "./PublicNavigator/ReservationNavigator";
+import { NAVIGATORS, SCREENS } from 'constants/screen-names';
+
+import CartNavigator from './PublicNavigator/CartNavigator';
+import MenuNavigator from './PublicNavigator/MenuNavigator';
+import OrderNavigator from './PublicNavigator/OrderNavigator';
+import ProfileNavigator from './PublicNavigator/ProfileNavigator';
+import ReservationNavigator from './PublicNavigator/ReservationNavigator';
 
 export const CoreNavigatorsInitialScreen = {
   [NAVIGATORS.MENU]: SCREENS.HOME,
@@ -21,6 +22,6 @@ export const CoreNavigatorsComponentMap = {
   [NAVIGATORS.PROFILE]: ProfileNavigator,
 };
 
-export const CoreNavigatorsKeys = Object.keys(CoreNavigatorsComponentMap) as Array<
-  keyof typeof CoreNavigatorsComponentMap
->;
+export const CoreNavigatorsKeys = Object.keys(
+  CoreNavigatorsComponentMap,
+) as Array<keyof typeof CoreNavigatorsComponentMap>;

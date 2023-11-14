@@ -1,9 +1,10 @@
 import { View, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { CartNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
-import styles from './styles';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { CartNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
+
 import assets from 'assets';
 import Typography from 'components/Typography';
 import Input from 'components/Input';
@@ -14,6 +15,8 @@ import Button from 'components/Button';
 
 import StarSelected from 'assets/svgs/star-selected.svg';
 import StarUnselected from 'assets/svgs/star-unselected.svg';
+
+import styles from './styles';
 
 const iconSize = moderateScale(25);
 
@@ -55,20 +58,18 @@ const Feedback: FeedbackScreen = () => {
         <View style={styles.body}>
           {Array(5)
             .fill(0)
-            .map((_, index) => {
-              return (
-                <TouchableOpacity
-                  onPress={() => setRating(index + 1)}
-                  key={`star-${index + 1}`}
-                >
-                  {rating >= index + 1 ? (
-                    <StarSelected width={iconSize} height={iconSize} />
-                  ) : (
-                    <StarUnselected width={iconSize} height={iconSize} />
-                  )}
-                </TouchableOpacity>
-              );
-            })}
+            .map((_, index) => (
+              <TouchableOpacity
+                onPress={() => setRating(index + 1)}
+                key={`star-${index + 1}`}
+              >
+                {rating >= index + 1 ? (
+                  <StarSelected width={iconSize} height={iconSize} />
+                ) : (
+                  <StarUnselected width={iconSize} height={iconSize} />
+                )}
+              </TouchableOpacity>
+            ))}
         </View>
 
         <View style={styles.footer}>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable global-require */
 module.exports = [
   {
     id: 1,
@@ -5,7 +7,7 @@ module.exports = [
     name: 'Fresh Crab Soup',
     description: 'Crab Sooup',
     price: 35,
-    quantity: 1
+    quantity: 1,
   },
   {
     id: 2,
@@ -13,6 +15,6 @@ module.exports = [
     name: 'Vegan Resto',
     description: 'Waroenk kita',
     price: 35,
-    quantity: 3
+    quantity: 3,
   },
-]
+];

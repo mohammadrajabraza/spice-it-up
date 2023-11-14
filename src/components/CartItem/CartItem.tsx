@@ -1,23 +1,19 @@
-import {
-  ImageSourcePropType,
-  TouchableHighlight,
-  Image,
-  View,
-  Pressable,
-} from 'react-native';
+import type { ImageSourcePropType } from 'react-native';
+import { TouchableHighlight, Image, View, Pressable } from 'react-native';
 import React from 'react';
-import Counter from 'components/Counter';
-import Typography from 'components/Typography';
 
-import styles from './styles';
 import { Swipeable } from 'react-native-gesture-handler';
+
+import Typography from 'components/Typography';
+import Counter from 'components/Counter';
 import { Dimensions } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 import DeleteIcon from 'assets/svgs/delete.svg';
 
+import styles from './styles';
+
 type CartItemProps = {
-  id: number;
   name: string;
   price: number;
   image: ImageSourcePropType;
@@ -28,12 +24,11 @@ type CartItemProps = {
   onDecrement: () => void;
 };
 
-
 const CartItemRight = () => (
   <Pressable style={styles.rightAction}>
     <DeleteIcon width={moderateScale(24)} height={moderateScale(24)} />
   </Pressable>
-)
+);
 
 const CartItem: React.FC<CartItemProps> = (props) => {
   const {
@@ -44,8 +39,9 @@ const CartItem: React.FC<CartItemProps> = (props) => {
     quantity,
     onIncrement,
     onDecrement,
+    onPress = () => {},
   } = props;
-  
+
   return (
     <Swipeable
       friction={2}
@@ -55,7 +51,7 @@ const CartItem: React.FC<CartItemProps> = (props) => {
       containerStyle={styles.swiper}
       renderRightActions={CartItemRight}
     >
-      <Pressable style={styles.container}>
+      <Pressable onPress={onPress} style={styles.container}>
         <TouchableHighlight style={styles.imageContainer}>
           <Image source={image} style={styles.image} resizeMode="cover" />
         </TouchableHighlight>
@@ -67,7 +63,7 @@ const CartItem: React.FC<CartItemProps> = (props) => {
             {description}
           </Typography>
           <Typography variant="caption" style={styles.price}>
-            {'$ ' + price}
+            {`$ ${price}`}
           </Typography>
         </View>
         <Counter

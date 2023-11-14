@@ -1,27 +1,35 @@
 import { View } from 'react-native';
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { PublicNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
-import styles from './styles';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import CheckBox from '@react-native-community/checkbox';
+
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+
+import type { ICountry } from 'react-native-international-phone-number';
+
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 import Typography from 'components/Typography';
 import useFormState from 'hooks/use-form-state';
 import Input from 'components/Input';
 import Button from 'components/Button';
 import PhoneInput from 'components/PhoneInput';
 
-import CheckBox from '@react-native-community/checkbox';
 import { Colors } from 'styles';
 import TopBackground from 'components/TopBackground';
 
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import UserIcon from 'assets/svgs/user.svg';
 import MailIcon from 'assets/svgs/mail.svg';
 import PasswordIcon from 'assets/svgs/password.svg';
 import { moderateScale } from 'utils/styles';
-import { ICountry } from 'react-native-international-phone-number';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import type { SCREENS } from 'constants/screen-names';
+import type { PublicNavigatorParamList } from 'navigation/types';
+
+import styles from './styles';
 
 export type SignupProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -61,7 +69,7 @@ const Signup: SignupScreen = () => {
           keyboardType="default"
           autoCapitalize="none"
           placeholder="Full Name"
-          key={'fullName'}
+          key="fullName"
           value={values.fullName}
           onChangeText={handleChange('fullName')}
           containerStyle={styles.inputContainer}
@@ -77,7 +85,7 @@ const Signup: SignupScreen = () => {
           autoCapitalize="none"
           placeholder="Email"
           value={values.email}
-          key={'email'}
+          key="email"
           onChangeText={handleChange('email')}
           containerStyle={styles.inputContainer}
           textInputStyle={styles.textInput}
@@ -97,7 +105,7 @@ const Signup: SignupScreen = () => {
           keyboardType="default"
           autoCapitalize="none"
           placeholder="Password"
-          key={'password'}
+          key="password"
           value={values.password}
           onChangeText={handleChange('password')}
           containerStyle={styles.inputContainer}
@@ -122,7 +130,7 @@ const Signup: SignupScreen = () => {
           keyboardType="default"
           autoCapitalize="none"
           placeholder="Confirm Password"
-          key={'confirmPassword'}
+          key="confirmPassword"
           value={values.confirmPassword}
           onChangeText={handleChange('confirmPassword')}
           containerStyle={styles.inputContainer}

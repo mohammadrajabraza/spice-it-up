@@ -1,7 +1,9 @@
 import { StyleSheet } from 'react-native';
+
 import { moderateScale } from 'utils/styles';
+
 import Spacing from './spacing';
-import Colors from './colors'
+import Colors from './colors';
 
 const Layouts = StyleSheet.create({
   centered: {

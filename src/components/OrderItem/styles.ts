@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     borderRadius: moderateScale(20),
     paddingHorizontal: Spacing.horizontal.size12,
-    marginBottom: Spacing.vertical.size16
+    marginBottom: Spacing.vertical.size16,
   },
   imageContainer: {
     width: Dimensions.width.size18,

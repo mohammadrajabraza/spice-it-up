@@ -1,8 +1,14 @@
-import { Text, TextStyle } from 'react-native';
+import type { TextStyle } from 'react-native';
+import { Text } from 'react-native';
 import React from 'react';
-import { TypographyVariants, TypogrpahyComponent } from './typography.types';
+
 import { moderateScale } from 'utils/styles';
 import { Colors } from 'styles';
+
+import type {
+  TypographyVariants,
+  TypogrpahyComponent,
+} from './typography.types';
 
 export const typographyVariants: Record<TypographyVariants, TextStyle> = {
   heading3: {

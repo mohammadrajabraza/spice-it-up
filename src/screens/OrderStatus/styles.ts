@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Spacing } from "styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   content: {
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
   },
   cartItemList: {
     gap: 10,
-    marginBottom: Spacing.vertical.size4
+    marginBottom: Spacing.vertical.size4,
   },
   cartItem: {
     width: '100%',
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     gap: 2,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   cartItemPrice: {
     color: Colors.red,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     verticalAlign: 'middle',
   },
   cartItemQuantity: {
-    color: `${Colors.typography20}aa`
+    color: `${Colors.typography20}aa`,
   },
   cartSummaryRow: {
     flexDirection: 'row',
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   cartSummaryPrice: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   cartSummaryTotal: {
     marginTop: Spacing.vertical.size12,
@@ -57,11 +58,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.grey,
-    paddingVertical: Spacing.vertical.size12
+    paddingVertical: Spacing.vertical.size12,
   },
   paymentMethodImage: {
-    width: Dimensions.width.size22
-  }
-})
+    width: Dimensions.width.size22,
+  },
+});
 
 export default styles;

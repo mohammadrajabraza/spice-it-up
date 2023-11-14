@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
+
 const styles = StyleSheet.create({
   container: {
     ...Layouts.container,
@@ -59,8 +61,8 @@ const styles = StyleSheet.create({
   },
   contentText: {
     width: Dimensions.width.size70,
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 });
 
 export default styles;

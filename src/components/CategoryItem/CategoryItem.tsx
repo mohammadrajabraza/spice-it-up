@@ -1,17 +1,15 @@
-import {
-  ImageSourcePropType,
-  Image,
-  TouchableHighlight,
-  TouchableOpacity,
-} from 'react-native';
+import type { ImageSourcePropType } from 'react-native';
+import { Image, TouchableHighlight, TouchableOpacity } from 'react-native';
 import React from 'react';
-import styles from './styles';
+
 import Typography from 'components/Typography';
+
+import styles from './styles';
 
 type CategoryItemProps = {
   image: ImageSourcePropType;
   name: string;
-  onPress: () => void
+  onPress: () => void;
 };
 
 const CategoryItem: React.FC<CategoryItemProps> = (props) => {

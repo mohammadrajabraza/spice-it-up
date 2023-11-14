@@ -1,22 +1,18 @@
-import {
-  ImageSourcePropType,
-  TouchableHighlight,
-  Image,
-  View,
-  Pressable,
-} from 'react-native';
+import type { ImageSourcePropType } from 'react-native';
+import { TouchableHighlight, Image, View, Pressable } from 'react-native';
 import React from 'react';
+
 import Typography from 'components/Typography';
 
-import styles from './styles';
 import strings from 'utils/strings';
 import { Colors } from 'styles';
 import { moderateScale } from 'utils/styles';
 
+import styles from './styles';
+
 export type OrderStatus = 'cancelled' | 'inprocess' | 'delivered';
 
 type OrderItemProps = {
-  id: number;
   name: string;
   price: number;
   image: ImageSourcePropType;
@@ -45,10 +41,10 @@ const OrderItem: React.FC<OrderItemProps> = (props) => {
           {name}
         </Typography>
         <Typography variant="body3" style={styles.orderId}>
-          {'# ' + orderId}
+          {`# ${orderId}`}
         </Typography>
         <Typography variant="caption" style={styles.price}>
-          {'$ ' + price}
+          {`$ ${price}`}
         </Typography>
       </View>
       <View

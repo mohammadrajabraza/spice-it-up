@@ -1,9 +1,10 @@
-import { StyleSheet } from "react-native";
-import { Spacing } from "styles";
+import { StyleSheet } from 'react-native';
+
+import { Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   title: {
-    paddingLeft: Spacing.horizontal.size8
+    paddingLeft: Spacing.horizontal.size8,
   },
   inputContainer: {
     paddingHorizontal: Spacing.horizontal.size8,
@@ -11,14 +12,14 @@ const styles = StyleSheet.create({
   textInput: {
     paddingHorizontal: Spacing.horizontal.size12,
   },
-  content: { 
-    flex: 1, 
-    justifyContent: 'space-between' 
+  content: {
+    flex: 1,
+    justifyContent: 'space-between',
   },
-  form: { 
-    gap: 5 
+  form: {
+    gap: 5,
   },
-  icon: { paddingLeft: Spacing.horizontal.size4 }
-})
+  icon: { paddingLeft: Spacing.horizontal.size4 },
+});
 
 export default styles;

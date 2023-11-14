@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginVertical: Spacing.vertical.size8,
     width: '100%',
     ...Platform.select({
-      ios: { paddingVertical: Spacing.vertical.size20  },
+      ios: { paddingVertical: Spacing.vertical.size20 },
       android: { paddingVertical: Spacing.vertical.size4 * 1.2 },
     }),
   },
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: Spacing.horizontal.size16,
     flexDirection: 'column',
-    gap: 2
+    gap: 2,
   },
   textInput: {
     fontSize: moderateScale(15),
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: `${Colors.typography20}aa`,
     fontSize: moderateScale(11),
     paddingHorizontal: 1,
-  }
+  },
 });
 
 export default styles;

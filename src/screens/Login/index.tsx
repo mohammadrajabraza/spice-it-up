@@ -1,9 +1,12 @@
 import { View, Pressable, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { PublicNavigatorParamList } from 'navigation/types';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
+import type { PublicNavigatorParamList } from 'navigation/types';
 import { NAVIGATORS, SCREENS } from 'constants/screen-names';
-import styles from './styles';
+
 import Typography from 'components/Typography';
 import Input from 'components/Input';
 import { Colors, Spacing } from 'styles';
@@ -15,8 +18,9 @@ import GoogleIcon from 'assets/svgs/google.svg';
 import { moderateScale } from 'utils/styles';
 import useBlockBackPress from 'hooks/use-block-back-press';
 import useFormState from 'hooks/use-form-state';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import TopBackground from 'components/TopBackground';
+
+import styles from './styles';
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -36,7 +40,7 @@ const Login: LoginScreen = ({ navigation }) => {
       contentContainerStyle={styles.container}
       pagingEnabled
     >
-      <TopBackground type='auth'/>
+      <TopBackground type="auth" />
       <View style={styles.contentContainer}>
         <Typography style={styles.title} variant="heading2">
           Login To Your Account

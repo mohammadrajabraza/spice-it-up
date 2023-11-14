@@ -1,9 +1,14 @@
 import { View, ScrollView } from 'react-native';
 import React from 'react';
-import styles from './styles';
-import TopBackground, { TopBackgroundProps } from 'components/TopBackground';
+
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Colors, Dimensions, Spacing } from 'styles';
+
+import type { TopBackgroundProps } from 'components/TopBackground';
+import TopBackground from 'components/TopBackground';
+
+import { Dimensions, Spacing } from 'styles';
+
+import styles from './styles';
 
 type Props = {
   children: React.ReactNode;
@@ -20,15 +25,14 @@ const MainLayout = (props: Props): React.JSX.Element => {
   return (
     <View style={styles.container}>
       <TopBackground {...rest} />
-      {props.scrollView && (
+      {scrollView ? (
         <ScrollView
           style={[[styles.wrapper]]}
           contentContainerStyle={[styles.content, { paddingTop }]}
         >
-          {props.children}
+          {children}
         </ScrollView>
-      )}
-      {!props?.scrollView && (
+      ) : (
         <View
           style={[
             styles.wrapper,
@@ -40,7 +44,7 @@ const MainLayout = (props: Props): React.JSX.Element => {
             },
           ]}
         >
-          {props.children}
+          {children}
         </View>
       )}
     </View>

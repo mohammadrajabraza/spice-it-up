@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Spacing } from "styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   searchInputContainer: {

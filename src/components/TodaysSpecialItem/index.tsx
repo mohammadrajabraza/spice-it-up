@@ -1,3 +1,3 @@
-import TodaysSpecialItem from "./TodaysSpecialItem";
+import TodaysSpecialItem from './TodaysSpecialItem';
 
-export default TodaysSpecialItem
+export default TodaysSpecialItem;

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -50,23 +51,22 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.vertical.size20,
     marginBottom: Spacing.vertical.size16,
   },
-  cardLeft: { 
-    justifyContent: 'space-between' 
+  cardLeft: {
+    justifyContent: 'space-between',
   },
-  time: { 
-    color: Colors.red, 
-    fontWeight: 'bold' 
+  time: {
+    color: Colors.red,
+    fontWeight: 'bold',
   },
-  personsContainer: { 
-    flexDirection: 'row', 
-    gap: 5, 
-    alignItems: 'center' 
+  personsContainer: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
   },
-  persons: { 
-    color: `${Colors.typography20}77` 
+  persons: {
+    color: `${Colors.typography20}77`,
   },
   date: { fontWeight: '500' },
-
 });
 
 export default styles;

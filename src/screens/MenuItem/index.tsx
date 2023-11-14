@@ -7,18 +7,21 @@ import {
   Image,
 } from 'react-native';
 import React, { useRef, useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { MenuNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { MenuNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
 import data from 'data';
 import GoBack from 'components/GoBack';
-import styles from './styles';
+
 import Button from 'components/Button';
 import Typography from 'components/Typography';
 
 import assets from 'assets';
 import Radio from 'components/Radio';
 import Counter from 'components/Counter';
+
+import styles from './styles';
 
 export type MenuItemProps = NativeStackScreenProps<
   MenuNavigatorParamList,
@@ -46,13 +49,13 @@ const MenuItem: MenuItemScreen = ({ route }) => {
     setQuantity((count) => count + 1);
   };
 
-  const [selectedAddonOption, setSelectedAddonOption] = useState(() => {
-    return Object.fromEntries(
+  const [selectedAddonOption, setSelectedAddonOption] = useState(() =>
+    Object.fromEntries(
       addons.map(
         (addon) => [addon.id, addon.options[0].id] as [number, number],
       ),
-    );
-  });
+    ),
+  );
 
   const onSelectAddonOption = (addonId: number, optionId: number) => {
     setSelectedAddonOption((prev) => ({
@@ -96,7 +99,7 @@ const MenuItem: MenuItemScreen = ({ route }) => {
               {menuItem.name}
             </Typography>
             <Typography variant="heading2" style={styles.price}>
-              {'$' + parseInt(menuItem.price.replace('$', ''), 10)}
+              {`$${parseInt(menuItem.price.replace('$', ''), 10)}`}
             </Typography>
           </View>
           <Typography variant="body3">
@@ -121,23 +124,19 @@ const MenuItem: MenuItemScreen = ({ route }) => {
                   ) : null}
                 </View>
                 <View style={styles.addonOptions}>
-                  {addon.options.map((option) => {
-                    return (
-                      <TouchableOpacity
+                  {addon.options.map((option) => (
+                    <TouchableOpacity
+                      onPress={() => onSelectAddonOption(addon.id, option.id)}
+                      key={`${addon.id}-${option.id}`}
+                      style={styles.addonOptionItem}
+                    >
+                      <Radio
+                        selected={option.id === selectedAddonOption[addon.id]}
                         onPress={() => onSelectAddonOption(addon.id, option.id)}
-                        key={`${addon.id}-${option.id}`}
-                        style={styles.addonOptionItem}
-                      >
-                        <Radio
-                          selected={option.id === selectedAddonOption[addon.id]}
-                          onPress={() =>
-                            onSelectAddonOption(addon.id, option.id)
-                          }
-                        />
-                        <Typography variant="body2">{option.name}</Typography>
-                      </TouchableOpacity>
-                    );
-                  })}
+                      />
+                      <Typography variant="body2">{option.name}</Typography>
+                    </TouchableOpacity>
+                  ))}
                 </View>
               </View>
             ))}

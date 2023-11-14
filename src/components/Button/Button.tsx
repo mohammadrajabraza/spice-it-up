@@ -9,6 +9,10 @@ import { TouchableOpacity, ActivityIndicator } from 'react-native';
 
 import { Colors } from 'styles';
 
+import Typography from 'components/Typography';
+
+import type { OptionalPropertyOf } from 'types/utils';
+
 import styles from './styles';
 import type {
   ButtonColors,
@@ -16,8 +20,6 @@ import type {
   ButtonProps,
   ButtonVariants,
 } from './button.types';
-import Typography from 'components/Typography';
-import { OptionalPropertyOf } from 'types/utils';
 
 type VariantReturnObj = (color: ButtonColors) => {
   button: ViewStyle;

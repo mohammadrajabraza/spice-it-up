@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Colors, Spacing } from "styles";
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   card: {
@@ -17,19 +18,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   heading: {
-    color: Colors.white
+    color: Colors.white,
   },
   content: {
-    color: Colors.white
+    color: Colors.white,
   },
   button: {
     width: 'auto',
     marginHorizontal: Spacing.horizontal.size12,
-    marginTop: Spacing.horizontal.size8
+    marginTop: Spacing.horizontal.size8,
   },
   buttonText: {
     color: Colors.primary,
-  }
-})
+  },
+});
 
 export default styles;

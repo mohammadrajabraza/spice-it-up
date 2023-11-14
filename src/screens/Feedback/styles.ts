@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Layouts, Colors, Dimensions, Spacing } from 'styles'
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Layouts, Colors, Dimensions, Spacing } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +12,10 @@ const styles = StyleSheet.create({
     width: Dimensions.width.size100,
     height: Dimensions.height.size50,
     alignItems: 'center',
-    paddingTop: Dimensions.height.size50 - Dimensions.width.size52 - Spacing.vertical.size40
+    paddingTop:
+      Dimensions.height.size50 -
+      Dimensions.width.size52 -
+      Spacing.vertical.size40,
   },
   logoContainer: {
     width: Dimensions.width.size52,
@@ -31,14 +35,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flex: 1,
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingBottom: Spacing.vertical.size28
+    paddingBottom: Spacing.vertical.size28,
   },
   header: {
     alignItems: 'center',
-    gap: moderateScale(15)
+    gap: moderateScale(15),
   },
   title: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   description: {
     color: `${Colors.typography20}80`,
@@ -46,17 +50,17 @@ const styles = StyleSheet.create({
   },
   body: {
     flexDirection: 'row',
-    gap: moderateScale(30)
+    gap: moderateScale(30),
   },
   footer: {
-    gap: moderateScale(15)
+    gap: moderateScale(15),
   },
   inputContainer: {
     borderRadius: moderateScale(15),
   },
   inputLeft: {
-    paddingLeft: moderateScale(15)
-  }
-})
+    paddingLeft: moderateScale(15),
+  },
+});
 
 export default styles;

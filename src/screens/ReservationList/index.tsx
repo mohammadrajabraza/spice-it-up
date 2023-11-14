@@ -1,17 +1,20 @@
 import { View, Image, SectionList, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ReservationNavigatorParamList } from 'navigation/types';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { ReservationNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
 import MainLayout from 'layouts/MainLayout';
 import Typography from 'components/Typography';
-import styles from './styles';
+
 import assets from 'assets';
 
 import PersonsIcon from 'assets/svgs/persons.svg';
 import { moderateScale } from 'utils/styles';
 import Button from 'components/Button';
 import { Dimensions, Spacing } from 'styles';
+
+import styles from './styles';
 
 type ReservationListProps = NativeStackScreenProps<
   ReservationNavigatorParamList,
@@ -65,75 +68,72 @@ const sections = [
 
 const iconSize = moderateScale(25);
 
-const ReservationList: ReservationListScreen = ({ navigation }) => {
-  return (
-    <MainLayout type="core">
-      <View style={styles.header}>
-        <Typography variant="heading2" style={styles.title}>
-          Reservations
-        </Typography>
-        <View style={styles.profile}>
-          <Image source={assets.images.smallLogo} resizeMode="contain" />
-        </View>
+const ReservationList: ReservationListScreen = ({ navigation }) => (
+  <MainLayout type="core">
+    <View style={styles.header}>
+      <Typography variant="heading2" style={styles.title}>
+        Reservations
+      </Typography>
+      <View style={styles.profile}>
+        <Image source={assets.images.smallLogo} resizeMode="contain" />
       </View>
+    </View>
 
-      <SectionList
-        sections={sections}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.card}>
-            <View style={styles.cardLeft}>
+    <SectionList
+      sections={sections}
+      keyExtractor={(item) => item.id.toString()}
+      renderItem={({ item }) => (
+        <TouchableOpacity style={styles.card}>
+          <View style={styles.cardLeft}>
+            <Typography variant="body3" style={styles.persons}>
+              Reservation
+            </Typography>
+
+            <Typography variant="body3" style={styles.date}>
+              {item.date}
+            </Typography>
+            <View style={styles.personsContainer}>
+              <PersonsIcon width={iconSize} height={iconSize} />
               <Typography variant="body3" style={styles.persons}>
-                Reservation
-              </Typography>
-
-              <Typography variant="body3" style={styles.date}>
-                {item.date}
-              </Typography>
-              <View style={styles.personsContainer}>
-                <PersonsIcon width={iconSize} height={iconSize} />
-                <Typography variant="body3" style={styles.persons}>
-                  {item.noOfPersons + ' Persons'}
-                </Typography>
-              </View>
-            </View>
-            <View>
-              <Typography variant="body3" style={styles.time}>
-                {item.time}
+                {`${item.noOfPersons} Persons`}
               </Typography>
             </View>
-          </TouchableOpacity>
-        )}
-        renderSectionHeader={({ section: { title } }) => (
-          <Typography variant="caption" style={styles.sectionHeader}>
-            {title}
-          </Typography>
-        )}
-        style={styles.list}
-        stickyHeaderHiddenOnScroll
-      />
+          </View>
+          <View>
+            <Typography variant="body3" style={styles.time}>
+              {item.time}
+            </Typography>
+          </View>
+        </TouchableOpacity>
+      )}
+      renderSectionHeader={({ section: { title } }) => (
+        <Typography variant="caption" style={styles.sectionHeader}>
+          {title}
+        </Typography>
+      )}
+      style={styles.list}
+      stickyHeaderHiddenOnScroll
+    />
 
-
-          <Button
-            variant="contained"
-            color="primary"
-            title="Make Reservation"
-            style={{
-              button: {
-                // flex: 0.3,
-                bottom: Dimensions.height.size10,
-                height: Dimensions.height.size8,
-                width:
-                  Dimensions.width.size100 -
-                  Spacing.horizontal.globalHorizontalPadding * 2,
-              },
-            }}
-            onPress={() => {
-              navigation.navigate(SCREENS.CREATE_RESERVATION)
-            }}
-          />
-    </MainLayout>
-  );
-};
+    <Button
+      variant="contained"
+      color="primary"
+      title="Make Reservation"
+      style={{
+        button: {
+          // flex: 0.3,
+          bottom: Dimensions.height.size10,
+          height: Dimensions.height.size8,
+          width:
+            Dimensions.width.size100 -
+            Spacing.horizontal.globalHorizontalPadding * 2,
+        },
+      }}
+      onPress={() => {
+        navigation.navigate(SCREENS.CREATE_RESERVATION);
+      }}
+    />
+  </MainLayout>
+);
 
 export default ReservationList;

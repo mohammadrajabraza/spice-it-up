@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -32,20 +33,20 @@ const styles = StyleSheet.create({
     height: Dimensions.width.size25,
     borderRadius: Dimensions.width.size25,
     ...Layouts.centered,
-    backgroundColor: `${Colors.red}10`
+    backgroundColor: `${Colors.red}10`,
   },
   noOrderTitle: {
     color: Colors.red,
     fontSize: moderateScale(30),
-    textAlign: 'center'
+    textAlign: 'center',
   },
   noOrderDescription: {
     textAlign: 'center',
-    width: Dimensions.width.size70
+    width: Dimensions.width.size70,
   },
   noOrderButton: {
     marginTop: Spacing.vertical.size20,
-  }
+  },
 });
 
 export default styles;

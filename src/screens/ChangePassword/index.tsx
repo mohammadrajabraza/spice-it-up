@@ -1,16 +1,22 @@
 import React, { useMemo } from 'react';
-import MainLayout from 'layouts/MainLayout';
-import Typography from 'components/Typography';
-import styles from './styles';
-import { ProfileNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import { View } from 'react-native';
-import Input, { InputProps } from 'components/Input';
+
+import type { ProfileNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
+
+import Typography from 'components/Typography';
+import MainLayout from 'layouts/MainLayout';
+import type { InputProps } from 'components/Input';
+import Input from 'components/Input';
 import useFormState from 'hooks/use-form-state';
 import PasswordIcon from 'assets/svgs/password.svg';
 import { moderateScale } from 'utils/styles';
 import Button from 'components/Button';
+
+import styles from './styles';
 
 type ChangePasswordProps = NativeStackScreenProps<
   ProfileNavigatorParamList,
@@ -28,13 +34,14 @@ const ChangePassword: ChangePasswordScreen = () => {
     confirmPassword: '',
   });
 
-  const InputLeftElement = useMemo(() => {
-    return (
+  const InputLeftElement = useMemo(
+    () => (
       <View style={styles.icon}>
         <PasswordIcon width={iconSize} height={iconSize} />
       </View>
-    );
-  }, []);
+    ),
+    [],
+  );
 
   const commonInputProps = {
     keyboardType: 'default',
@@ -55,21 +62,21 @@ const ChangePassword: ChangePasswordScreen = () => {
           <Input
             {...commonInputProps}
             placeholder="Current Password"
-            key={'currentPassword'}
+            key="currentPassword"
             value={values.currentPassword}
             onChangeText={handleChange('currentPassword')}
           />
           <Input
             {...commonInputProps}
             placeholder="New Password"
-            key={'newPassword'}
+            key="newPassword"
             value={values.newPassword}
             onChangeText={handleChange('newPassword')}
           />
           <Input
             {...commonInputProps}
             placeholder="Confirm Password"
-            key={'confirmPassword'}
+            key="confirmPassword"
             value={values.confirmPassword}
             onChangeText={handleChange('confirmPassword')}
           />

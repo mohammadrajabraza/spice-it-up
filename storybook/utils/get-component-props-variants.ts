@@ -2,9 +2,10 @@ import type { ComponentProps } from 'react';
 import type { InputType } from '@storybook/csf';
 import cartesian from 'cartesian';
 
+import type { SupportedLocales } from 'context/locales/types';
+
 import type { ComponentType, ComponentConfig } from './component-config';
 import { getComponentArgTypes } from './get-component-arg-types';
-import { SupportedLocales } from 'context/locales/types';
 
 const mapComponentArgTypesToPropsVariants = (
   args: Record<string, InputType>,

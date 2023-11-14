@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
   bannerTitle: {
     color: Colors.white,
     lineHeight: moderateScale(24),
-    fontSize: moderateScale(17)
+    fontSize: moderateScale(17),
   },
   bannerButton: {
     width: Dimensions.width.size25,
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
   bannerButtonText: {
     color: Colors.red,
     fontSize: moderateScale(10),
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   section: {
     gap: Spacing.horizontal.size16,
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: Spacing.horizontal.size4,  
+    paddingHorizontal: Spacing.horizontal.size4,
   },
   sectionList: {
     minWidth: Dimensions.width.size100,

@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
@@ -13,16 +13,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { Platform, StatusBar, StyleSheet } from 'react-native';
 
+import { ThemeProvider } from 'styled-components/native';
+
+import { Provider } from 'jotai';
+
 import LocalesProvider from 'context/locales';
 import useCurrentLocale from 'hooks/use-current-locale';
 import Navigation from 'navigation';
 
 import { Colors, Layouts } from 'styles';
-import { ThemeProvider } from 'styled-components/native';
-import { Provider } from 'jotai';
+
 import store from 'store';
-import BottomSheet from 'components/BottomSheet';
-import { BottomSheetRefProps } from 'components/BottomSheet/BottomSheet';
 import useBottomSheet from 'hooks/use-bottom-sheet';
 
 const styles = StyleSheet.create({
@@ -45,7 +46,7 @@ const App: React.FC = () => {
   const { selectedLocale } = useCurrentLocale();
   const rootStyles = Platform.OS === 'android' ? styles.android : styles.ios;
 
-  const Sheet = useBottomSheet()
+  const Sheet = useBottomSheet();
 
   return (
     <GestureHandlerRootView style={[styles.root, rootStyles]}>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Dimensions, StyleSheet, View } from 'react-native';
 import React, { useCallback, useImperativeHandle } from 'react';
 import Animated, {
@@ -9,17 +11,18 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
+
 import Typography from 'components/Typography';
 import { Colors } from 'styles';
 import Button from 'components/Button';
+
 import styles from './styles';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 50;
 
-type BottomSheetProps = {
-};
+type BottomSheetProps = {};
 
 export type BottomSheetRefProps = {
   scrollTo: (destination: number) => void;
@@ -33,14 +36,14 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
 
     const scrollTo = useCallback((destination: number) => {
       'worklet';
+
       active.value = destination !== 0;
 
       translateY.value = withSpring(destination, { damping: 50 });
+      /* eslint-disable react-hooks/exhaustive-deps */
     }, []);
 
-    const isActive = useCallback(() => {
-      return active.value;
-    }, []);
+    const isActive = useCallback(() => active.value, []);
 
     useImperativeHandle(ref, () => ({ scrollTo, isActive }), [
       scrollTo,
@@ -61,17 +64,21 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
       };
     });
 
-    const rBackdropStyle = useAnimatedStyle(() => {
-      return {
+    const rBackdropStyle = useAnimatedStyle(
+      () => ({
         opacity: withTiming(active.value ? 1 : 0),
-      };
-    }, []);
+        /* eslint-disable react-hooks/exhaustive-deps */
+      }),
+      [],
+    );
 
-    const rBackdropProps = useAnimatedProps(() => {
-      return {
-        pointerEvents: active.value ? 'auto' : 'none',
-      } as any;
-    }, []);
+    const rBackdropProps = useAnimatedProps(
+      () =>
+        ({
+          pointerEvents: active.value ? 'auto' : 'none',
+        }) as any,
+      [],
+    );
 
     return (
       <>
@@ -110,6 +117,5 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
     );
   },
 );
-
 
 export default BottomSheet;

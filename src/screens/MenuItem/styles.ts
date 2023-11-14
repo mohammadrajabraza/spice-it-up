@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     minHeight: Dimensions.screenHeight,
-    backgroundColor: Colors.black
+    backgroundColor: Colors.black,
   },
   imageBackground: {
     width: Dimensions.width.size100,

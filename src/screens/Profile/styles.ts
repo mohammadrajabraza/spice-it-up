@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Dimensions, Spacing, Layouts, Colors } from 'styles';
 import { moderateScale } from 'utils/styles';
 

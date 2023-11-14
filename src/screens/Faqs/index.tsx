@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ProfileNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import { FlatList, TouchableOpacity, View } from 'react-native';
+
+import type { ProfileNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
 import MainLayout from 'layouts/MainLayout';
 import Typography from 'components/Typography';
-import styles from './styles';
-import { FlatList, TouchableOpacity, View } from 'react-native';
 
 import ChevronDownIcon from 'assets/svgs/chevron-down.svg';
 import { moderateScale } from 'utils/styles';
+
+import styles from './styles';
 
 export type FaqsProps = NativeStackScreenProps<
   ProfileNavigatorParamList,
@@ -21,7 +24,7 @@ const faqsData = [
   {
     id: 1,
     question: 'What is Lorem Ipsum?',
-    answer:  `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
   {
     id: 2,
@@ -60,37 +63,35 @@ const Faqs: FaqsScreen = () => {
       <FlatList
         data={faqsData}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => {
-          return (
-            <View style={styles.faq}>
-              <View style={styles.faqHeader}>
-                <Typography variant="body3" style={styles.question}>
-                  {item.question}
-                </Typography>
-                <TouchableOpacity
-                  onPress={() => {
-                    handleFaqSelection(item.id);
-                  }}
-                >
-                  <ChevronDownIcon
-                    width={moderateScale(25)}
-                    height={moderateScale(25)}
-                  />
-                </TouchableOpacity>
-              </View>
-              {selectedFaq === item.id && (
-                <>
-                  <View style={styles.line} />
-                  <View style={styles.faqBody}>
-                    <Typography variant="caption" style={styles.answer}>
-                      {item.answer}
-                    </Typography>
-                  </View>
-                </>
-              )}
+        renderItem={({ item }) => (
+          <View style={styles.faq}>
+            <View style={styles.faqHeader}>
+              <Typography variant="body3" style={styles.question}>
+                {item.question}
+              </Typography>
+              <TouchableOpacity
+                onPress={() => {
+                  handleFaqSelection(item.id);
+                }}
+              >
+                <ChevronDownIcon
+                  width={moderateScale(25)}
+                  height={moderateScale(25)}
+                />
+              </TouchableOpacity>
             </View>
-          );
-        }}
+            {selectedFaq === item.id && (
+              <>
+                <View style={styles.line} />
+                <View style={styles.faqBody}>
+                  <Typography variant="caption" style={styles.answer}>
+                    {item.answer}
+                  </Typography>
+                </View>
+              </>
+            )}
+          </View>
+        )}
       />
     </MainLayout>
   );

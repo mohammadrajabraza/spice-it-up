@@ -1,12 +1,15 @@
 import React from 'react';
-import { View, TextInput, TextInputProps } from 'react-native';
+import type { TextInputProps } from 'react-native';
+import { View, TextInput } from 'react-native';
 
 import { Colors } from 'styles';
 
+import type { OptionalPropertyOf } from 'types/utils';
+
+import Typography from 'components/Typography';
+
 import type { InputComponent, InputProps } from './input.types';
 import styles from './styles';
-import { OptionalPropertyOf } from 'types/utils';
-import Typography from 'components/Typography';
 
 const defaultProps: Required<
   OptionalPropertyOf<Omit<InputProps, keyof TextInputProps>>
@@ -15,7 +18,7 @@ const defaultProps: Required<
   textInputStyle: {},
   InputLeftElement: null,
   InputRightElement: null,
-  label: ''
+  label: '',
 };
 
 const Input: InputComponent = (props) => {
@@ -31,7 +34,11 @@ const Input: InputComponent = (props) => {
     <View style={[styles.container, containerStyle]}>
       {InputLeftElement}
       <View style={[styles.textInputContainer, textInputStyle]}>
-        {!!label && <Typography variant='caption' style={styles.label}>{label}</Typography>} 
+        {!!label && (
+          <Typography variant="caption" style={styles.label}>
+            {label}
+          </Typography>
+        )}
         <TextInput
           style={[styles.textInput]}
           autoCapitalize="none"

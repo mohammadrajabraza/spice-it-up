@@ -1,18 +1,19 @@
 import { Image, View } from 'react-native';
 import React, { useRef, useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import SwiperFlatList from 'react-native-swiper-flatlist';
 
-import { PublicNavigatorParamList } from 'navigation/types';
+import type { PublicNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
 import assets from 'assets';
 
-import styles from './styles';
 import Typography from 'components/Typography';
 import Button from 'components/Button';
 import Storage from 'utils/storage';
 import { ONBOARDING_COMPLETE } from 'constants/storage';
+
+import styles from './styles';
 
 const screens = [
   {
@@ -69,19 +70,17 @@ const Onboarding: OnboardingScreen = ({ navigation }) => {
         paginationStyleItemInactive={styles.paginationItemInactive}
         showPagination
         data={screens}
-        renderItem={({ item }: { item: (typeof screens)[number] }) => {
-          return (
-            <View style={styles.item}>
-              <Image source={item.image} style={styles.image} />
-              <Typography variant="heading2" style={{ textAlign: 'center' }}>
-                {item.title}
-              </Typography>
-              <Typography variant="body1" style={{ textAlign: 'center' }}>
-                {item.subtitle}
-              </Typography>
-            </View>
-          );
-        }}
+        renderItem={({ item }) => (
+          <View style={styles.item}>
+            <Image source={item.image} style={styles.image} />
+            <Typography variant="heading2" style={{ textAlign: 'center' }}>
+              {item.title}
+            </Typography>
+            <Typography variant="body1" style={{ textAlign: 'center' }}>
+              {item.subtitle}
+            </Typography>
+          </View>
+        )}
       />
       <Button
         variant="contained"

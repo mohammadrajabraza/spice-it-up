@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Layouts, Spacing } from "styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingBottom:  Spacing.vertical.size28
+    paddingBottom: Spacing.vertical.size28,
   },
   content: {
     alignItems: 'center',
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     flex: 1,
     gap: 15,
     justifyContent: 'flex-end',
-  }
-})
+  },
+});
 
 export default styles;

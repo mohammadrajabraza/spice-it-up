@@ -1,12 +1,6 @@
 import { TouchableOpacity, View } from 'react-native';
 import React, { useMemo, useState } from 'react';
 
-import styles from './styles';
-import Typography from 'components/Typography';
-import ChevronRight from 'assets/svgs/chevron-right.svg';
-import ChevronLeft from 'assets/svgs/chevron-left.svg';
-import { moderateScale } from 'utils/styles';
-
 import {
   eachDayOfInterval,
   endOfMonth,
@@ -19,9 +13,17 @@ import {
 } from 'date-fns';
 import { CalendarComponent } from './calendar.types';
 
+import Typography from 'components/Typography';
+
+import ChevronRight from 'assets/svgs/chevron-right.svg';
+import ChevronLeft from 'assets/svgs/chevron-left.svg';
+import { moderateScale } from 'utils/styles';
+
+import styles from './styles';
+
 const Calendar: CalendarComponent = () => {
   const [monthIndex, setMonthIndex] = useState(0);
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleBack = () => {
     if (monthIndex === 0) return;
@@ -73,30 +75,31 @@ const Calendar: CalendarComponent = () => {
         </View>
       </View>
       <View style={styles.calendar}>
-        {Object.entries(calendar.days).map(([day, dates]) => {
-          return (
-            <View style={styles.calendarCol} key={day}>
-              <Typography variant="heading3" style={styles.calenderDay}>
-                {day}
-              </Typography>
-              {dates.map((date) => {
-                const isSame = isSameDay(selectedDate, date);
-                return (
-                  <TouchableOpacity 
-                    key={date.toString()}
-                    onPress={() => setSelectedDate(date)}
-                    style={{ position: 'relative', }}
+        {Object.entries(calendar.days).map(([day, dates]) => (
+          <View style={styles.calendarCol} key={day}>
+            <Typography variant="heading3" style={styles.calenderDay}>
+              {day}
+            </Typography>
+            {dates.map((date) => {
+              const isSame = isSameDay(selectedDate, date);
+              return (
+                <TouchableOpacity
+                  key={date.toString()}
+                  onPress={() => setSelectedDate(date)}
+                  style={{ position: 'relative' }}
+                >
+                  {isSame ? <View style={styles.selectedDay} /> : null}
+                  <Typography
+                    variant="caption"
+                    style={isSame && styles.selectedDayText}
                   >
-                    {isSame ? <View  style={styles.selectedDay} /> : null}
-                    <Typography variant="caption" style={isSame && styles.selectedDayText}>
-                      {format(date, 'dd')}
-                    </Typography>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          );
-        })}
+                    {format(date, 'dd')}
+                  </Typography>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+        ))}
       </View>
     </View>
   );

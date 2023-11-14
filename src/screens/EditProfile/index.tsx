@@ -1,11 +1,14 @@
 import React from 'react';
-import MainLayout from 'layouts/MainLayout';
-import Typography from 'components/Typography';
-import styles from './styles';
-import { ProfileNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import { View } from 'react-native';
+
+import type { ICountry } from 'react-native-international-phone-number';
+
+import type { ProfileNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
+
 import Button from 'components/Button';
 import Input from 'components/Input';
 
@@ -13,10 +16,14 @@ import ProfileIcon from 'assets/svgs/profile-active.svg';
 import EmailIcon from 'assets/svgs/email.svg';
 import { moderateScale } from 'utils/styles';
 import useFormState from 'hooks/use-form-state';
-import { ICountry } from 'react-native-international-phone-number';
+
+import Typography from 'components/Typography';
+import MainLayout from 'layouts/MainLayout';
 import PhoneInput from 'components/PhoneInput';
 import Radio from 'components/Radio';
 import { Spacing } from 'styles';
+
+import styles from './styles';
 
 type EditProfileProps = NativeStackScreenProps<
   ProfileNavigatorParamList,
@@ -48,7 +55,7 @@ const EditProfile: EditProfileScreen = () => {
             label="Full Name"
             keyboardType="default"
             autoCapitalize="none"
-            key={'fullName'}
+            key="fullName"
             value={values.fullName}
             onChangeText={handleChange('fullName')}
             containerStyle={styles.inputContainer}
@@ -62,7 +69,7 @@ const EditProfile: EditProfileScreen = () => {
             label="Email Address"
             keyboardType="default"
             autoCapitalize="none"
-            key={'email'}
+            key="email"
             value={values.email}
             onChangeText={handleChange('email')}
             containerStyle={styles.inputContainer}
@@ -87,18 +94,14 @@ const EditProfile: EditProfileScreen = () => {
             <View style={{ flexDirection: 'row', gap: 10 }}>
               <Radio
                 selected={values.gender === 'male'}
-                onChange={() => {
-                  return setGender('male');
-                }}
+                onChange={() => setGender('male')}
               />
               <Typography variant="body3">Male</Typography>
             </View>
             <View style={{ flexDirection: 'row', gap: 10 }}>
               <Radio
                 selected={values.gender === 'female'}
-                onChange={() => {
-                  return setGender('female');
-                }}
+                onChange={() => setGender('female')}
               />
               <Typography variant="body3">Female</Typography>
             </View>

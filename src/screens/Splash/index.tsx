@@ -1,19 +1,23 @@
 import React from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
+import { useStore } from 'jotai';
+
+import { ImageBackground } from 'react-native';
+
 import type { PublicNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
 
 import assets from 'assets';
 import useBootstrapApp from 'hooks/use-bootstrap-app';
 
-import { Container, SplashLogo } from './styles';
 import Storage from 'utils/storage';
 import { ONBOARDING_COMPLETE } from 'constants/storage';
-import { useStore } from 'jotai';
 import { initialRouteNameAtom } from 'store/atoms';
-import { ImageBackground } from 'react-native';
+
 import { Dimensions } from 'styles';
+
+import { Container, SplashLogo } from './styles';
 
 type SplashProps = NativeStackScreenProps<
   PublicNavigatorParamList,

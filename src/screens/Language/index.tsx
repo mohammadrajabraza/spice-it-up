@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ProfileNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+import { FlatList, TouchableOpacity, View } from 'react-native';
+
+import type { ProfileNavigatorParamList } from 'navigation/types';
+import type { SCREENS } from 'constants/screen-names';
 import MainLayout from 'layouts/MainLayout';
 import Typography from 'components/Typography';
-import styles from './styles';
+
 import Button from 'components/Button';
-import { FlatList, TouchableOpacity, View } from 'react-native';
 
 import TickIcon from 'assets/svgs/tick.svg';
 import { moderateScale } from 'utils/styles';
+
+import styles from './styles';
 
 const iconSize = moderateScale(15);
 
@@ -106,9 +110,7 @@ const Language: LanguageScreen = () => {
                 {item.name}
               </Typography>
               {isSelected && (
-                <View
-                  style={styles.tick}
-                >
+                <View style={styles.tick}>
                   <TickIcon width={iconSize} height={iconSize} />
                 </View>
               )}

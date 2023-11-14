@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
-import { Colors, Dimensions, Spacing, Layouts } from "styles";
-import { moderateScale } from "utils/styles";
+import { StyleSheet } from 'react-native';
+
+import { Colors, Dimensions, Spacing, Layouts } from 'styles';
+import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
   title: {
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   },
   selectedName: {
     color: Colors.primary,
-    fontWeight: '600'
+    fontWeight: '600',
   },
   tick: {
     width: Dimensions.width.size8,
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: `${Colors.primary}33`,
     ...Layouts.centered,
     borderRadius: moderateScale(8),
-  }
-})
+  },
+});
 
 export default styles;

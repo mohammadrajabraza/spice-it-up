@@ -17,10 +17,10 @@ export { default as OrderStatus } from './OrderStatus';
 export { default as Feedback } from './Feedback';
 export { default as ReservationList } from './ReservationList';
 export { default as CreateReservation } from './CreateReservation';
-export { default as ReservationSuccess } from './ReservationSuccess'
-export { default as Profile } from './Profile'
-export { default as EditProfile } from './EditProfile'
-export { default as ChangePassword } from './ChangePassword'
-export { default as Language } from './Language'
-export { default as Faqs } from './Faqs'
-export { default as AboutUs } from './AboutUs'
+export { default as ReservationSuccess } from './ReservationSuccess';
+export { default as Profile } from './Profile';
+export { default as EditProfile } from './EditProfile';
+export { default as ChangePassword } from './ChangePassword';
+export { default as Language } from './Language';
+export { default as Faqs } from './Faqs';
+export { default as AboutUs } from './AboutUs';

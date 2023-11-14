@@ -108,14 +108,19 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
-        paths: [
-          {
-            importNames: ['useNavigation', 'useRoute'],
-            message:
-              'Please use hooks/use-navigation or hooks/use-route instead.',
-            name: '@react-navigation/native',
-          },
-        ],
+        // paths: [
+        //   // {
+        //   //   importNames: ['Pressable'],
+        //   //   message: 'Please use Pressable from components/Pressable instead.',
+        //   //   name: 'react-native',
+        //   // },
+        //   {
+        //     importNames: ['useNavigation', 'useRoute'],
+        //     message:
+        //       'Please use hooks/use-navigation or hooks/use-route instead.',
+        //     name: '@react-navigation/native',
+        //   },
+        // ],
         patterns: ['../../*'], // relative imports are allowed only up two one directory above the current
       },
     ],

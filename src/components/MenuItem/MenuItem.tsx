@@ -1,15 +1,15 @@
+import type { ImageSourcePropType, ViewStyle, TextStyle } from 'react-native';
 import {
   View,
-  ImageSourcePropType,
   TouchableHighlight,
   Image,
   TouchableOpacity,
-  ViewStyle,
-  TextStyle,
 } from 'react-native';
 import React from 'react';
-import styles from './styles';
+
 import Typography from 'components/Typography';
+
+import styles from './styles';
 
 type MenuItemProps = {
   name: string;
@@ -30,7 +30,10 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
     onPress = () => {},
   } = props;
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.container, style?.container]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.container, style?.container]}
+    >
       <TouchableHighlight onPress={onPress} style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
       </TouchableHighlight>

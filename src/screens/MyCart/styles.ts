@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Colors, Dimensions, Spacing, Layouts } from 'styles';
 import { moderateScale } from 'utils/styles';
 
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   },
   transferMethodImage: {
     width: Dimensions.width.size7,
-    height: Dimensions.width.size7
+    height: Dimensions.width.size7,
   },
   cartItems: {
     alignItems: 'center',
@@ -69,19 +70,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   cartTotalRowHeading: {
-    color: Colors.white
+    color: Colors.white,
   },
   cartTotalRowContent: {
-    color: Colors.white
+    color: Colors.white,
   },
   checkoutButton: {
     width: 'auto',
     marginHorizontal: Spacing.horizontal.size12,
-    marginTop: Spacing.horizontal.size8
+    marginTop: Spacing.horizontal.size8,
   },
   checkoutButtonText: {
     color: Colors.primary,
-  }
+  },
 });
 
 export default styles;
