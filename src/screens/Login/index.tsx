@@ -32,7 +32,7 @@ export type LoginScreen = React.FC<LoginProps>;
 const Login: LoginScreen = ({ navigation }) => {
   const { values, handleChange } = useFormState({ email: '', password: '' });
 
-  useBlockBackPress();
+  useBlockBackPress(navigation);
 
   return (
     <KeyboardAwareScrollView
@@ -72,11 +72,11 @@ const Login: LoginScreen = ({ navigation }) => {
           variant="contained"
           color="primary"
           title="Login"
-          onPress={() =>
+          onPress={() => {
             navigation.navigate(NAVIGATORS.CORE, {
               screen: NAVIGATORS.MENU,
               params: { screen: SCREENS.HOME },
-            })
+            })}
           }
           style={{ button: { width: '100%' } }}
         />

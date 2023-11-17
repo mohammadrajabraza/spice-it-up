@@ -1,18 +1,23 @@
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, ParamListBase } from '@react-navigation/native';
 import { useEffect } from 'react';
 import { BackHandler } from 'react-native';
+import navigationService from 'navigation/service'
+import { SCREENS } from 'constants/screen-names';
 
-const useBlockBackPress = () => {
-  const navigation = useNavigation();
+const useBlockBackPress = <ParamList extends ParamListBase, RouteName extends keyof ParamList>(navigation: NavigationProp<ParamList, RouteName>) => {
   useEffect(() => {
     const navigationSubscription = navigation.addListener(
       'beforeRemove',
-      () => {},
+      () => { 
+      },
     );
     const backHandleSubscription = BackHandler.addEventListener(
       'hardwareBackPress',
       () => {
-        BackHandler.exitApp();
+        const currentRoute = navigationService.getActiveRoute(navigation.getState());
+        if (currentRoute?.name === SCREENS.LOGIN) {
+          BackHandler.exitApp();
+        }
         return false;
       },
     );
