@@ -26,10 +26,9 @@ module.exports = {
       },
     ],
     'react-native-reanimated/plugin',
-    // ['babel-plugin-transform-private-methods']
   ],
   presets: [
     'module:metro-react-native-babel-preset',
-    ['@babel/preset-env', { loose: true }],
+    // ['@babel/preset-env', { loose: true }],
   ],
 };
