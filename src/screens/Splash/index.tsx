@@ -40,7 +40,6 @@ const Splash: SplashScreen = ({ navigation }) => {
     },
   });
 
-  console.log(DeviceInfo.getBuildNumber());
   return (
     <Container>
       <ImageBackground

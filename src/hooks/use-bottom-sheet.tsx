@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import type { BottomSheetRefProps } from 'components/BottomSheet';
 import BottomSheet from 'components/BottomSheet';
+import { Platform } from 'react-native';
 
 export class BottomSheetDriver {
   private static sheet: React.RefObject<BottomSheetRefProps>;
@@ -15,7 +16,7 @@ export class BottomSheetDriver {
     if (BottomSheetDriver.sheet.current.isActive()) {
       BottomSheetDriver.sheet.current.scrollTo(0);
     } else {
-      BottomSheetDriver.sheet.current.scrollTo(-280);
+      BottomSheetDriver.sheet.current.scrollTo(-Platform.select({ android: 300, ios: 350, default: 320 }));
     }
   };
 }

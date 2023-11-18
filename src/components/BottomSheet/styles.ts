@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     textAlign: 'center',
+    width: Dimensions.width.size70,
   },
   buttons: {
     gap: 5,
