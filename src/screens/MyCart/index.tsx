@@ -23,7 +23,7 @@ type MyCartProps = NativeStackScreenProps<
 
 type MyCartScreen = React.FC<MyCartProps>;
 
-const transferMethods = ['delivery', 'pickup'];
+const transferMethods = ['delivery', 'pickup'] as const;
 
 const getCartItems = () => data.cartItems;
 
@@ -52,7 +52,7 @@ const MyCart: MyCartScreen = ({ navigation }) => {
       <Typography variant="heading2">My Cart</Typography>
 
       <View style={styles.transferMethodRow}>
-        {transferMethods.map((transferMethod) => (
+        {transferMethods.map((transferMethod: (typeof transferMethods)[number])  => (
           <TouchableOpacity
             style={[
               styles.transferMethodItem,
@@ -63,7 +63,7 @@ const MyCart: MyCartScreen = ({ navigation }) => {
             onPress={() => setSelectedTransferMethod(transferMethod)}
           >
             <Image
-              source={assets.images.delivery}
+              source={assets.images[transferMethod]}
               style={styles.transferMethodImage}
               resizeMode="contain"
             />

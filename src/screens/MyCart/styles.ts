@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors, Dimensions, Spacing, Layouts } from 'styles';
+import { Colors, Dimensions, Spacing, Layouts, Shadows } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -28,18 +28,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   transferMethodItem: {
-    width: Dimensions.width.size41,
-    height: Dimensions.height.size10,
+    width: Dimensions.width.size42,
+    height: Dimensions.height.size8,
     flexDirection: 'row',
     backgroundColor: Colors.white,
     gap: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 3,
-    shadowColor: Colors.darkGrey,
-    shadowOffset: { width: 5, height: 5 },
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
+    ...Shadows.primary,
     borderRadius: moderateScale(20),
   },
   selectedTransferMethodItem: {
@@ -47,8 +43,8 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
   },
   transferMethodImage: {
-    width: Dimensions.width.size7,
-    height: Dimensions.width.size7,
+    width: Dimensions.width.size6,
+    height: Dimensions.width.size6,
   },
   cartItems: {
     alignItems: 'center',
