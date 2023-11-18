@@ -62,7 +62,7 @@ export const typographyVariants: Record<TypographyVariants, TextStyle> = {
     fontSize: moderateScale(12),
     fontWeight: 'normal',
     color: Colors.typography20,
-    letterSpacing: 0.5,
+    letterSpacing: 0.3,
   },
   button: {
     fontSize: moderateScale(16),

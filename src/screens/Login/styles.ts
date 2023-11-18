@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   registerHere: {
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingVertical: Spacing.vertical.size20,
+    paddingVertical: Spacing.vertical.size28,
   },
   authMethods: {
     flexDirection: 'row',
@@ -38,12 +38,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     ...Layouts.centered,
     paddingVertical: Spacing.vertical.size16,
-    elevation: 5,
     flexDirection: 'row',
     gap: 10,
-    shadowColor: Colors.grey,
-    shadowOpacity: 0.7,
-    shadowOffset: { width: 2, height: 5 },
+    shadowColor: 'rgba(0,0,0,0.53)',
+    elevation: Platform.select({ ios: 2, android: 20, default: 2 }),
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 2, height: 25 },
+    shadowRadius: 10,
+  },
+  inputContainer: {
+    paddingHorizontal: Spacing.horizontal.size8,
+  },
+  textInput: {
+    paddingHorizontal: Spacing.horizontal.size12,
   },
 });
 

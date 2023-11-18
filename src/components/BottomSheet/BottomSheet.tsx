@@ -57,8 +57,6 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
         Extrapolate.CLAMP,
       );
 
-      console.log(translateY.value)
-
       return {
         borderRadius,
         transform: [{ translateY: translateY.value }],

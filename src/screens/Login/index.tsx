@@ -1,5 +1,5 @@
 import { View, Pressable, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -11,9 +11,12 @@ import Typography from 'components/Typography';
 import Input from 'components/Input';
 import { Colors, Spacing } from 'styles';
 import Button from 'components/Button';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 import FacebookIcon from 'assets/svgs/facebook.svg';
 import GoogleIcon from 'assets/svgs/google.svg';
+import MailIcon from 'assets/svgs/mail.svg';
+import PasswordIcon from 'assets/svgs/password.svg';
 
 import { moderateScale } from 'utils/styles';
 import useBlockBackPress from 'hooks/use-block-back-press';
@@ -21,6 +24,8 @@ import useFormState from 'hooks/use-form-state';
 import TopBackground from 'components/TopBackground';
 
 import styles from './styles';
+
+const iconSize = moderateScale(20);
 
 export type LoginProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -30,6 +35,8 @@ export type LoginProps = NativeStackScreenProps<
 export type LoginScreen = React.FC<LoginProps>;
 
 const Login: LoginScreen = ({ navigation }) => {
+  const [showPassword, setShowPassword] = useState(true);
+
   const { values, handleChange } = useFormState({ email: '', password: '' });
 
   useBlockBackPress(navigation);
@@ -50,19 +57,46 @@ const Login: LoginScreen = ({ navigation }) => {
           autoCapitalize="none"
           placeholder="Email"
           value={values.email}
+          key="email"
           onChangeText={handleChange('email')}
+          containerStyle={styles.inputContainer}
+          textInputStyle={styles.textInput}
+          InputLeftElement={
+            <View>
+              <MailIcon width={iconSize} height={iconSize} />
+            </View>
+          }
         />
         <Input
           keyboardType="default"
           autoCapitalize="none"
           placeholder="Password"
+          key="password"
           value={values.password}
           onChangeText={handleChange('password')}
+          containerStyle={styles.inputContainer}
+          textInputStyle={styles.textInput}
+          secureTextEntry={showPassword}
+          InputLeftElement={
+            <View>
+              <PasswordIcon width={iconSize} height={iconSize} />
+            </View>
+          }
+          InputRightElement={
+            <TouchableOpacity onPress={() => setShowPassword((prev) => !prev)}>
+              <FontAwesomeIcon
+                name={showPassword ? 'eye' : 'eye-slash'}
+                color={Colors.darkGrey}
+                size={iconSize}
+              />
+            </TouchableOpacity>
+          }
         />
         <Typography
           style={{
             textAlign: 'center',
             paddingVertical: Spacing.vertical.size12,
+            fontWeight: 'bold'
           }}
           variant="caption"
         >
@@ -76,16 +110,16 @@ const Login: LoginScreen = ({ navigation }) => {
             navigation.navigate(NAVIGATORS.CORE, {
               screen: NAVIGATORS.MENU,
               params: { screen: SCREENS.HOME },
-            })}
-          }
+            });
+          }}
           style={{ button: { width: '100%' } }}
         />
         <Pressable
           style={styles.registerHere}
           onPress={() => navigation.navigate(SCREENS.SIGNUP)}
         >
-          <Typography variant="body3">No Account Yet? </Typography>
-          <Typography variant="body3" style={{ color: Colors.red }}>
+          <Typography variant="caption">No Account yet? </Typography>
+          <Typography variant="caption" style={{ color: Colors.red, fontWeight: 'bold' }}>
             Register Here
           </Typography>
         </Pressable>
