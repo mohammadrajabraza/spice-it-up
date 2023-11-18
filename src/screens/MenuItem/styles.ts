@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     minHeight: Dimensions.screenHeight,
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.background100,
   },
   imageBackground: {
     width: Dimensions.width.size100,
@@ -16,18 +16,20 @@ const styles = StyleSheet.create({
   scrollView: {
     minHeight: Dimensions.height.size55,
     bottom: Dimensions.height.size12,
+    backgroundColor: Colors.black,
     borderTopStartRadius: moderateScale(25),
     borderTopEndRadius: moderateScale(25),
-    overflow: 'hidden',
-    // borderStartEndRadius: moderateScale(25),
-    backgroundColor: Colors.white,
+    borderStartStartRadius: moderateScale(25),
+    borderStartEndRadius: moderateScale(25),
   },
   content: {
-    backgroundColor: Colors.white,
-    borderTopStartRadius: moderateScale(25),
-    borderTopEndRadius: moderateScale(25),
+    backgroundColor: Colors.background100,
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
     paddingVertical: Spacing.vertical.size20,
+    borderTopStartRadius: moderateScale(25),
+    borderTopEndRadius: moderateScale(25),
+    borderStartStartRadius: moderateScale(25),
+    borderStartEndRadius: moderateScale(25),
     zIndex: 100,
     marginBottom: Spacing.vertical.size20,
   },
@@ -108,13 +110,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     display: 'flex',
     width: '100%',
-    height: Dimensions.height.size12,
     backgroundColor: Colors.white,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingVertical: Spacing.vertical.size20,
+    paddingVertical: Spacing.vertical.size24,
+    paddingBottom: Platform.select({ ios: 30, android: 25 }),
   },
   footerButton: {
     width: Dimensions.width.size55,

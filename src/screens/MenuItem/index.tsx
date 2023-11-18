@@ -73,76 +73,85 @@ const MenuItem: MenuItemScreen = ({ route }) => {
       >
         <GoBack />
       </ImageBackground>
-
-      <ScrollView
-        style={styles.scrollView}
-        ref={scrollViewRef}
-        contentContainerStyle={styles.content}
+      <View
+        style={{
+          borderRadius: 20,
+          overflow: 'hidden',
+        }}
       >
-        <View style={styles.line} />
-        <View style={styles.header}>
-          <View style={styles.popular}>
-            <Typography variant="caption" style={styles.popularText}>
-              Popular
-            </Typography>
+        <ScrollView
+          style={styles.scrollView}
+          ref={scrollViewRef}
+          contentContainerStyle={styles.content}
+        >
+          <View style={styles.line} />
+          <View style={styles.header}>
+            <View style={styles.popular}>
+              <Typography variant="caption" style={styles.popularText}>
+                Popular
+              </Typography>
+            </View>
+            <View style={styles.rating}>
+              <Image source={assets.images.star} style={styles.star} />
+              <Typography variant="body3" style={styles.ratingText}>
+                4.8 Rating
+              </Typography>
+            </View>
           </View>
-          <View style={styles.rating}>
-            <Image source={assets.images.star} style={styles.star} />
-            <Typography variant="body3" style={styles.ratingText}>
-              4.8 Rating
+          <View style={styles.body}>
+            <View style={styles.titleAndPriceRow}>
+              <Typography variant="heading1" style={styles.name}>
+                {menuItem.name}
+              </Typography>
+              <Typography variant="heading2" style={styles.price}>
+                {`$${parseInt(menuItem.price.replace('$', ''), 10)}`}
+              </Typography>
+            </View>
+            <Typography variant="body3">
+              Nulla occaecat velit laborum exercitation ullamco. Elit labore eu
+              aute elit nostrud culpa velit excepteur deserunt sunt. Velit non
+              est cillum consequat cupidatat ex Lorem laboris labore aliqua ad
+              duis eu laborum.
             </Typography>
-          </View>
-        </View>
-        <View style={styles.body}>
-          <View style={styles.titleAndPriceRow}>
-            <Typography variant="heading1" style={styles.name}>
-              {menuItem.name}
+            <Typography variant="body3">
+              Nulla occaecat velit laborum exercitation ullamco. Elit labore eu
+              aute elit nostrud culpa velit excepteur deserunt sunt.
             </Typography>
-            <Typography variant="heading2" style={styles.price}>
-              {`$${parseInt(menuItem.price.replace('$', ''), 10)}`}
-            </Typography>
-          </View>
-          <Typography variant="body3">
-            Nulla occaecat velit laborum exercitation ullamco. Elit labore eu
-            aute elit nostrud culpa velit excepteur deserunt sunt. Velit non est
-            cillum consequat cupidatat ex Lorem laboris labore aliqua ad duis eu
-            laborum.
-          </Typography>
-          <Typography variant="body3">
-            Nulla occaecat velit laborum exercitation ullamco. Elit labore eu
-            aute elit nostrud culpa velit excepteur deserunt sunt.
-          </Typography>
-          <View style={styles.addons}>
-            {addons.map((addon) => (
-              <View key={addon.id} style={styles.addonItem}>
-                <View style={styles.addonHeader}>
-                  <Typography variant="heading3">{addon.title}</Typography>
-                  {addon.isRequired ? (
-                    <Typography variant="body3" style={styles.addonRequired}>
-                      Required
-                    </Typography>
-                  ) : null}
-                </View>
-                <View style={styles.addonOptions}>
-                  {addon.options.map((option) => (
-                    <TouchableOpacity
-                      onPress={() => onSelectAddonOption(addon.id, option.id)}
-                      key={`${addon.id}-${option.id}`}
-                      style={styles.addonOptionItem}
-                    >
-                      <Radio
-                        selected={option.id === selectedAddonOption[addon.id]}
+            <View style={styles.addons}>
+              {addons.map((addon) => (
+                <View key={addon.id} style={styles.addonItem}>
+                  <View style={styles.addonHeader}>
+                    <Typography variant="heading3">{addon.title}</Typography>
+                    {addon.isRequired ? (
+                      <Typography variant="body3" style={styles.addonRequired}>
+                        Required
+                      </Typography>
+                    ) : null}
+                  </View>
+                  <View style={styles.addonOptions}>
+                    {addon.options.map((option) => (
+                      <TouchableOpacity
                         onPress={() => onSelectAddonOption(addon.id, option.id)}
-                      />
-                      <Typography variant="body2">{option.name}</Typography>
-                    </TouchableOpacity>
-                  ))}
+                        key={`${addon.id}-${option.id}`}
+                        style={styles.addonOptionItem}
+                      >
+                        <Radio
+                          selected={option.id === selectedAddonOption[addon.id]}
+                          onPress={() =>
+                            onSelectAddonOption(addon.id, option.id)
+                          }
+                        />
+                        <Typography variant="body2">{option.name}</Typography>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
                 </View>
-              </View>
-            ))}
+              ))}
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
+
       <View style={styles.footer}>
         <Counter
           count={quantity}
