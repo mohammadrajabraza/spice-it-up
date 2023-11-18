@@ -16,9 +16,9 @@ export const CoreNavigatorsInitialScreen = {
 
 export const CoreNavigatorsComponentMap = {
   [NAVIGATORS.MENU]: MenuNavigator,
-  [NAVIGATORS.CART]: CartNavigator,
   [NAVIGATORS.ORDER]: OrderNavigator,
   [NAVIGATORS.RESERVATION]: ReservationNavigator,
+  [NAVIGATORS.CART]: CartNavigator,
   [NAVIGATORS.PROFILE]: ProfileNavigator,
 };
 
