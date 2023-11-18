@@ -20,7 +20,7 @@ import styles from './styles';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
-const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 50;
+const MAX_TRANSLATE_Y = -SCREEN_HEIGHT;
 
 type BottomSheetProps = {};
 
@@ -31,7 +31,7 @@ export type BottomSheetRefProps = {
 
 const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
   (_, ref) => {
-    const translateY = useSharedValue(0);
+    const translateY = useSharedValue(100);
     const active = useSharedValue(false);
 
     const scrollTo = useCallback((destination: number) => {
@@ -39,7 +39,7 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
 
       active.value = destination !== 0;
 
-      translateY.value = withSpring(destination, { damping: 50 });
+      translateY.value = withSpring(destination + 100, { damping: 50 });
     }, []);
 
     const isActive = useCallback(() => active.value, []);
@@ -56,6 +56,8 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
         [25, 5],
         Extrapolate.CLAMP,
       );
+
+      console.log(translateY.value)
 
       return {
         borderRadius,
@@ -103,7 +105,7 @@ const BottomSheet = React.forwardRef<BottomSheetRefProps, BottomSheetProps>(
                 color="darkGrey"
                 title="Cancel"
                 style={{ text: { color: Colors.black } }}
-                onPress={() => scrollTo(0)}
+                onPress={() => scrollTo(100)}
               />
             </View>
           </View>

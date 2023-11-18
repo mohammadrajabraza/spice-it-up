@@ -14,6 +14,7 @@ import Storage from 'utils/storage';
 import { ONBOARDING_COMPLETE } from 'constants/storage';
 
 import styles from './styles';
+import { Colors, Dimensions } from 'styles';
 
 const screens = [
   {
@@ -64,6 +65,8 @@ const Onboarding: OnboardingScreen = ({ navigation }) => {
         index={swipeIndex}
         ref={swiperRef}
         onChangeIndex={({ index }) => setSwipeIndex(index)}
+        style={{ flex: 0.5, height: Dimensions.height.size50 }}
+        contentContainerStyle={{backgroundColor: Colors.white }}
         paginationStyle={styles.pagination}
         paginationStyleItem={styles.paginationItem}
         paginationStyleItemActive={styles.paginationItemActive}
@@ -72,23 +75,33 @@ const Onboarding: OnboardingScreen = ({ navigation }) => {
         data={screens}
         renderItem={({ item }) => (
           <View style={styles.item}>
-            <Image source={item.image} style={styles.image} />
+            <View
+              style={{ width: Dimensions.width.size100, alignItems: 'center' }}
+            >
+              <Image
+                source={item.image}
+                style={styles.image}
+                resizeMode="contain"
+              />
+            </View>
             <Typography variant="heading2" style={{ textAlign: 'center' }}>
               {item.title}
             </Typography>
-            <Typography variant="body1" style={{ textAlign: 'center' }}>
+            <Typography variant="body3" style={{ textAlign: 'center' }}>
               {item.subtitle}
             </Typography>
           </View>
         )}
       />
-      <Button
-        variant="contained"
-        color="primary"
-        title="Next"
-        style={{ button: styles.button }}
-        onPress={onNextPress}
-      />
+      {/* <View style={{ height: Dimensions.height.size10 }}> */}
+        <Button
+          variant="contained"
+          color="primary"
+          title="Next"
+          style={{ button: styles.button }}
+          onPress={onNextPress}
+        />
+      {/* </View> */}
     </View>
   );
 };

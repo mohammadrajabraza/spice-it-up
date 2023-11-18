@@ -15,7 +15,7 @@ export class BottomSheetDriver {
     if (BottomSheetDriver.sheet.current.isActive()) {
       BottomSheetDriver.sheet.current.scrollTo(0);
     } else {
-      BottomSheetDriver.sheet.current.scrollTo(-230);
+      BottomSheetDriver.sheet.current.scrollTo(-280);
     }
   };
 }

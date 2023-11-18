@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
   return (
     <GestureHandlerRootView style={[styles.root, rootStyles]}>
-      <StatusBar backgroundColor={Colors.white} barStyle="dark-content" />
+      <StatusBar backgroundColor={'transparent'} barStyle="dark-content" translucent />
       <SafeAreaProvider>
         <Provider store={store}>
           <LocalesProvider defaultLocale="en" locale={selectedLocale}>
