@@ -4,6 +4,7 @@ import Colors from './colors';
 import Dimensions from './dimensions';
 import Spacing from './spacing';
 import Layouts from './layouts';
+import Shadows from './shadows';
 
 const styleSheetMerge = <BaseStyles, DifferenceStyles>(
   baseStyle: StyleSheet.NamedStyles<BaseStyles>,
@@ -19,4 +20,4 @@ const styleSheetMerge = <BaseStyles, DifferenceStyles>(
   return StyleSheet.create(allStyles);
 };
 
-export { Colors, Dimensions, Spacing, Layouts, styleSheetMerge };
+export { Colors, Dimensions, Spacing, Layouts, styleSheetMerge, Shadows };

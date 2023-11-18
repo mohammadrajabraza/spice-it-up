@@ -46,10 +46,10 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
         </Typography>
       </View>
       <Typography
-        variant="caption"
+        variant="body3"
         style={{ ...styles.price, ...(style?.price ?? {}) }}
       >
-        {price}
+        {'$' + parseInt(price.replace('$', ''))}
       </Typography>
     </TouchableOpacity>
   );

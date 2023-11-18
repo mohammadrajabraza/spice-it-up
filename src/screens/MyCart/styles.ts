@@ -6,6 +6,7 @@ import { moderateScale } from 'utils/styles';
 const styles = StyleSheet.create({
   container: {
     ...Layouts.container,
+    backgroundColor: Colors.background100
   },
   wrapper: {
     flex: 1,

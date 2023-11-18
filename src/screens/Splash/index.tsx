@@ -36,7 +36,7 @@ const Splash: SplashScreen = ({ navigation }) => {
       const initialRouteName: keyof PublicNavigatorParamList =
         isOnboardingComplete ? SCREENS.LOGIN : SCREENS.ONBOARDING;
       store.set(initialRouteNameAtom, initialRouteName);
-      return navigation.navigate(SCREENS.ONBOARDING);
+      return navigation.navigate(initialRouteName);
     },
   });
 

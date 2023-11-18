@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { Colors, Dimensions, Layouts, Spacing, Shadows } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -15,11 +15,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     borderWidth: 1,
     borderColor: `${Colors.darkGrey}33`,
-    elevation: 2,
-    shadowColor: Colors.darkGrey,
-    shadowOffset: { width: 2, height: 0 },
-    shadowRadius: 2,
-    shadowOpacity: 0.5,
+    ...Shadows.primary,
+    shadowOffset: { width: 0, height: 0 },
     alignItems: 'center',
   },
   content: {
