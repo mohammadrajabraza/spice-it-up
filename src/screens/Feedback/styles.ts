@@ -61,6 +61,20 @@ const styles = StyleSheet.create({
   inputLeft: {
     paddingLeft: moderateScale(15),
   },
+  skipBtn: {
+    shadowColor: Colors.darkGrey,
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 1,
+    shadowRadius: 20,
+    marginHorizontal: 0,
+    flex: 0.25,
+  },
+  skipBtnText: { color: Colors.red },
+  submitBtn: {
+    marginHorizontal: 0,
+    flex: 0.7,
+  },
+  footerBtnContainer: { flexDirection: 'row', justifyContent: 'space-between' }
 });
 
 export default styles;

@@ -79,12 +79,27 @@ const Feedback: FeedbackScreen = () => {
                 <EditIcon width={iconSize} height={iconSize} />
               </View>
             }
-            // multiline
             placeholder="Leave feedback"
             containerStyle={styles.inputContainer}
           />
-          <View style={{ flexDirection: 'row' }}>
-            <Button variant="contained" color="primary" title="Submit" />
+          <View style={styles.footerBtnContainer}>
+            <Button
+              variant="contained"
+              color="primary"
+              title="Submit"
+              style={{
+                button: styles.submitBtn,
+              }}
+            />
+            <Button
+              variant="contained"
+              color="white"
+              title="Skip"
+              style={{
+                text: styles.skipBtnText,
+                button: styles.skipBtn,
+              }}
+            />
           </View>
         </View>
       </View>
