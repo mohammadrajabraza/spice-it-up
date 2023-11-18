@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   },
   checkBoxTextContainer: {
     flexDirection: 'row',
+    paddingVertical: Spacing.vertical.size16
   },
   inputContainer: {
     paddingHorizontal: Spacing.horizontal.size8,
