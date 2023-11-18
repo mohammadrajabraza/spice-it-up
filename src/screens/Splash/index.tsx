@@ -18,6 +18,8 @@ import { initialRouteNameAtom } from 'store/atoms';
 import { Dimensions } from 'styles';
 
 import { Container, SplashLogo } from './styles';
+import DeviceInfo from 'react-native-device-info';
+import Typography from 'components/Typography';
 
 type SplashProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -34,10 +36,11 @@ const Splash: SplashScreen = ({ navigation }) => {
       const initialRouteName: keyof PublicNavigatorParamList =
         isOnboardingComplete ? SCREENS.LOGIN : SCREENS.ONBOARDING;
       store.set(initialRouteNameAtom, initialRouteName);
-      return navigation.navigate(initialRouteName);
+      return navigation.navigate(SCREENS.ONBOARDING);
     },
   });
 
+  console.log(DeviceInfo.getBuildNumber());
   return (
     <Container>
       <ImageBackground
@@ -56,6 +59,12 @@ const Splash: SplashScreen = ({ navigation }) => {
           resizeMode="contain"
         />
       </ImageBackground>
+      <Typography
+        variant="body3"
+        style={{ position: 'absolute', bottom: 30 }}
+      >
+        {'Version v' + DeviceInfo.getVersion()}
+      </Typography>
     </Container>
   );
 };

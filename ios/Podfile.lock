@@ -499,6 +499,8 @@ PODS:
     - React-Core
   - RNDateTimePicker (7.6.1):
     - React-Core
+  - RNDeviceInfo (10.11.0):
+    - React-Core
   - RNGestureHandler (2.13.4):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
@@ -612,6 +614,7 @@ DEPENDENCIES:
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCCheckbox (from `../node_modules/@react-native-community/checkbox`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
@@ -727,6 +730,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/checkbox"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReactNativeHapticFeedback:
@@ -798,6 +803,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: f2974eca860c16a3e56eea5771fda8d12e2d2057
   RNCCheckbox: 75255b03e604bbcc26411eb31c4cbe3e3865f538
   RNDateTimePicker: 8fb39263b721223e095248acaf6f406d5b7f6713
+  RNDeviceInfo: bf8a32acbcb875f568217285d1793b0e8588c974
   RNGestureHandler: 6e46dde1f87e5f018a54fe5d40cd0e0b942b49ee
   RNReactNativeHapticFeedback: ec56a5f81c3941206fd85625fa669ffc7b4545f9
   RNReanimated: ab2e96c6d5591c3dfbb38a464f54c8d17fb34a87
