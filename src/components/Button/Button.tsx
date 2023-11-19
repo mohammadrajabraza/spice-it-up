@@ -20,6 +20,7 @@ import type {
   ButtonProps,
   ButtonVariants,
 } from './button.types';
+import { moderateScale } from 'utils/styles';
 
 type VariantReturnObj = (color: ButtonColors) => {
   button: ViewStyle;
@@ -112,7 +113,7 @@ const Button: ButtonComponent = (props) => {
     >
       {isLoading ? (
         <ActivityIndicator
-          size={18}
+          size={moderateScale(15)}
           color={variant === 'outlined' ? Colors[color] : Colors[loadingColor]}
         />
       ) : (
