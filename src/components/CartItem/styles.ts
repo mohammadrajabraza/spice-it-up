@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     overflow: 'visible',
   },
   swiperChildren: {
+    backgroundColor: Colors.yellow,
     borderRadius: moderateScale(20),
     ...Shadows.primary
   },

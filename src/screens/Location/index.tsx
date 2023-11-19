@@ -21,11 +21,13 @@ const data = [
     id: 1,
     type: 'Home',
     address: '8502 Preston Rd. Inglewood, Maine 98380',
+    isPrimary: true,
   },
   {
     id: 2,
     type: 'Office',
     address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
   },
 ];
 
@@ -56,6 +58,11 @@ const Location: LocationScreen = ({ navigation }) => (
               {item.address}
             </Typography>
           </View>
+          {item.isPrimary ? (
+            <Typography variant="caption" style={styles.primary}>
+              Primary
+            </Typography>
+          ) : null}
         </TouchableOpacity>
       )}
       keyExtractor={(item) => item.id.toString()}
