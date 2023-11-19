@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     flex: 1,
     ...Layouts.over,
     paddingTop: Spacing.horizontal.size20,
-    // backgroundColor: 'transparent',
   },
   contentContainer: {
     backgroundColor: 'transparent',
@@ -23,8 +22,21 @@ const styles = StyleSheet.create({
   title: {
     paddingLeft: Spacing.horizontal.size8,
   },
+  cart: { 
+    flex: 1, 
+    gap: Spacing.vertical.size24 
+  },
+  cartHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  emptyRadio: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
+  },
   transferMethodRow: {
-    // marginVertical: Spacing.vertical.size20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

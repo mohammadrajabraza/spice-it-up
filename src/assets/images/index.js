@@ -30,6 +30,8 @@ const noOrder = require('./no-order.png');
 const profilePic = require('./photoProfile.png');
 const profilePicX2 = require('./profile-pic.png');
 
+const emptyCart = require('./empty-cart.png');
+
 module.exports = {
   splashLogo,
   onboarding1,
@@ -56,4 +58,5 @@ module.exports = {
   noOrder,
   profilePic,
   profilePicX2,
+  emptyCart,
 };

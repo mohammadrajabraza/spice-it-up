@@ -13,25 +13,28 @@ const styles = StyleSheet.create({
     width: Dimensions.width.size100,
     height: Dimensions.height.size50,
   },
-  scrollView: {
+  wrapper: {
     minHeight: Dimensions.height.size55,
     bottom: Dimensions.height.size12,
-    backgroundColor: Colors.black,
     borderTopStartRadius: moderateScale(25),
     borderTopEndRadius: moderateScale(25),
     borderStartStartRadius: moderateScale(25),
     borderStartEndRadius: moderateScale(25),
+    overflow: 'hidden',
+  },
+  scrollView: {
+    backgroundColor: Colors.white,
+    flex: 1,
   },
   content: {
     backgroundColor: Colors.background100,
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingVertical: Spacing.vertical.size20,
-    borderTopStartRadius: moderateScale(25),
-    borderTopEndRadius: moderateScale(25),
-    borderStartStartRadius: moderateScale(25),
-    borderStartEndRadius: moderateScale(25),
+    paddingBottom: Platform.select({
+      ios: Spacing.vertical.size88,
+      android: Spacing.vertical.size12,
+      default: Spacing.vertical.size12,
+    }),
     zIndex: 100,
-    marginBottom: Spacing.vertical.size20,
   },
   header: {
     flexDirection: 'row',

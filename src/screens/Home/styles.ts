@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
   },
   sectionList: {
     minWidth: Dimensions.width.size100,
+    overflow: 'visible',
   },
 });
 

@@ -8,17 +8,17 @@ import type { CoreNavigatorParamList } from 'navigation/types';
 
 import EmptyListFallback from 'components/EmptyListFallback';
 
-const NoOrder = () => {
+const EmptyCart = () => {
   const navigation = useNavigation<NavigationProp<CoreNavigatorParamList>>();
 
   return (
     <EmptyListFallback
-      image={assets.images.noOrder}
-      title="Oops, No Order Yet"
-      description={'You haven’t ordered anything to display'}
+      image={assets.images.emptyCart}
+      title="Hungry?"
+      description={'You haven’t added anything to your cart!'}
       navigation={navigation}
     />
   );
 };
 
-export default NoOrder;
+export default EmptyCart;

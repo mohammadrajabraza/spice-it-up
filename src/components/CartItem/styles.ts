@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors, Dimensions, Layouts, Spacing } from 'styles';
+import { Colors, Dimensions, Layouts, Spacing, Shadows } from 'styles';
 import { moderateScale } from 'utils/styles';
 
 const styles = StyleSheet.create({
@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
       Dimensions.width.size100 - Spacing.horizontal.globalHorizontalPadding * 2,
     backgroundColor: Colors.yellow,
     borderRadius: moderateScale(20),
+    overflow: 'visible',
+  },
+  swiperChildren: {
+    borderRadius: moderateScale(20),
+    ...Shadows.primary
   },
   rightAction: {
     width: Dimensions.width.size25,
@@ -28,11 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     gap: 10,
     alignItems: 'center',
-    elevation: 3,
-    shadowColor: Colors.darkGrey,
-    shadowOffset: { width: 5, height: 5 },
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
+    
     borderRadius: moderateScale(20),
     paddingHorizontal: Spacing.horizontal.size12,
   },

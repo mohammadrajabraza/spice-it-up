@@ -48,6 +48,7 @@ const CartItem: React.FC<CartItemProps> = (props) => {
       leftThreshold={Dimensions.width.size15}
       rightThreshold={Dimensions.width.size15}
       shouldCancelWhenOutside
+      childrenContainerStyle={styles.swiperChildren}
       containerStyle={styles.swiper}
       renderRightActions={CartItemRight}
     >

@@ -73,12 +73,7 @@ const MenuItem: MenuItemScreen = ({ route }) => {
       >
         <GoBack />
       </ImageBackground>
-      <View
-        style={{
-          borderRadius: 20,
-          overflow: 'hidden',
-        }}
-      >
+      <View style={styles.wrapper}>
         <ScrollView
           style={styles.scrollView}
           ref={scrollViewRef}
