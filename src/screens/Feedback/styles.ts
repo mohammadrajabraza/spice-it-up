@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flex: 1,
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingBottom: Spacing.vertical.size28,
+    paddingBottom: Spacing.vertical.size40,
   },
   header: {
     alignItems: 'center',

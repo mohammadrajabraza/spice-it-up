@@ -1,6 +1,5 @@
 import {
   View,
-  SafeAreaView,
   ImageBackground,
   ScrollView,
   TouchableOpacity,
@@ -65,7 +64,7 @@ const MenuItem: MenuItemScreen = ({ route }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ImageBackground
         source={menuItem.image}
         resizeMode="cover"
@@ -160,7 +159,7 @@ const MenuItem: MenuItemScreen = ({ route }) => {
           style={{ button: styles.footerButton }}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 export default MenuItem;

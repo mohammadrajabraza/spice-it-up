@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { TopBackgroundProps } from 'components/TopBackground';
 import TopBackground from 'components/TopBackground';
 
-import { Dimensions, Spacing } from 'styles';
+import { Dimensions } from 'styles';
 
 import styles from './styles';
 
@@ -39,8 +39,7 @@ const MainLayout = (props: Props): React.JSX.Element => {
             styles.content,
             {
               paddingTop,
-              minHeight: Dimensions.screenHeight - Spacing.vertical.size28,
-              marginBottom: Spacing.vertical.size28,
+              flex: 1,
             },
           ]}
         >

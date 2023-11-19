@@ -2,8 +2,11 @@ import { View, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import type { CartNavigatorParamList } from 'navigation/types';
-import type { SCREENS } from 'constants/screen-names';
+import type {
+  CartNavigatorParamList,
+  CoreNavigatorParamList,
+} from 'navigation/types';
+import { NAVIGATORS, SCREENS } from 'constants/screen-names';
 
 import assets from 'assets';
 import Typography from 'components/Typography';
@@ -17,6 +20,7 @@ import StarSelected from 'assets/svgs/star-selected.svg';
 import StarUnselected from 'assets/svgs/star-unselected.svg';
 
 import styles from './styles';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 const iconSize = moderateScale(25);
 
@@ -29,6 +33,8 @@ export type FeedbackScreen = React.FC<FeedbackProps>;
 
 const Feedback: FeedbackScreen = () => {
   const [rating, setRating] = useState(2);
+  const coreNavigation =
+    useNavigation<NavigationProp<CoreNavigatorParamList>>();
 
   return (
     <View style={styles.container}>
@@ -99,6 +105,11 @@ const Feedback: FeedbackScreen = () => {
                 text: styles.skipBtnText,
                 button: styles.skipBtn,
               }}
+              onPress={() =>
+                coreNavigation.navigate(NAVIGATORS.MENU, {
+                  screen: SCREENS.HOME,
+                })
+              }
             />
           </View>
         </View>

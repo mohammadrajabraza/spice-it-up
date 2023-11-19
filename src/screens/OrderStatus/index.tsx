@@ -114,7 +114,6 @@ const OrderStatus: OrderStatusScreen = ({ navigation }) => (
         title="Track Order"
         style={{
           text: { color: Colors.white },
-          button: { marginTop: 'auto' },
         }}
         onPress={() => {
           navigation.navigate(SCREENS.FEEDBACK);

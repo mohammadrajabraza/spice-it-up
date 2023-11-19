@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
     backgroundColor: 'transparent',
     gap: Spacing.horizontal.size16,
-    paddingBottom : Spacing.vertical.size20,
+    paddingBottom : Spacing.vertical.size40,
   },
 });
 

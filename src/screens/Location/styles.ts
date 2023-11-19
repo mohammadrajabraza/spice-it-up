@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 15,
     alignItems: 'flex-start',
-    // paddingTop: Spacing.vertical.size24,
   },
   address: {
     width: Dimensions.width.size70,

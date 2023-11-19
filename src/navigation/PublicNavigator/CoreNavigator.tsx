@@ -25,6 +25,7 @@ const CoreNavigator = () => (
       headerShown: false,
     }}
     tabBar={TabBar}
+    
   >
     {routes.map((route) => (
       <BottomTab.Screen key={route.name} {...route} />

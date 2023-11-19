@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 import { Colors, Dimensions, Layouts, Spacing } from 'styles';
 import { moderateScale } from 'utils/styles';
@@ -16,6 +16,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
     gap: Spacing.horizontal.size16,
     paddingBottom: Spacing.vertical.size20,
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'space-between',
+    ...Platform.select({
+      android: { minHeight: Dimensions.screenHeight * .8 },
+      default: {}
+    })
   },
   title: {
     paddingLeft: Spacing.horizontal.size8,

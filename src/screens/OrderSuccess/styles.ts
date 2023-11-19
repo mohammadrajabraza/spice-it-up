@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
-    paddingBottom: Spacing.vertical.size28,
+    paddingBottom: Spacing.vertical.size40,
   },
   content: {
     alignItems: 'center',

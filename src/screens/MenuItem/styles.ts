@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background100,
     paddingHorizontal: Spacing.horizontal.globalHorizontalPadding,
     paddingBottom: Platform.select({
-      ios: Spacing.vertical.size88,
+      ios: Spacing.vertical.size56,
       android: Spacing.vertical.size12,
       default: Spacing.vertical.size12,
     }),

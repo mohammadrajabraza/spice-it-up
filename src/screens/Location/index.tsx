@@ -29,6 +29,36 @@ const data = [
     address: '4517 Washington Ave. Manchester, Kentucky 39495',
     isPrimary: false,
   },
+  {
+    id: 3,
+    type: 'Office',
+    address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
+  },
+  {
+    id: 4,
+    type: 'Office',
+    address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
+  },
+  {
+    id: 5,
+    type: 'Office',
+    address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
+  },
+  {
+    id: 6,
+    type: 'Office',
+    address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
+  },
+  {
+    id: 7,
+    type: 'Office',
+    address: '4517 Washington Ave. Manchester, Kentucky 39495',
+    isPrimary: false,
+  },
 ];
 
 type LocationScreen = React.FC<LocationProps>;

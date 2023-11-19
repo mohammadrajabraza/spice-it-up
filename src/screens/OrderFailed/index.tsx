@@ -45,7 +45,9 @@ const OrderFailed: OrderFailedScreen = () => (
         variant="contained"
         color="primary"
         title="Try Again"
-        style={{ text: { color: Colors.white } }}
+        style={{
+          text: { color: Colors.white },
+        }}
       />
     </View>
   </View>
