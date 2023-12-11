@@ -5,6 +5,8 @@ import { useStore } from 'jotai';
 
 import { ImageBackground } from 'react-native';
 
+import DeviceInfo from 'react-native-device-info';
+
 import type { PublicNavigatorParamList } from 'navigation/types';
 import { SCREENS } from 'constants/screen-names';
 
@@ -17,9 +19,9 @@ import { initialRouteNameAtom } from 'store/atoms';
 
 import { Dimensions } from 'styles';
 
-import { Container, SplashLogo } from './styles';
-import DeviceInfo from 'react-native-device-info';
 import Typography from 'components/Typography';
+
+import { Container, SplashLogo } from './styles';
 
 type SplashProps = NativeStackScreenProps<
   PublicNavigatorParamList,
@@ -62,7 +64,7 @@ const Splash: SplashScreen = ({ navigation }) => {
         variant="body3"
         style={{ position: 'absolute', bottom: 30 }}
       >
-        {'Version v' + DeviceInfo.getVersion()}
+        {`Version v${  DeviceInfo.getVersion()}`}
       </Typography>
     </Container>
   );

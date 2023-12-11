@@ -2,9 +2,9 @@
 import { useNavigation as useNativeNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 
-import type { MainNavigationParamList } from 'navigation/types';
+import type { MainNavigatorParamList } from 'navigation/types';
 
 const useNavigation = () =>
-  useNativeNavigation<StackNavigationProp<MainNavigationParamList>>();
+  useNativeNavigation<StackNavigationProp<MainNavigatorParamList>>();
 
 export default useNavigation;

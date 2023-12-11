@@ -47,6 +47,16 @@ const styles = StyleSheet.create({
   noOrderButton: {
     marginTop: Spacing.vertical.size20,
   },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  emptyRadio: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
+  },
 });
 
 export default styles;

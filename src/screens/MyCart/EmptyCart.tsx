@@ -15,7 +15,7 @@ const EmptyCart = () => {
     <EmptyListFallback
       image={assets.images.emptyCart}
       title="Hungry?"
-      description={'You haven’t added anything to your cart!'}
+      description="You haven’t added anything to your cart!"
       navigation={navigation}
     />
   );

@@ -15,7 +15,7 @@ const NoOrder = () => {
     <EmptyListFallback
       image={assets.images.noOrder}
       title="Oops, No Order Yet"
-      description={'You haven’t ordered anything to display'}
+      description="You haven’t ordered anything to display"
       navigation={navigation}
     />
   );

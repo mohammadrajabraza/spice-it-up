@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
+import { View } from 'react-native';
+
 import type { CartNavigatorParamList } from 'navigation/types';
-import { SCREENS } from 'constants/screen-names';
+import type { SCREENS } from 'constants/screen-names';
 
 import Typography from 'components/Typography';
 import MainLayout from 'layouts/MainLayout';
-import Cart from './Cart';
+
 import data from 'data';
-import { View } from 'react-native';
 import Radio from 'components/Radio';
+
+import Cart from './Cart';
+
 import styles from './styles';
 
 type MyCartProps = NativeStackScreenProps<

@@ -1,6 +1,8 @@
 import { Image, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 
+import type { NavigationProp } from '@react-navigation/native';
+
 import { SCREENS } from 'constants/screen-names';
 
 import Typography from 'components/Typography';
@@ -8,12 +10,12 @@ import assets from 'assets';
 import strings from 'utils/strings';
 import CartItem from 'components/CartItem';
 
-import styles from './styles';
-import EmptyCart from './EmptyCart';
-import data from 'data';
-import { NavigationProp } from '@react-navigation/native';
-import { CartNavigatorParamList } from 'navigation/types';
+import type data from 'data';
+import type { CartNavigatorParamList } from 'navigation/types';
 import CartSummary from 'components/CartSummary';
+
+import EmptyCart from './EmptyCart';
+import styles from './styles';
 
 const transferMethods = ['delivery', 'pickup'] as const;
 

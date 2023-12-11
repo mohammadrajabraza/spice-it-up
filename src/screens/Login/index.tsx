@@ -36,7 +36,7 @@ export type LoginScreen = React.FC<LoginProps>;
 
 const Login: LoginScreen = ({ navigation }) => {
   const [showPassword, setShowPassword] = useState(true);
-
+  
   const { values, handleChange } = useFormState({ email: '', password: '' });
 
   useBlockBackPress(navigation);

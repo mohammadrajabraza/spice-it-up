@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 import React from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -11,6 +11,8 @@ import OrderItem from 'components/OrderItem';
 import type { OrderStatus } from 'components/OrderItem/OrderItem';
 import MainLayout from 'layouts/MainLayout';
 
+import Radio from 'components/Radio';
+
 import styles from './styles';
 import NoOrder from './NoOrder';
 
@@ -21,23 +23,36 @@ type OrderListProps = NativeStackScreenProps<
 
 type OrderListScreen = React.FC<OrderListProps>;
 
-const OrderList: OrderListScreen = () => (
-  <MainLayout type="core" showBackIcon>
-    <Typography variant="heading2">Your Orders</Typography>
+const OrderList: OrderListScreen = () => {
+  const [isEmpty, setIsEmpty] = React.useState(data.orders.length === 0);
+  return (
+    <MainLayout type="core" showBackIcon>
+      <View style={styles.header}>
+        <Typography variant="heading2">Your Orders</Typography>
+        <View style={styles.emptyRadio}>
+          <Typography variant="caption">Show Empty</Typography>
+          <Radio
+            selected={isEmpty}
+            onPress={() => setIsEmpty((isPrevEmpty: boolean) => !isPrevEmpty)}
+          />
+        </View>
+      </View>
 
-    {data.orders.length === 0 ? (
-      <NoOrder />
-    ) : (
-      <FlatList
-        data={data.orders}
-        renderItem={({ item }) => (
-          <OrderItem {...item} status={item.status as OrderStatus} />
-        )}
-        keyExtractor={(item) => item.id.toString()}
-        style={styles.orderList}
-      />
-    )}
-  </MainLayout>
-);
+      {isEmpty ? (
+        <NoOrder />
+      ) : (
+        <FlatList
+          data={data.orders}
+          renderItem={({ item }) => (
+            <OrderItem {...item} status={item.status as OrderStatus} />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+          style={styles.orderList}
+        />
+      )}
+
+    </MainLayout>
+  );
+};
 
 export default OrderList;
